@@ -17,13 +17,28 @@ pipeline {
             steps {
                 script {
                     echo 'Building image..'
-                    dockerimage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                    dockerImage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                     
                     echo 'Running unit tests..'
                     dockerImage.inside {
                         sh 'tests/test_user_api.py'
                     }
                 }
+            }
+        }
+        stage('Test') {
+            steps {
+              script {
+                echo 'Testing..'
+                sh "docker pull ${DOCKER_IMAGE}"
+        
+                // Stop and remove any existing container
+                sh "docker stop clinicalx_api || true"
+                sh "docker rm clinicalx_api || true"
+        
+                // Run the new container
+                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
+              }
             }
         }
         stage('Push Image') {
@@ -34,16 +49,7 @@ pipeline {
                     sh "docker push ${DOCKER_IMAGE}"                }
             }
         }
-        // stage('Test') {
-        //     steps {
-        //       script {
-        //         echo 'Testing..'
-        //         dockerimage.inside {
-        //             sh 'pytest --junitxml=pytest-report.xml tests/test_user_api.py'  // Run pytest with JUnit output
-        //         }
-        //       }
-        //     }
-        // }
+       
 
 
        stage('Deployment') {
@@ -59,6 +65,8 @@ pipeline {
         
                 // Run the new container
                 sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
+                // Remove previous Docker images
+                sh "docker rmi $(docker images -q) || true"
             }
         }
 
