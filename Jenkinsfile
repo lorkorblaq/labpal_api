@@ -13,7 +13,6 @@ pipeline {
                 git(url: 'https://github.com/lorkorblaq/clinicalx_api.git', branch: 'main', credentialsId: GIT_CREDENTIALS)
             }
         }
-        
         stage('Build Image') {
             steps {
                 script {
@@ -22,7 +21,7 @@ pipeline {
                     
                     echo 'Running unit tests..'
                     dockerImage.inside {
-                        sh 'tests/test_user_api.py'
+                        sh 'pytest tests/test_user_api.py'
                     }
                 }
             }
