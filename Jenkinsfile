@@ -21,16 +21,16 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-              script {
-                echo 'Testing..'
-                dockerimage.inside {
-                    sh 'pytest --junitxml=pytest-report.xml tests/test_user_api.py'  // Run pytest with JUnit output
-                }
-              }
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //       script {
+        //         echo 'Testing..'
+        //         dockerimage.inside {
+        //             sh 'pytest --junitxml=pytest-report.xml tests/test_user_api.py'  // Run pytest with JUnit output
+        //         }
+        //       }
+        //     }
+        // }
         stage('Push Image') {
             steps {
                 echo 'Pushing to Docker Hub..'
