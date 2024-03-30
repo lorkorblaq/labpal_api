@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building image..'
-                    docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                    def dockerimage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                 }
             }
         }
@@ -25,7 +25,6 @@ pipeline {
             steps {
               script {
                 echo 'Testing..'
-                def dockerimage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                 dockerimage.inside {
                     sh 'pytest --junitxml=pytest-report.xml tests/test_user_api.py'  // Run pytest with JUnit output
                 }
