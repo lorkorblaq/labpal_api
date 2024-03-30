@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building image..'
-                    dockerImage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                    def dockerImage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                     
                     echo 'Running unit tests..'
                     dockerImage.inside {
