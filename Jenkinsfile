@@ -26,6 +26,14 @@ pipeline {
                 }
             }
         }
+        stage('Push Image') {
+            steps {
+                echo 'Pushing to Docker Hub..'
+                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                    sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io"
+                    sh "docker push ${DOCKER_IMAGE}"                }
+            }
+        }
         // stage('Test') {
         //     steps {
         //       script {
@@ -36,14 +44,7 @@ pipeline {
         //       }
         //     }
         // }
-        stage('Push Image') {
-            steps {
-                echo 'Pushing to Docker Hub..'
-                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                    sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io"
-                    sh "docker push ${DOCKER_IMAGE}"                }
-            }
-        }
+
 
        stage('Deployment') {
             steps {
