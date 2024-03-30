@@ -1,0 +1,18 @@
+
+RUD "/api/user/<int:user_id>/"
+CR "/api/users/"
+
+
+RUD "/api/dog/<int:dog_id>/"
+CR "/api/dogs/"
+
+
+RUD "/api/bid/<int:bid_id>/"
+CR "/api/bids/"
+
+
+C=create
+R=read
+U=update
+D=delete
+
