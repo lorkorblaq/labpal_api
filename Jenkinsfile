@@ -51,8 +51,8 @@ pipeline {
                 sh "docker pull ${DOCKER_IMAGE}"
         
                 // Stop and remove any existing container
-                sh "docker stop clinicalx_api || true"
-                sh "docker rm clinicalx_api || true"
+                sh "docker stop clinicalx_api_test_stage || true"
+                sh "docker rm clinicalx_api_test_stage || true"
         
                 // Run the new container
                 sh "docker run -d --name clinicalx_api_test_stage -p 3001:3000 ${DOCKER_IMAGE}"
