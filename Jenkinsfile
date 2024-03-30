@@ -21,7 +21,7 @@ pipeline {
                     
                     echo 'Running unit tests..'
                     dockerImage.inside {
-                        sh 'pytest --junitxml=pytest-report.xml tests/test_user_api.py'
+                        sh 'tests/test_user_api.py'
                     }
                 }
             }
