@@ -17,15 +17,24 @@ pipeline {
             steps {
                 script {
                     echo 'Building image..'
-                    def dockerImage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
-                    
-                    echo 'Running unit tests..'
-                    dockerImage.inside {
-                        sh 'pytest tests/test_user_api.py'
+                    docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                     }
-                }
             }
         }
+        stage('Unit Testing') {
+            steps {
+              script {
+                echo 'Unit testing to begin..'
+                  
+                echo 'Running unit tests..'
+                sh "docker run -d --name clinicalx_api_test ${DOCKER_IMAGE}"
+                sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
+                sh "docker stop clinicalx_api_test"
+                sh "docker rm clinicalx_api_test"
+              }
+            }
+        }
+        
         stage('Push Image') {
             steps {
                 echo 'Pushing to Docker Hub..'
