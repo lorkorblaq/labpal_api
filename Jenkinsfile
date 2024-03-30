@@ -35,7 +35,7 @@ pipeline {
                     sh "docker push ${DOCKER_IMAGE}"                }
             }
         }
-        stage('Test') {
+        stage('Test Deployment') {
             steps {
               script {
                 echo 'Deploying to testing stage..'
@@ -52,7 +52,7 @@ pipeline {
             }
         }
         
-       stage('Deployment') {
+       stage('Deployment Production') {
             steps {
                 echo 'Deploying to production...'
         
