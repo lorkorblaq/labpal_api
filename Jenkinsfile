@@ -18,6 +18,11 @@ pipeline {
                 script {
                     echo 'Building image..'
                     def dockerimage = docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                    
+                    echo 'Running unit tests..'
+                    dockerImage.inside {
+                        sh 'pytest --junitxml=pytest-report.xml tests/test_user_api.py'
+                    }
                 }
             }
         }
