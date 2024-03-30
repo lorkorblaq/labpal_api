@@ -54,7 +54,7 @@ pipeline {
                 sh "docker rm clinicalx_api || true"
         
                 // Run the new container
-                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
+                sh "docker run -d --name clinicalx_api_test -p 3001:3000 ${DOCKER_IMAGE}"
                 sh "docker rmi $(docker images -q) || true"
               }
             }
