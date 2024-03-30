@@ -13,6 +13,7 @@ pipeline {
                 git(url: 'https://github.com/lorkorblaq/clinicalx_api.git', branch: 'main', credentialsId: GIT_CREDENTIALS)
             }
         }
+        
         stage('Build Image') {
             steps {
                 script {
@@ -26,21 +27,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-              script {
-                echo 'Testing..'
-                sh "docker pull ${DOCKER_IMAGE}"
-        
-                // Stop and remove any existing container
-                sh "docker stop clinicalx_api || true"
-                sh "docker rm clinicalx_api || true"
-        
-                // Run the new container
-                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
-              }
-            }
-        }
         stage('Push Image') {
             steps {
                 echo 'Pushing to Docker Hub..'
@@ -49,12 +35,26 @@ pipeline {
                     sh "docker push ${DOCKER_IMAGE}"                }
             }
         }
-       
-
-
+        stage('Test') {
+            steps {
+              script {
+                echo 'Deploying to testing stage..'
+                sh "docker pull ${DOCKER_IMAGE}"
+        
+                // Stop and remove any existing container
+                sh "docker stop clinicalx_api || true"
+                sh "docker rm clinicalx_api || true"
+        
+                // Run the new container
+                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
+                sh "docker rmi $(docker images -q) || true"
+              }
+            }
+        }
+        
        stage('Deployment') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploying to production...'
         
                 // Pull the latest image from Docker Hub
                 sh "docker pull ${DOCKER_IMAGE}"
