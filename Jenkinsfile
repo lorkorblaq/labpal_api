@@ -48,11 +48,11 @@ pipeline {
                 sh "docker pull ${DOCKER_IMAGE}"
         
                 // Stop and remove any existing container
-                sh "docker stop app_main || true"
-                sh "docker rm app_main || true"
+                sh "docker stop clinicalx_api || true"
+                sh "docker rm clinicalx_api || true"
         
                 // Run the new container
-                sh "docker run -d --name app_main -p 8080:8080 ${DOCKER_IMAGE}"
+                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
             }
         }
 
