@@ -43,7 +43,7 @@ pipeline {
                 // sh "docker rm clinicalx_api_test_stage || true"
         
                 // Run the new container
-                sh "docker run -d --name clinicalx_api_test_stage -p 3001:3000 ${DOCKER_TAG}"
+                sh "docker run -d --name clinicalx_api_test -p 3001:3000 ${DOCKER_TAG}"
                 echo 'Starting Integration testing'
                 // sh "docker rmi \$(docker images -q) || true"
                 // echo 'Running unit tests..'
