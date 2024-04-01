@@ -15,5 +15,5 @@ EXPOSE 3000
 ENV FLASK_APP=api.py
 
 # Run app.py when the container launches
-CMD ["gunicorn", "-w", "2", "-t", "1", "-b", "0.0.0.0:3000", "api:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:3000", "api:app"]
 # CMD ["python3", "api.py"]
