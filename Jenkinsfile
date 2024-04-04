@@ -18,13 +18,13 @@ pipeline {
             steps {
                 script {
                     echo 'Building image..'
-                    docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                    docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                     }
                 script{
                     echo 'Running unit tests..'
                     // sh "docker stop clinicalx_api_test || true"
                     // sh "docker rm clinicalx_api_test || true"
-                    sh "docker run -d --name clinicalx_api_test ${DOCKER_TAG}"
+                    sh "docker run -d --name clinicalx_api_test ${DOCKER_IMAGE}"
                     // sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
                     sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                     sh "docker stop clinicalx_api_test"
@@ -43,7 +43,7 @@ pipeline {
                 sh "docker rm clinicalx_api_test_stage || true"
         
                 // Run the new container
-                sh "docker run -d --name clinicalx_api_test -p 3001:3000 ${DOCKER_TAG}"
+                sh "docker run -d --name clinicalx_api_test -p 3001:3000 ${DOCKER_IMAGE}"
                 echo 'Starting Integration testing'
                 // sh "docker rmi \$(docker images -q) || true"
                 // echo 'Running unit tests..'
@@ -98,7 +98,7 @@ pipeline {
                 sh "docker rm clinicalx_api || true"
         
                 // Run the new container
-                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_TAG}"
+                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
                 // Remove previous Docker images
                 // sh "docker rmi \$(docker images -q) -f || true"
                 // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
