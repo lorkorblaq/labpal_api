@@ -23,7 +23,7 @@ pipeline {
                     echo 'Running unit tests..'
                     // sh "docker stop clinicalx_api_test || true"
                     // sh "docker rm clinicalx_api_test || true"
-                    sh "docker run -d --name clinicalx_api_test ${DOCKER_IMAGE}"
+                    sh "docker run -d --name clinicalx_api_test p 2999:3000 ${DOCKER_IMAGE}"
                     // sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
                     sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                     sh "docker stop clinicalx_api_test"
