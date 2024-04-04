@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'lorkorblaq/clinicalx_api'
-        DOCKER_TAG = "${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
+        // DOCKER_TAG = "${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
         DOCKER_REGISTRY_URL = 'https://hub.docker.com'
         GIT_CREDENTIALS = 'gitpass'
         DOCKER_CREDENTIALS= 'dockerpass'
@@ -38,7 +38,7 @@ pipeline {
                 echo 'Testing to begin..'
                 // sh "docker pull ${DOCKER_IMAGE}"
                 echo 'Deploying to testing stage..'
-                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                 sh "docker stop clinicalx_api_test_stage || true"
                 sh "docker rm clinicalx_api_test_stage || true"
         
@@ -80,7 +80,7 @@ pipeline {
                 echo 'Pushing to Docker Hub..'
                 withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io"
-                    sh "docker push ${DOCKER_TAG}"     
+                    sh "docker push ${DOCKER_IMAGE}"     
                     sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
 
                 }
