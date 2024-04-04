@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'lorkorblaq/clinicalx_api'
-        // DOCKER_TAG = "${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
         DOCKER_REGISTRY_URL = 'https://hub.docker.com'
         GIT_CREDENTIALS = 'gitpass'
         DOCKER_CREDENTIALS= 'dockerpass'
@@ -64,7 +63,7 @@ pipeline {
               script {
                 echo 'Deploying to Beta stage..'
                 // sh "docker pull ${DOCKER_IMAGE}"
-                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
                 // Stop and remove any existing container
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
