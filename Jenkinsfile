@@ -78,7 +78,7 @@ pipeline {
             steps {
                 echo 'Pushing to Docker Hub..'
                 withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                    sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io"
+                    sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} docker.io"
                     sh "docker push ${DOCKER_IMAGE}"     
                     sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
 
