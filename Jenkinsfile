@@ -100,7 +100,7 @@ pipeline {
                 sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
                 // Remove previous Docker images
                 // sh "docker rmi \$(docker images -q) -f || true"
-                // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
+                sh "docker rmi $(docker images -q lorkorblaq/clinicalx_api) -f || true"
             }
         }
 
