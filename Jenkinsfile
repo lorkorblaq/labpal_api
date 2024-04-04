@@ -69,7 +69,7 @@ pipeline {
                 sh "docker rm clinicalx_api_beta || true"
                 echo 'Starting End to end testing...'
                 // Run the new container
-                sh "docker run -d --name clinicalx_api_beta -p 3001:3000 ${DOCKER_IMAGE}"
+                sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_IMAGE}"
                 // sh "docker rmi \$(docker images -q) || true"
               }
             }
