@@ -58,11 +58,8 @@ pipeline {
                 // docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                 sh "docker stop clinicalx_api_test || true"
                 sh "docker rm clinicalx_api_test || true"
-        
                 // Run the new container
                 sh "docker run -d --name clinicalx_api_test -p 2998:3000 ${DOCKER_TAG}"
-                echo 'Starting Integration testing'
-                // // sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
                 sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                 sh "docker stop clinicalx_api_test"
                 sh "docker rm clinicalx_api_test"
