@@ -28,6 +28,7 @@ pipeline {
                     sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                     sh "docker stop clinicalx_api_test"
                     sh "docker rm clinicalx_api_test"
+                    sh "docker rmi ${DOCKER_TAG} -f"                    
                     }
             }
         }
@@ -53,6 +54,7 @@ pipeline {
                 // sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                 sh "docker stop clinicalx_api_test"
                 sh "docker rm clinicalx_api_test"
+                sh "docker rmi ${DOCKER_TAG} -f"                    
                 // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) || true"
               }
             }
@@ -78,7 +80,7 @@ pipeline {
                 // }
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
-                sh "docker rmi ${DOCKER_TAG}|| true"
+                sh "docker rmi ${DOCKER_TAG} -f || true"
               }
             }
         }
