@@ -23,7 +23,7 @@ pipeline {
                     echo 'Running unit tests..'
                     // sh "docker stop clinicalx_api_test || true"
                     // sh "docker rm clinicalx_api_test || true"
-                    sh "docker run -d --name clinicalx_api_test -p 2999:3000 ${DOCKER_IMAGE}"
+                    sh "docker run -d --name clinicalx_api_test -p 2997:3000 ${DOCKER_IMAGE}"
                     // sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
                     sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                     sh "docker stop clinicalx_api_test"
@@ -43,7 +43,7 @@ pipeline {
                 sh "docker rm clinicalx_api_test_stage || true"
         
                 // Run the new container
-                sh "docker run -d --name clinicalx_api_test -p 3001:3000 ${DOCKER_IMAGE}"
+                sh "docker run -d --name clinicalx_api_test -p 2998:3000 ${DOCKER_IMAGE}"
                 echo 'Starting Integration testing'
                 // // sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
                 sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
@@ -64,7 +64,7 @@ pipeline {
                 sh "docker rm clinicalx_api_beta || true"
                 echo 'Starting End to end testing...'
                 // Run the new container
-                sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_TAG}"
+                sh "docker run -d --name clinicalx_api_beta -p 2999:3000 ${DOCKER_TAG}"
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
                 sh "docker rmi ${DOCKER_TAG} -f || true"
@@ -83,7 +83,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
                     // Push the Docker image to Docker Hub
-                    sh "docker push ${DOCKER_TAG}"                    
+                    sh "docker push ${DOCKER_TAG} -f"                    
                     }
             }
         }
