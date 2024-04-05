@@ -87,18 +87,10 @@ pipeline {
         stage('Push Image') {
             steps {
                 echo 'Pushing to Docker Hub..'
-                // withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                //     sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
-                //     sh "docker push lorkorblaq/clinicalx_api"     
-                //     sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
-
-                // }
                         withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                             // Use 'withCredentials' block to securely access username and password from Jenkins credentials
                         
-                            // Create a temporary credentials file
-                            sh docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-                                                   
+                            sh docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}                                                   
                             // Push the Docker image to Docker Hub
                             sh "docker push lorkorblaq/clinicalx_api"
                         
