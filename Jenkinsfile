@@ -8,7 +8,7 @@ pipeline {
         DOCKERFILE_PATH = 'Dockerfile'
     }
     stages {
-        stage('checkout') {
+        stage('checkout') { 
             steps {
                 git(url: 'https://github.com/lorkorblaq/clinicalx_api.git', branch: 'main', credentialsId: GIT_CREDENTIALS)
             }
