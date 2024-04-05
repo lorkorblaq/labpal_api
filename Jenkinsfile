@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'lorkorblaq/clinicalx_api'
-        DOCKER_REGISTRY_URL = 'https://hub.docker.com'
+        DOCKER_TAG = "${DOCKER_IMAGE}:${BUILD_NUMBER}" 
         GIT_CREDENTIALS = 'gitpass'
         DOCKER_CREDENTIALS= 'dockerpass'
         DOCKERFILE_PATH = 'Dockerfile'
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building image..'
-                    docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                    docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                     }
                 script{
                     echo 'Running unit tests..'
@@ -37,7 +37,7 @@ pipeline {
                 echo 'Testing to begin..'
                 // sh "docker pull ${DOCKER_IMAGE}"
                 echo 'Deploying to testing stage..'
-                docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                 sh "docker stop clinicalx_api_test_stage || true"
                 sh "docker rm clinicalx_api_test_stage || true"
         
@@ -63,28 +63,36 @@ pipeline {
               script {
                 echo 'Deploying to Beta stage..'
                 // sh "docker pull ${DOCKER_IMAGE}"
-                docker.build("${DOCKER_IMAGE}", "-f ${DOCKERFILE_PATH} .")
+                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                 // Stop and remove any existing container
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
                 echo 'Starting End to end testing...'
                 // Run the new container
-                sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_IMAGE}"
+                sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_TAG}"
                 // sh "docker rmi \$(docker images -q) || true"
+                            // Remove all other images for the same repository
+                def otherImages = sh(script: 'docker ps -aq --filter "name=clinicalx_api_beta" --filter "not id=$(docker ps -q --filter "name=clinicalx_api_beta" --last 1)"', returnStdout: true).trim()
+                if(otherImages) {
+                    sh "docker rmi $otherImages -f"
+                }
               }
             }
         }
         stage('Push Image') {
             steps {
                 echo 'Pushing to Docker Hub..'
-                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                    sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
-                    sh "docker push lorkorblaq/clinicalx_api"     
-                    sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
+                // withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                //     sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
+                //     sh "docker push lorkorblaq/clinicalx_api"     
+                //     sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
 
-                }
+                // }
+                sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
+                sh "docker push lorkorblaq/clinicalx_api"
             }
         }
+       
         stage('Production Deployment') {
             steps {
                 echo 'Deploying to production...'
@@ -97,12 +105,23 @@ pipeline {
                 sh "docker rm clinicalx_api || true"
         
                 // Run the new container
-                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_IMAGE}"
+                sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_TAG}"
                 // Remove previous Docker images
                 // sh "docker rmi \$(docker images -q) -f || true"
                 // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
             }
         }
+         stage('Cleanup Images') {
+            steps {
+                script {
+                    echo 'Cleaning up old Docker images..'
+                    def images = sh(script: 'docker images --format "{{.ID}}:{{.Repository}}" | grep lorkorblaq/clinicalx_api | head -n -3', returnStdout: true).trim()
+                    if(images) {
+                        sh "docker rmi $images"
+                    }
+                }
+            }
+        }        
 
      }
  }
