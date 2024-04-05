@@ -44,4 +44,4 @@ api.add_resource(Lot_exp_Get, "/api/lotexp/get/")
 api.add_resource(Lot_exp_Push, "/api/lotexp/push/<string:user_id>/")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000,debug=True)
+    app.run(host="0.0.0.0", port=3000, debug=True)
