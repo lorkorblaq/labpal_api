@@ -28,7 +28,7 @@ pipeline {
                     sh "docker exec clinicalx_api_build pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                     sh "docker stop clinicalx_api_build"
                     sh "docker rm clinicalx_api_build"
-                    sh "docker rmi ${DOCKER_TAG} -f"                    
+                    // sh "docker rmi ${DOCKER_TAG} -f"                    
                     }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
                 echo 'Testing to begin..'
                 // sh "docker pull ${DOCKER_IMAGE}"
                 echo 'Deploying to testing stage..'
-                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                // docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                 sh "docker stop clinicalx_api_test || true"
                 sh "docker rm clinicalx_api_test || true"
         
@@ -49,7 +49,7 @@ pipeline {
                 sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                 sh "docker stop clinicalx_api_test"
                 sh "docker rm clinicalx_api_test"
-                sh "docker rmi ${DOCKER_TAG} -f"                    
+                // sh "docker rmi ${DOCKER_TAG} -f"                    
               }
             }
         }
@@ -58,7 +58,7 @@ pipeline {
             steps {
               script {
                 echo 'Deploying to Beta stage..'
-                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                // docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                 // Stop and remove any existing container
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
@@ -67,23 +67,24 @@ pipeline {
                 sh "docker run -d --name clinicalx_api_beta -p 2999:3000 ${DOCKER_TAG}"
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
-                sh "docker rmi ${DOCKER_TAG} -f || true"
+                // sh "docker rmi ${DOCKER_TAG} -f || true"
               }
             }
         }
         stage('Push Image') {
             steps {
-                script {
-                    echo 'Building image..'
-                    docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
-                    }
+                // script {
+                //     echo 'Building image..'
+                //     docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                //     }
                 echo 'Pushing to Docker Hub..'
                 // docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                     // Use 'withCredentials' block to securely access username and password from Jenkins credentials
                 withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
                     // Push the Docker image to Docker Hub
-                    sh "docker push ${DOCKER_TAG}"                    
+                    sh "docker push ${DOCKER_TAG}" 
+                    sh "docker rmi ${DOCKER_TAG} -f || true"
                     }
             }
         }
