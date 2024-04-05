@@ -97,11 +97,8 @@ pipeline {
                             // Use 'withCredentials' block to securely access username and password from Jenkins credentials
                         
                             // Create a temporary credentials file
-                            sh """
-                                echo ${DOCKER_PASSWORD} > /tmp/docker_password
-                                docker login -u ${DOCKER_USERNAME} --password-stdin < /tmp/docker_password
-                            """
-                        
+                            sh docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+                                                   
                             // Push the Docker image to Docker Hub
                             sh "docker push lorkorblaq/clinicalx_api"
                         
