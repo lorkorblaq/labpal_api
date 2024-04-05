@@ -93,13 +93,19 @@ pipeline {
                 // }
                         withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                             // Use 'withCredentials' block to securely access username and password from Jenkins credentials
-                
-                            // Log in to Docker Hub securely
-                            sh "echo '\${DOCKER_PASSWORD}' | docker login -u '\${DOCKER_USERNAME}' --password-stdin docker.io"
-                
+                        
+                            // Create a temporary credentials file
+                            sh """
+                                echo ${DOCKER_PASSWORD} > /tmp/docker_password
+                                docker login -u ${DOCKER_USERNAME} --password-stdin < /tmp/docker_password
+                            """
+                        
                             // Push the Docker image to Docker Hub
                             sh "docker push lorkorblaq/clinicalx_api"
-                        }                
+                        
+                            // Clean up the temporary credentials file
+                            sh "rm /tmp/docker_password"
+                        }               
                         // sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
                         // sh "docker push lorkorblaq/clinicalx_api"
                     }
