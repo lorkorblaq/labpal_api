@@ -112,18 +112,7 @@ pipeline {
                 // sh "docker rmi \$(docker images -q) -f || true"
                 // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
             }
-        }
-         stage('Cleanup Images') {
-            steps {
-                script {
-                    echo 'Cleaning up old Docker images..'
-                    def images = sh(script: 'docker images --format "{{.ID}}:{{.Repository}}" | grep lorkorblaq/clinicalx_api | head -n -3', returnStdout: true).trim()
-                    if(images) {
-                        sh "docker rmi $images"
-                    }
-                }
-            }
-        }        
+        }       
 
      }
  }
