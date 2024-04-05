@@ -72,7 +72,8 @@ pipeline {
                 sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_TAG}"
                 // sh "docker rmi \$(docker images -q) || true"
                             // Remove all other images for the same repository
-                def otherImages = sh(script: 'docker ps -aq --filter "name=clinicalx_api_beta" --filter "not id=$(docker ps -q --filter "name=clinicalx_api_beta" --last 1)"', returnStdout: true).trim()
+                def currentImageId = sh(script: "docker inspect --format='{{.Id}}' clinicalx_api_beta", returnStdout: true).trim()
+                def otherImages = sh(script: "docker images --quiet --filter=reference=${repository} --filter=since=${currentImageId}", returnStdout: true).trim()
                 if(otherImages) {
                     sh "docker rmi $otherImages -f"
                 }
