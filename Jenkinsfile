@@ -73,6 +73,10 @@ pipeline {
         }
         stage('Push Image') {
             steps {
+                script {
+                    echo 'Building image..'
+                    docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                    }
                 echo 'Pushing to Docker Hub..'
                 // docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                     // Use 'withCredentials' block to securely access username and password from Jenkins credentials
