@@ -101,7 +101,7 @@ pipeline {
                 echo 'Deploying to production...'
         
                 // Pull the latest image from Docker Hub
-                // sh "docker pull ${DOCKER_IMAGE}"
+                sh "docker pull ${DOCKER_TAG}"
         
                 // Stop and remove any existing container
                 sh "docker stop clinicalx_api || true"
