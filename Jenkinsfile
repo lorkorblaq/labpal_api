@@ -45,17 +45,11 @@ pipeline {
                 // Run the new container
                 sh "docker run -d --name clinicalx_api_test -p 3001:3000 ${DOCKER_IMAGE}"
                 echo 'Starting Integration testing'
-                // sh "docker rmi \$(docker images -q) || true"
-                // echo 'Running unit tests..'
-                // sh "docker stop clinicalx_api_test || true"
-                // sh "docker rm clinicalx_api_test || true"
-                // sh "docker run -d --name clinicalx_api_test ${DOCKER_TAG}"
                 // // sh "docker exec clinicalx_api_test pytest tests/test_user_api.py"
                 // sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                 sh "docker stop clinicalx_api_test"
                 sh "docker rm clinicalx_api_test"
                 sh "docker rmi ${DOCKER_TAG} -f"                    
-                // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) || true"
               }
             }
         }
@@ -64,7 +58,6 @@ pipeline {
             steps {
               script {
                 echo 'Deploying to Beta stage..'
-                // sh "docker pull ${DOCKER_IMAGE}"
                 docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
                 // Stop and remove any existing container
                 sh "docker stop clinicalx_api_beta || true"
@@ -72,12 +65,6 @@ pipeline {
                 echo 'Starting End to end testing...'
                 // Run the new container
                 sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_TAG}"
-                // sh "docker rmi \$(docker images -q) || true"
-                // def currentImageId = sh(script: "docker inspect --format='{{.Id}}' clinicalx_api_beta", returnStdout: true).trim()
-                // def otherImages = sh(script: "docker images --quiet --filter=reference=${repository} --filter=since=${currentImageId}", returnStdout: true).trim()
-                // if(otherImages) {
-                //     sh "docker rmi $otherImages -f"
-                // }
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
                 sh "docker rmi ${DOCKER_TAG} -f || true"
@@ -88,8 +75,8 @@ pipeline {
             steps {
                 echo 'Pushing to Docker Hub..'
                 docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
-                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     // Use 'withCredentials' block to securely access username and password from Jenkins credentials
+                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
                     // Push the Docker image to Docker Hub
                     sh "docker push ${DOCKER_TAG}"                    }
@@ -109,9 +96,7 @@ pipeline {
         
                 // Run the new container
                 sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_TAG}"
-                // Remove previous Docker images
-                // sh "docker rmi \$(docker images -q) -f || true"
-                // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
+                docker images --format "{{.ID}}" | tail -n 3 | xargs docker rmi
             }
         }       
 
