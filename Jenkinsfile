@@ -71,11 +71,9 @@ pipeline {
                 // Run the new container
                 sh "docker run -d --name clinicalx_api_beta -p 3002:3000 ${DOCKER_TAG}"
                 // sh "docker rmi \$(docker images -q) || true"
-                def currentImageId = sh(script: "docker inspect --format='{{.Id}}' clinicalx_api_beta", returnStdout: true).trim()
-                def otherImages = sh(script: "docker images --quiet --filter=reference=${repository} --filter=since=${currentImageId}", returnStdout: true).trim()
-                if(otherImages) {
-                    sh "docker rmi $otherImages -f"
-                }
+                sh "docker stop clinicalx_api_beta || true"
+                sh "docker rm clinicalx_api_beta || true"
+                sh "docker rmi ${DOCKER_TAG}|| true"
               }
             }
         }
