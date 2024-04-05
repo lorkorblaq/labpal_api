@@ -79,8 +79,9 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
                     // Push the Docker image to Docker Hub
-                    sh "docker push ${DOCKER_TAG}"                    }
-                }
+                    sh "docker push ${DOCKER_TAG}"                    
+                    }
+            }
         }
        
         stage('Production Deployment') {
