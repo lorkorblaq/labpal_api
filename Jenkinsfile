@@ -88,10 +88,19 @@ pipeline {
                 //     sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) -f || true"
 
                 // }
-                sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
-                sh "docker push lorkorblaq/clinicalx_api"
-            }
-        }
+                        withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                            // Use 'withCredentials' block to securely access username and password from Jenkins credentials
+                
+                            // Log in to Docker Hub securely
+                            sh "echo '\${DOCKER_PASSWORD}' | docker login -u '\${DOCKER_USERNAME}' --password-stdin docker.io"
+                
+                            // Push the Docker image to Docker Hub
+                            sh "docker push lorkorblaq/clinicalx_api"
+                        }                
+                        // sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
+                        // sh "docker push lorkorblaq/clinicalx_api"
+                    }
+                }
        
         stage('Production Deployment') {
             steps {
