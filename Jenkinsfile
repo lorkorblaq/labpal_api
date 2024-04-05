@@ -28,7 +28,7 @@ pipeline {
                     sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                     sh "docker stop clinicalx_api_test"
                     sh "docker rm clinicalx_api_test"
-                    // sh "docker rmi ${DOCKER_TAG} -f"                    
+                    sh "docker rmi ${DOCKER_TAG} -f"                    
                     }
             }
         }
@@ -54,7 +54,7 @@ pipeline {
                 // sh "docker exec clinicalx_api_test pytest --junitxml=pytest-report.xml tests/test_user_api.py"
                 sh "docker stop clinicalx_api_test"
                 sh "docker rm clinicalx_api_test"
-                // sh "docker rmi ${DOCKER_TAG} -f"                    
+                sh "docker rmi ${DOCKER_TAG} -f"                    
                 // sh "docker rmi \$(docker images -q lorkorblaq/clinicalx_api) || true"
               }
             }
@@ -80,18 +80,19 @@ pipeline {
                 // }
                 sh "docker stop clinicalx_api_beta || true"
                 sh "docker rm clinicalx_api_beta || true"
-                // sh "docker rmi ${DOCKER_TAG} -f || true"
+                sh "docker rmi ${DOCKER_TAG} -f || true"
               }
             }
         }
         stage('Push Image') {
             steps {
                 echo 'Pushing to Docker Hub..'
-                        withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                            // Use 'withCredentials' block to securely access username and password from Jenkins credentials
-                            sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
-                            // Push the Docker image to Docker Hub
-                            sh "docker push ${DOCKER_TAG}"                    }
+                docker.build("${DOCKER_TAG}", "-f ${DOCKERFILE_PATH} .")
+                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                    // Use 'withCredentials' block to securely access username and password from Jenkins credentials
+                    sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
+                    // Push the Docker image to Docker Hub
+                    sh "docker push ${DOCKER_TAG}"                    }
                 }
         }
        
