@@ -93,12 +93,7 @@ pipeline {
                             sh docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}                                                   
                             // Push the Docker image to Docker Hub
                             sh "docker push lorkorblaq/clinicalx_api"
-                        
-                            // Clean up the temporary credentials file
-                            sh "rm /tmp/docker_password"
                         }               
-                        // sh "docker login -u ${DOCKER_USERNAME} -p 518Oloko. docker.io"
-                        // sh "docker push lorkorblaq/clinicalx_api"
                     }
                 }
        
