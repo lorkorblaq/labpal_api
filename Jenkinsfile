@@ -89,13 +89,12 @@ pipeline {
                 echo 'Pushing to Docker Hub..'
                         withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                             // Use 'withCredentials' block to securely access username and password from Jenkins credentials
-                        
-                            sh docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}                                                   
+                            sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"                                                   
                             // Push the Docker image to Docker Hub
-                            sh "docker push lorkorblaq/clinicalx_api"
-                        }               
+                            sh "docker push lorkorblaq/clinicalx_api"              
                     }
                 }
+        }
        
         stage('Production Deployment') {
             steps {
