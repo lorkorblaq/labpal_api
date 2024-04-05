@@ -96,7 +96,6 @@ pipeline {
         
                 // Run the new container
                 sh "docker run -d --name clinicalx_api -p 3000:3000 ${DOCKER_TAG}"
-                docker images --format "{{.ID}}" | tail -n 3 | xargs docker rmi
             }
         }       
 
