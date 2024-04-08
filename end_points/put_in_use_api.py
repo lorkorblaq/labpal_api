@@ -45,11 +45,9 @@ class P_in_usePush(Resource):
                 'description': args["description"],
                 'created at': wat_time,
             }
-            inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id 
-            inserted_id = str(inserted_id)           
+            PUT_IN_USE_COLLECTION.insert_one(piu)
             response = {
                 "message": "Item put in use successfully",
-                'piu_id': inserted_id
             }
             return response, 200
         except Exception as e:

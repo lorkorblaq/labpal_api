@@ -9,7 +9,7 @@ def create_user():
     payload = {
         'firstname': 'John',
         'lastname': 'Doe',
-        'email': 'John.Doe@example.com',
+        'email': 'John.Doe@exakkmple.com',
         'image': 'https://example.com/image.jpg',
         'title': 'Software Engineer',
         'org': 'Example Organization',

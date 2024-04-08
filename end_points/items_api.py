@@ -24,20 +24,20 @@ class ItemsResource(Resource):
         # print((response))
         return response_data, 200
 
-# class ItemsPut(Resource):
-#     def put(self):
-#         # utc_now = datetime.utcnow()
-#         # wat_time = utc_now + timedelta(hours=1)
-#         args = item_parser.parse_args()
-#         if not args['item']:
-#             abort(404, message="Item not found, kindly contact Lorkorblaq")
-#         filter = {'item': args['item']}
-#         if args['direction'] == "To": 
-#             new_value = {'$inc': {'in stock': -args['in stock']}}
-#             ITEMS_COLLECTION.update_one(filter, new_value)
-#         elif args['direction'] == "From":
-#             new_value = {'$inc': {'in stock': args['in stock']}}
-#             ITEMS_COLLECTION.update_one(filter, new_value)
-#         response = {"message": "Your data has been updated successfully",}
-#         return response, 200
+class ItemsPut(Resource):
+    def put(self):
+        # utc_now = datetime.utcnow()
+        # wat_time = utc_now + timedelta(hours=1)
+        args = item_parser.parse_args()
+        if not args['item']:
+            abort(404, message="Item not found, kindly contact Lorkorblaq")
+        filter = {'item': args['item']}
+        if args['direction'] == "To": 
+            new_value = {'$inc': {'in stock': -args['in stock']}}
+            ITEMS_COLLECTION.update_one(filter, new_value)
+        elif args['direction'] == "From":
+            new_value = {'$inc': {'in stock': args['in stock']}}
+            ITEMS_COLLECTION.update_one(filter, new_value)
+        response = {"message": "Your data has been updated successfully",}
+        return response, 200
         
