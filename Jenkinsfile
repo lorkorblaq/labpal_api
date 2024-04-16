@@ -2,7 +2,8 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'lorkorblaq/clinicalx_api'
-        DOCKER_TAG = "${DOCKER_IMAGE}:${BUILD_NUMBER}" 
+        DOCKER_TAG = "${DOCKER_IMAGE}:latest"
+        // ${BUILD_NUMBER}" 
         GIT_CREDENTIALS = 'gitpass'
         DOCKER_CREDENTIALS= 'dockerpass'
         DOCKERFILE_PATH = 'Dockerfile'
