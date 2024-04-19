@@ -1,12 +1,17 @@
 from flask import Flask, request, jsonify, render_template, Blueprint
 from flask_restful import Api
 from flask_cors import CORS
-from items_api import *  # Import your resources
-from put_in_use_api import *
-from user_api import *
-from channels_api import *
-from lot_exp_api import *
-
+# from items_api import *  # Import your resources
+# from put_in_use_api import *
+# from user_api import *
+# from channels_api import *
+# from lot_exp_api import *
+from end_points.items_api import *
+from end_points.put_in_use_api import *
+from end_points.user_api import *
+from end_points.channels_api import *
+from end_points.lot_exp_api import *
+from end_points.messenger_api import *
 
 
 app = Flask(__name__)
@@ -42,6 +47,16 @@ api.add_resource(ChannelGetAll, "/api/channels/get/")
 #lot exp
 api.add_resource(Lot_exp_Get, "/api/lotexp/get/")
 api.add_resource(Lot_exp_Push, "/api/lotexp/push/<string:user_id>/")
+
+#messenger
+api.add_resource(CreatePot, '/api/pot/create/<string:user_id>')
+api.add_resource(GetPot, '/api/pot/get/')
+api.add_resource(JoinPot, '/api/pot/join/<string:user_id>/<string:pot_id>/')
+api.add_resource(LeavePot, '/api/pot/leave/<string:user_id>/')
+api.add_resource(PotMessage, '/api/pot/message/push/<string:sender_id>/<string:pot_id>/')
+api.add_resource(GlobalMessage, '/api/pot/global_message/push/<string:sender_id>/<string:pot_id>/')
+api.add_resource(PrivateMessage, '/api/message/private_message/push/<string:sender_id>/<string:recipient_id>/')
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000, debug=True)

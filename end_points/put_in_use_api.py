@@ -24,11 +24,10 @@ class P_in_usePush(Resource):
             args = put_in_use_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             item = ITEMS_COLLECTION.find_one({'item': args['item']})
+            bench = item.get('bench')
             name = user.get('firstname') + ' ' + user.get('lastname')
-
             if not user:
                 return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
-
             if not item:
                 return {"message": "Item does not exist, kindly contact Lorkorblaq"}, 400
 
@@ -39,15 +38,17 @@ class P_in_usePush(Resource):
             piu = {
                 'user': name,
                 'item': args["item"],
-                'bench': args["bench"],
+                'bench': bench,
                 'machine': args["machine"],
                 'quantity': args["quantity"],
                 'description': args["description"],
                 'created at': wat_time,
             }
-            PUT_IN_USE_COLLECTION.insert_one(piu)
+            inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id 
+            inserted_id = str(inserted_id)           
             response = {
                 "message": "Item put in use successfully",
+                'piu_id': inserted_id
             }
             return response, 200
         except Exception as e:

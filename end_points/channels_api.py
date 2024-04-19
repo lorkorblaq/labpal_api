@@ -66,9 +66,11 @@ class ChannelPush(Resource):
             #         }
             #         return response, 200
             # except:
-            CHANNELS_COLLECTION.insert_one(channel)
+            inserted_id = CHANNELS_COLLECTION.insert_one(channel).inserted_id
+            inserted_id = str(inserted_id)
             response = {
                 "message": "Channel created successfully",
+                "channel_id": inserted_id
             }
             return response, 200
         except Exception as e:

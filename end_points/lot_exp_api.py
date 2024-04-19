@@ -41,9 +41,11 @@ class Lot_exp_Push(Resource):
             return {"message": "Item does not exist, kindly contact Lorkorblaq"}, 400
         else:
             try:
-                LOT_EXP_COLLECTION.insert_one(lot_exp)
+                inserted_id = LOT_EXP_COLLECTION.insert_one(lot_exp).inserted_id
+                inserted_id = str(inserted_id)
                 response = {
                         "message": "lot exp created successfully",
+                        "lot_exp_id": inserted_id
                     }
                 return response, 200
             except Exception as e:

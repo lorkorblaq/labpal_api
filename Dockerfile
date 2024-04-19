@@ -11,7 +11,6 @@ COPY . /clinicalx_api/
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 3000
-
 ENV FLASK_APP=api.py
 
 # Run app.py when the container launches
