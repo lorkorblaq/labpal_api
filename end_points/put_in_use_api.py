@@ -19,7 +19,7 @@ put_in_use_parser.add_argument("description", type=str, help="Description is req
 class P_in_usePush(Resource):
     def post(self, user_id):
         try:
-            utc_now = datetime.utcnow()
+            utc_now = datetime.now()
             wat_time = utc_now + timedelta(hours=1)
             args = put_in_use_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})

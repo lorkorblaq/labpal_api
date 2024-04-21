@@ -9,10 +9,8 @@ USERS_COLLECTION = db_clinical['users']
 CONVERSATION_COLLECTION = db_clinical['conversations']
 MESSAGING_COLLECTION = db_clinical['messaging']
 
-
 app = Flask(__name__)
 api = Api(app)
-
 
 # Store room information
 rooms = {}
@@ -22,6 +20,19 @@ messenger_parser = reqparse.RequestParser()
 messenger_parser.add_argument('message', type=str, required=False, help='Message is required')
 messenger_parser.add_argument('pot_name', type=str, required=False, help='Pot name is required')
 messenger_parser.add_argument('description', type=str, required=False)
+
+#utiliy functions
+def get_conversation_id(sender_id, recipient_id):
+    conversation = CONVERSATION_COLLECTION.find_one({'participants': {'$all': [sender_id, recipient_id]}})
+    if conversation is None:
+        conversation_id = str(ObjectId())  # Generate unique conversation ID
+        CONVERSATION_COLLECTION.insert_one({'_id': conversation_id, 'participants': [sender_id, recipient_id]})
+        return conversation_id
+    elif conversation is not None:
+            conversation_id = conversation['_id']
+            return conversation_id
+
+
 
 class CreatePot(Resource):
     def post(self, user_id):
@@ -41,7 +52,8 @@ class CreatePot(Resource):
             # Insert pot document into the POT_COLLECTION
             pot_doc = {
                 'pot_name': pot_name,
-                'admin': user_id,  # The user who created the pot is the admin
+                'created_by': user_id,
+                'admin': [user_id],  # The user who created the pot is the admin
                 'members': [user_id],
                 'description': description,
                 'created_at': datetime.now()
@@ -51,7 +63,7 @@ class CreatePot(Resource):
         except Exception as e:
             return {'error': str(e)}, 500  # Internal Server Error for MongoDB-related errors
 
-class GetPot(Resource):      
+class GetPots(Resource):      
     def get(self):
         results = list(POT_COLLECTION.find())
         if not results:
@@ -77,14 +89,10 @@ class GetPot(Resource):
         response = {"pots": pot_list}
         return response, 200
     
-
-
 class JoinPot(Resource):
     def post(self, user_id, pot_id):
         try:
-            args = messenger_parser.parse_args()
-            pot_name = args['pot_name']
-            
+            args = messenger_parser.parse_args()            
             # Check if the user exists
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             if user is None:
@@ -92,12 +100,11 @@ class JoinPot(Resource):
             
             # Get the user's full name
             username = user.get('firstname') + ' ' + user.get('lastname')
-            
             # Check if the pot exists
             pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
-            pot_name = pot.get('pot_name')
             if pot is None:
-                return {'error': f'{pot_name} does not exist'}, 404
+                return {'error': f'Pot does not exist'}, 404
+            pot_name = pot.get('pot_name')
             
             # Check if the user is already a member of the pot
             if user_id in pot.get('members', []):
@@ -111,11 +118,12 @@ class JoinPot(Resource):
             return {'error': str(e)}, 500  # Internal Server Error for MongoDB-related errors
 
 class LeavePot(Resource):
-    def post(self, user_id):
+    def post(self, user_id, pot_id):
         args = messenger_parser.parse_args()
-        pot_name = args['pot_name']
-        pot = POT_COLLECTION.find_one({'pot_name': pot_name})
+        # pot = POT_COLLECTION.find_one({'pot_name': pot_name})
         user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+        pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
+        pot_name = pot.get('pot_name')
         username = user.get('firstname') + ' ' + user.get('lastname')
         if user is None:
             return {'error': 'User does not exist'}, 404
@@ -126,6 +134,61 @@ class LeavePot(Resource):
             return {'error': f'{username} is not in the pot'}, 400
         POT_COLLECTION.update_one({'pot_name': pot_name}, {'$pull': {'members': user_id}})
         return {'message': f'{username} left the pot'}, 200
+
+class GetPrivateMessages(Resource):
+    def get(self, sender_id, recipient_id):
+        try:
+            # Ensure sender and recipient exist
+            sender = USERS_COLLECTION.find_one({'_id': ObjectId(sender_id)})
+            recipient = USERS_COLLECTION.find_one({'_id': ObjectId(recipient_id)})
+            if sender is None and recipient is None:
+                return {'error': 'Sender and recipient does not exist'}, 404
+            conversation_id = get_conversation_id(sender_id, recipient_id)
+            messages = MESSAGING_COLLECTION.find({'conversation_id': conversation_id})
+            if not messages:
+                return {'message': 'No messages found'}, 404
+            keys = messages[0].keys() if messages else []
+            message_list = []
+            for message in messages:
+                message_data = {}
+                for key in keys:
+                    value = message[key]
+                    # Convert ObjectId to string
+                    if isinstance(value, ObjectId):
+                        value = str(value)
+                    elif isinstance(value, datetime):
+                        value = value.isoformat()
+                    message_data[key] = value
+                    message_list.append(message_data)
+            return {'messages': message_list}, 200
+        except Exception as e:
+            return {'error': str(e)}, 500
+        
+class GetPotMessages(Resource):
+    def get(self, pot_id):
+        try:
+            pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
+            if pot is None:
+                return {'error': 'Pot does not exist'}, 404
+            results = list(MESSAGING_COLLECTION.find())
+            keys = results[0].keys() if results else []
+            pot_messages = []
+            for result in results:
+                pot_data = {}
+                for key in keys:
+                    value = result[key]
+                    # Convert ObjectId to string
+                    if isinstance(value, ObjectId):
+                        value = str(value)
+                    elif isinstance(value, datetime):
+                        value = value.isoformat()
+                    pot_data[key] = value
+                    pot_messages.append(pot_data) 
+
+            return {'pot_messages': pot_messages}, 200   
+
+        except Exception as e:
+            return {'error': str(e)}, 500
 
 class PrivateMessage(Resource):
     def post(self, sender_id, recipient_id):
@@ -139,13 +202,14 @@ class PrivateMessage(Resource):
                 return {'error': 'Sender and recipient does not exist'}, 404
             
             # Create conversation document if it doesn't exist
-            conversation = CONVERSATION_COLLECTION.find_one({'participants': {'$all': [sender_id, recipient_id]}})
-            if conversation is None:
-                conversation_id = str(ObjectId())  # Generate unique conversation ID
-                CONVERSATION_COLLECTION.insert_one({'_id': conversation_id, 'participants': [sender_id, recipient_id]})
-            else:
-                conversation_id = conversation['_id']
-            
+            conversation_id = get_conversation_id(sender_id, recipient_id)
+            # conversation = CONVERSATION_COLLECTION.find_one({'participants': {'$all': [sender_id, recipient_id]}})
+            # if conversation is None:
+            #     conversation_id = str(ObjectId())  # Generate unique conversation ID
+            #     CONVERSATION_COLLECTION.insert_one({'_id': conversation_id, 'participants': [sender_id, recipient_id]})
+            # else:
+            #     conversation_id = conversation['_id']
+    
             # Store message in message collection
             message = {
                 'conversation_id': conversation_id,
@@ -165,28 +229,32 @@ class GlobalMessage(Resource):
     def post(self, sender_id, pot_id):
         try:
             args = messenger_parser.parse_args()
-            sender_id = USERS_COLLECTION.find_one({'_id': ObjectId(sender_id)})
-            sender = sender.get('firstname') + ' ' + sender.get('lastname')
+            sender = USERS_COLLECTION.find_one({'_id': ObjectId(sender_id)})
+            pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
+            sender_name = sender.get('firstname') + ' ' + sender.get('lastname')
+            if pot is None:
+                return {'message': 'Pot does not exist'}, 404
             if sender is None:
                 return {'message': 'User does not exist'}, 404
-            pot_id = POT_COLLECTION.find_one({'_id': ObjectId(sender_id)})
-            if pot_id is None:
-                return {'message': 'Pot does not exist'}, 404
             message = args['message']
             # Get all members in the pot
-            members = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)}).get('members', [])
+            members = pot.get('members', [])
             if sender_id not in members:
-                return {'error': f'{sender} is not a member of the pot'}, 400
-            for member in members:
-                if member != sender_id:
-                    message_doc = {
+                return {'error': f'{sender_name} is not a member of the pot'}, 400
+            for member_id in members:
+                if member_id != sender_id:
+                    conversation_id = get_conversation_id(sender_id, member_id)
+                    recipient = USERS_COLLECTION.find_one({'_id': ObjectId(member_id)})
+                    recipient_name = recipient.get('firstname') + ' ' + recipient.get('lastname')
+                    # Construct the private message
+                    private_message = {
                         'sender': sender_id,
-                        'recipient': member,
+                        'conversation_id': conversation_id,
+                        'recipient': member_id,
                         'message': message,
                         'timestamp': datetime.now()
                     }
-                    MESSAGING_COLLECTION.insert_one(message_doc)
-
+                    MESSAGING_COLLECTION.insert_one(private_message)                    # MESSAGING_COLLECTION.insert_one(message_doc)
             return {'message': 'Message sent successfully'}, 200
         except Exception as e:
             return {'error': str(e)}, 500
@@ -196,17 +264,18 @@ class PotMessage(Resource):
         try:
             args = messenger_parser.parse_args()
             message = args['message']
-            sender_id = USERS_COLLECTION.find_one({'_id': ObjectId(sender_id)})
-            sender = sender.get('firstname') + ' ' + sender.get('lastname')
-            if sender_id is None:
+            sender = USERS_COLLECTION.find_one({'_id': ObjectId(sender_id)})
+            sender_name = sender.get('firstname') + ' ' + sender.get('lastname')
+            if sender is None:
                 return {'message': 'User does not exist'}, 404
             
-            pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
-            if pot_id is None:
+            pot_document = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
+            if pot_document is None:
                 return {'message': 'Pot does not exist'}, 404
 
             # Check if the sender is a member of the pot
-            if sender_id not in pot.get('members', []):
+            members = pot_document.get('members', [])
+            if sender_id not in members:
                 return {'error': 'Sender is not a member of the pot'}, 400
             
             # Construct the message document
@@ -219,11 +288,31 @@ class PotMessage(Resource):
             
             # Insert the message into the messaging collection
             MESSAGING_COLLECTION.insert_one(message_doc)
-
             return {'message': 'Group message sent successfully'}, 200
         except Exception as e:
             return {'error': str(e)}, 500
+    def get(self, pot_id):
+        try:
+            pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
+            if pot is None:
+                return {'error': 'Pot does not exist'}, 404
+            results = list(MESSAGING_COLLECTION.find())
+            keys = results[0].keys() if results else []
+            pot_list = []
+            for result in results:
+                pot_data = {}
+                for key in keys:
+                    value = result[key]
+                    # Convert ObjectId to string
+                    if isinstance(value, ObjectId):
+                        value = str(value)
+                    elif isinstance(value, datetime):
+                        value = value.isoformat()
+                    pot_data[key] = value
+                    pot_list.append(pot_data)    
 
+        except Exception as e:
+            return {'error': str(e)}, 500
 
 
 if __name__ == '__main__':

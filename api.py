@@ -50,12 +50,15 @@ api.add_resource(Lot_exp_Push, "/api/lotexp/push/<string:user_id>/")
 
 #messenger
 api.add_resource(CreatePot, '/api/pot/create/<string:user_id>')
-api.add_resource(GetPot, '/api/pot/get/')
+api.add_resource(GetPots, '/api/pots/get/')
 api.add_resource(JoinPot, '/api/pot/join/<string:user_id>/<string:pot_id>/')
-api.add_resource(LeavePot, '/api/pot/leave/<string:user_id>/')
+api.add_resource(LeavePot, '/api/pot/leave/<string:user_id>/<string:pot_id>/')
 api.add_resource(PotMessage, '/api/pot/message/push/<string:sender_id>/<string:pot_id>/')
 api.add_resource(GlobalMessage, '/api/pot/global_message/push/<string:sender_id>/<string:pot_id>/')
-api.add_resource(PrivateMessage, '/api/message/private_message/push/<string:sender_id>/<string:recipient_id>/')
+api.add_resource(PrivateMessage, '/api/pm/push/<string:sender_id>/<string:recipient_id>/')
+api.add_resource(GetPrivateMessages, '/api/gpm/<string:sender_id>/<string:recipient_id>/')
+api.add_resource(GetPotMessages, '/api/ggm/<string:pot_id>/')
+
 
 
 if __name__ == "__main__":
