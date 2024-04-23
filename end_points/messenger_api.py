@@ -32,6 +32,13 @@ def get_conversation_id(sender_id, recipient_id):
             conversation_id = conversation['_id']
             return conversation_id
 
+def serialize_pot(pot):
+    serialized_pot = {
+        "_id": str(pot["_id"]),  # Convert ObjectId to string
+        "name": pot["pot_name"],
+        # Add more fields as needed
+    }
+    return serialized_pot
 
 
 class CreatePot(Resource):
@@ -59,7 +66,7 @@ class CreatePot(Resource):
                 'created_at': datetime.now()
             }
             POT_COLLECTION.insert_one(pot_doc)     
-            return {'message': 'Pot created successfully'}, 201  # Use 201 status code for resource creation
+            return {'message': 'Pot created successfully'}, 201  # 201 for resource creation
         except Exception as e:
             return {'error': str(e)}, 500  # Internal Server Error for MongoDB-related errors
 
@@ -88,7 +95,22 @@ class GetPots(Resource):
         
         response = {"pots": pot_list}
         return response, 200
-    
+
+class GetMyPots(Resource):
+    def get(self, user_id):
+        try:
+            user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+            if user is None:
+                return {"message": "User does not exist"}, 404
+            
+            # Find all pots where the user is a member
+            pots = POT_COLLECTION.find({'members': user_id})
+            serialized_pots = [serialize_pot(pot) for pot in pots]
+            
+            return {"pots": serialized_pots}, 200
+        except Exception as e:
+            return {'error': str(e)}, 500  # Internal Server Error for MongoDB-related errors
+
 class JoinPot(Resource):
     def post(self, user_id, pot_id):
         try:
@@ -163,7 +185,41 @@ class GetPrivateMessages(Resource):
             return {'messages': message_list}, 200
         except Exception as e:
             return {'error': str(e)}, 500
-        
+
+class GetConversations(Resource):
+    def get(self, user_id):
+        try:
+            contacts = set()  # Use a set to automatically remove duplicates
+
+            # Find all conversations where the user is either the sender or recipient
+            sender_conversations = MESSAGING_COLLECTION.find({'sender': user_id}, {'recipient': 1})
+            recipient_conversations = MESSAGING_COLLECTION.find({'recipient': user_id}, {'sender': 1})
+
+            # Extract unique user IDs from both sender and recipient conversations
+            for conversation in sender_conversations:
+                contacts.add(conversation['recipient'])
+            for conversation in recipient_conversations:
+                contacts.add(conversation['sender'])
+            
+            # Fetch usernames from USERS_COLLECTION
+            usernames = []
+            for contact_id in contacts:
+                user = USERS_COLLECTION.find_one({'_id': contact_id})
+                if user:
+                    # Concatenate first name and last name to form the username
+                    username = f"{user.get('firstname', '')} {user.get('lastname', '')}".strip()
+                    usernames[str(contact_id)] = username
+
+                    # usernames.append({'user_id': str(contact_id), 'username': username})
+
+            # Return usernames along with user IDs
+            return {'contacts': usernames}, 200
+        except Exception as e:
+            return {'error': str(e)}, 500
+
+
+
+
 class GetPotMessages(Resource):
     def get(self, pot_id):
         try:
@@ -190,7 +246,7 @@ class GetPotMessages(Resource):
         except Exception as e:
             return {'error': str(e)}, 500
 
-class PrivateMessage(Resource):
+class PushPrivateMessage(Resource):
     def post(self, sender_id, recipient_id):
         try:
             args = messenger_parser.parse_args()
@@ -225,7 +281,7 @@ class PrivateMessage(Resource):
             return jsonify({'error': str(e)}), 400
     # def get(self, conversation_id):
 
-class GlobalMessage(Resource):
+class PushGlobalMessage(Resource):
     def post(self, sender_id, pot_id):
         try:
             args = messenger_parser.parse_args()
@@ -259,7 +315,7 @@ class GlobalMessage(Resource):
         except Exception as e:
             return {'error': str(e)}, 500
         
-class PotMessage(Resource):
+class PushPotMessage(Resource):
     def post(self, sender_id, pot_id):
         try:
             args = messenger_parser.parse_args()
