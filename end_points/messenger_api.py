@@ -21,6 +21,7 @@ messenger_parser.add_argument('message', type=str, required=False, help='Message
 messenger_parser.add_argument('pot_name', type=str, required=False, help='Pot name is required')
 messenger_parser.add_argument('description', type=str, required=False)
 
+
 #utiliy functions
 def get_conversation_id(sender_id, recipient_id):
     conversation = CONVERSATION_COLLECTION.find_one({'participants': {'$all': [sender_id, recipient_id]}})
@@ -29,17 +30,17 @@ def get_conversation_id(sender_id, recipient_id):
         CONVERSATION_COLLECTION.insert_one({'_id': conversation_id, 'participants': [sender_id, recipient_id]})
         return conversation_id
     elif conversation is not None:
-            conversation_id = conversation['_id']
-            return conversation_id
+        conversation_id = conversation['_id']
+        return conversation_id
 
 def serialize_pot(pot):
     serialized_pot = {
-        "_id": str(pot["_id"]),  # Convert ObjectId to string
+        "_id": str(pot["_id"]),  
+        # Convert ObjectId to string
         "name": pot["pot_name"],
         # Add more fields as needed
     }
     return serialized_pot
-
 
 class CreatePot(Resource):
     def post(self, user_id):
@@ -72,26 +73,19 @@ class CreatePot(Resource):
 
 class GetPots(Resource):      
     def get(self):
-        results = list(POT_COLLECTION.find())
+        results = POT_COLLECTION.find()
         if not results:
             abort(404, message="No pots found")
-        
-        # Get the keys of the first document (assuming all documents have the same keys)
-        keys = results[0].keys() if results else []
 
-        # Iterate over the results and construct the response dynamically
-        pot_list = []
-        for result in results:
-            pot_data = {}
-            for key in keys:
-                value = result[key]
-                # Convert ObjectId to string
-                if isinstance(value, ObjectId):
-                    value = str(value)
-                elif isinstance(value, datetime):
-                    value = value.isoformat()
-                pot_data[key] = value
-                pot_list.append(pot_data)
+        pot_list = [{
+            "_id":str(result['_id']),
+            "pot_name":result['pot_name'],
+            "created_by":result['created_by'],
+            "admin":result['admin'],
+            "members":result['members'],
+            "description":result['description'],
+            "created_at":result['created_at'].strftime("%Y-%m-%d %H:%M:%S"),
+        }for result in results]
         
         response = {"pots": pot_list}
         return response, 200
@@ -159,29 +153,45 @@ class LeavePot(Resource):
 
 class GetPrivateMessages(Resource):
     def get(self, sender_id, recipient_id):
-        try:
-            # Ensure sender and recipient exist
+        try:# Ensure sender and recipient exist
             sender = USERS_COLLECTION.find_one({'_id': ObjectId(sender_id)})
             recipient = USERS_COLLECTION.find_one({'_id': ObjectId(recipient_id)})
             if sender is None and recipient is None:
                 return {'error': 'Sender and recipient does not exist'}, 404
             conversation_id = get_conversation_id(sender_id, recipient_id)
             messages = MESSAGING_COLLECTION.find({'conversation_id': conversation_id})
+            
             if not messages:
                 return {'message': 'No messages found'}, 404
-            keys = messages[0].keys() if messages else []
-            message_list = []
-            for message in messages:
-                message_data = {}
-                for key in keys:
-                    value = message[key]
-                    # Convert ObjectId to string
-                    if isinstance(value, ObjectId):
-                        value = str(value)
-                    elif isinstance(value, datetime):
-                        value = value.isoformat()
-                    message_data[key] = value
-                    message_list.append(message_data)
+            
+            # keys = messages[0].keys() if messages else []
+
+            # message_list = []
+            # for message in messages:
+            #     print(message)
+            #     message_data = {}
+
+
+            message_list = [{
+                "_id":str(message['_id']),
+                "conversation_id":message['conversation_id'],
+                "sender":message['sender'],
+                "recipient":message['recipient'],
+                "message":message['message'],
+                "timestamp":message['timestamp'].strftime("%Y-%m-%d %H:%M:%S"),
+            }for message in messages]
+
+
+                # for key in keys:
+                #     value = message[key]
+                #     # Convert ObjectId to string
+                #     if isinstance(value, ObjectId):
+                #         value = str(value)
+                #     elif isinstance(value, datetime):
+                #         value = value.isoformat()
+                #     message_data[key] = value
+                #     message_list.append(message_data)
+
             return {'messages': message_list}, 200
         except Exception as e:
             return {'error': str(e)}, 500
@@ -204,21 +214,13 @@ class GetConversations(Resource):
             # Fetch usernames from USERS_COLLECTION
             usernames = []
             for contact_id in contacts:
-                user = USERS_COLLECTION.find_one({'_id': contact_id})
+                user = USERS_COLLECTION.find_one({'_id': ObjectId(contact_id)})
                 if user:
-                    # Concatenate first name and last name to form the username
-                    username = f"{user.get('firstname', '')} {user.get('lastname', '')}".strip()
-                    usernames[str(contact_id)] = username
-
-                    # usernames.append({'user_id': str(contact_id), 'username': username})
-
-            # Return usernames along with user IDs
-            return {'contacts': usernames}, 200
+                    usernames.append({'user_id': str(contact_id), 'username': f"{user.get('firstname', '')} {user.get('lastname', '')}".strip()})
+            response = {'contacts': usernames}
+            return response, 200
         except Exception as e:
             return {'error': str(e)}, 500
-
-
-
 
 class GetPotMessages(Resource):
     def get(self, pot_id):
@@ -226,20 +228,34 @@ class GetPotMessages(Resource):
             pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
             if pot is None:
                 return {'error': 'Pot does not exist'}, 404
-            results = list(MESSAGING_COLLECTION.find())
-            keys = results[0].keys() if results else []
-            pot_messages = []
-            for result in results:
-                pot_data = {}
-                for key in keys:
-                    value = result[key]
-                    # Convert ObjectId to string
-                    if isinstance(value, ObjectId):
-                        value = str(value)
-                    elif isinstance(value, datetime):
-                        value = value.isoformat()
-                    pot_data[key] = value
-                    pot_messages.append(pot_data) 
+            # results = MESSAGING_COLLECTION.find()
+            results = MESSAGING_COLLECTION.find({'recipient': pot_id})
+            # keys = results[0].keys() if results else []
+            # pot_messages = []
+
+            pot_messages = [{
+                "_id":str(message['_id']),
+                # "conversation_id":message['conversation_id'],
+                "sender":message['sender'],
+                "recipient":message['recipient'],
+                "message":message['message'],
+                "timestamp":message['timestamp'].strftime("%Y-%m-%d %H:%M:%S"),
+            }for message in results]
+            print(pot_messages)
+
+
+            # for result in results:
+            #     pot_data = {}
+            #     for key in keys:
+            #         value = result[key]
+            #         # Convert ObjectId to string
+            #         if isinstance(value, ObjectId):
+            #             value = str(value)
+            #         elif isinstance(value, datetime):
+            #             value = value.isoformat()
+            #         pot_data[key] = value
+            #         pot_messages.append(pot_data) 
+
 
             return {'pot_messages': pot_messages}, 200   
 
@@ -370,6 +386,19 @@ class PushPotMessage(Resource):
         except Exception as e:
             return {'error': str(e)}, 500
 
+class AddContact(Resource):
+    def post(self, user_id, contact_id):
+        try:
+            user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+            contact = USERS_COLLECTION.find_one({'_id': ObjectId(contact_id)})
+            if user is None:
+                return {'error': 'User does not exist'}, 404
+            if contact is None:
+                return {'error': 'Contact does not exist'}, 404
+            conversation_id = get_conversation_id(user_id, contact_id)
+            return {'message': 'Contact added successfully'}, 200
+        except Exception as e:
+            return {'error': str(e)}, 500
 
 if __name__ == '__main__':
     app.run(debug=True)

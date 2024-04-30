@@ -52,15 +52,19 @@ api.add_resource(Lot_exp_Push, "/api/lotexp/push/<string:user_id>/")
 api.add_resource(CreatePot, '/api/pot/create/<string:user_id>/')
 api.add_resource(GetPots, '/api/pots/get/')
 api.add_resource(GetMyPots, '/api/pots/get/<string:user_id>/')
+
 api.add_resource(GetConversations, '/api/conversations/get/<string:user_id>/')
+api.add_resource(GetPrivateMessages, '/api/gpm/<string:sender_id>/<string:recipient_id>/')
+api.add_resource(GetPotMessages, '/api/gpotm/<string:pot_id>/')
 
 api.add_resource(JoinPot, '/api/pot/join/<string:user_id>/<string:pot_id>/')
 api.add_resource(LeavePot, '/api/pot/leave/<string:user_id>/<string:pot_id>/')
+
 api.add_resource(PushPotMessage, '/api/pot/message/push/<string:sender_id>/<string:pot_id>/')
 api.add_resource(PushGlobalMessage, '/api/pot/global_message/push/<string:sender_id>/<string:pot_id>/')
 api.add_resource(PushPrivateMessage, '/api/pm/push/<string:sender_id>/<string:recipient_id>/')
-api.add_resource(GetPrivateMessages, '/api/gpm/<string:sender_id>/<string:recipient_id>/')
-api.add_resource(GetPotMessages, '/api/ggm/<string:pot_id>/')
+
+api.add_resource(AddContact, '/api/contact/add/<string:user_id>/<string:contact_id>/')
 
 
 
