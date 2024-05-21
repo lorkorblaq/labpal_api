@@ -108,7 +108,6 @@ class GetMyPots(Resource):
 class JoinPot(Resource):
     def post(self, user_id, pot_id):
         try:
-            args = messenger_parser.parse_args()            
             # Check if the user exists
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             if user is None:
@@ -135,7 +134,6 @@ class JoinPot(Resource):
 
 class LeavePot(Resource):
     def post(self, user_id, pot_id):
-        args = messenger_parser.parse_args()
         # pot = POT_COLLECTION.find_one({'pot_name': pot_name})
         user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
         pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
@@ -144,12 +142,34 @@ class LeavePot(Resource):
         if user is None:
             return {'error': 'User does not exist'}, 404
         if pot is None:
-            return {'error': 'Pot name is required'}, 400
+            return {'error': 'Pot is required'}, 400
                 # Check if the user is a member of the pot
         if user_id not in pot.get('members', []):
             return {'error': f'{username} is not in the pot'}, 400
+        # If the user is the admin of the pot, delete the pot entirely
+        # print(pot.get('created_by'))
+        if pot.get('created_by') == user_id:
+            POT_COLLECTION.delete_one({'_id': ObjectId(pot_id)})
+            return {'message': f'{username} was the creator and the pot has been deleted'}, 200
         POT_COLLECTION.update_one({'pot_name': pot_name}, {'$pull': {'members': user_id}})
         return {'message': f'{username} left the pot'}, 200
+
+class DeletePot(Resource):
+    def delete(self, user_id, pot_id):
+        try:
+            user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+            pot = POT_COLLECTION.find_one({'_id': ObjectId(pot_id)})
+            if user is None:
+                return {'error': 'User does not exist'}, 404
+            if pot is None:
+                return {'error': 'Pot does not exist'}, 404
+            if user_id not in pot.get('admin', []):
+                return {'error': 'User is not an admin of the pot'}, 400
+            POT_COLLECTION.delete_one({'_id': ObjectId(pot_id)})
+            return {'message': 'Pot deleted successfully'}, 200
+        except Exception as e:
+            return {'error': str(e)}, 500
+        
 
 class GetPrivateMessages(Resource):
     def get(self, sender_id, recipient_id):
@@ -199,28 +219,31 @@ class GetPrivateMessages(Resource):
 class GetConversations(Resource):
     def get(self, user_id):
         try:
-            contacts = set()  # Use a set to automatically remove duplicates
+            # Find conversations where the user is a participant
+            conversations = CONVERSATION_COLLECTION.find({'participants': user_id})
 
-            # Find all conversations where the user is either the sender or recipient
-            sender_conversations = MESSAGING_COLLECTION.find({'sender': user_id}, {'recipient': 1})
-            recipient_conversations = MESSAGING_COLLECTION.find({'recipient': user_id}, {'sender': 1})
+            # Set to store unique participants
+            participants = set()
 
-            # Extract unique user IDs from both sender and recipient conversations
-            for conversation in sender_conversations:
-                contacts.add(conversation['recipient'])
-            for conversation in recipient_conversations:
-                contacts.add(conversation['sender'])
-            
+            # Extract unique participants from conversations
+            for conversation in conversations:
+                participants.update(conversation['participants'])
+
+            # Remove the user's own ID from the participants set
+            participants.remove(user_id)
+
             # Fetch usernames from USERS_COLLECTION
             usernames = []
-            for contact_id in contacts:
-                user = USERS_COLLECTION.find_one({'_id': ObjectId(contact_id)})
+            for participant_id in participants:
+                user = USERS_COLLECTION.find_one({'_id': ObjectId(participant_id)})
                 if user:
-                    usernames.append({'user_id': str(contact_id), 'username': f"{user.get('firstname', '')} {user.get('lastname', '')}".strip()})
+                    usernames.append({'user_id': str(participant_id), 'username': f"{user.get('firstname', '')} {user.get('lastname', '')}".strip()})
+            
             response = {'contacts': usernames}
             return response, 200
         except Exception as e:
             return {'error': str(e)}, 500
+
 
 class GetPotMessages(Resource):
     def get(self, pot_id):
@@ -241,21 +264,7 @@ class GetPotMessages(Resource):
                 "message":message['message'],
                 "timestamp":message['timestamp'].strftime("%Y-%m-%d %H:%M:%S"),
             }for message in results]
-            print(pot_messages)
-
-
-            # for result in results:
-            #     pot_data = {}
-            #     for key in keys:
-            #         value = result[key]
-            #         # Convert ObjectId to string
-            #         if isinstance(value, ObjectId):
-            #             value = str(value)
-            #         elif isinstance(value, datetime):
-            #             value = value.isoformat()
-            #         pot_data[key] = value
-            #         pot_messages.append(pot_data) 
-
+            # print(pot_messages)
 
             return {'pot_messages': pot_messages}, 200   
 
@@ -399,6 +408,34 @@ class AddContact(Resource):
             return {'message': 'Contact added successfully'}, 200
         except Exception as e:
             return {'error': str(e)}, 500
+
+class DeleteContact(Resource):
+    def delete(self, user_id, contact_id):
+        try:
+            # Check if the user and contact exist
+            user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+            contact = USERS_COLLECTION.find_one({'_id': ObjectId(contact_id)})
+            if user is None:
+                return {'error': 'User does not exist'}, 404
+            if contact is None:
+                return {'error': 'Contact does not exist'}, 404
+            
+            # Get the conversation ID
+            conversation_id = get_conversation_id(user_id, contact_id)
+            
+            # Delete the conversation from the database
+            deleted_conversation = CONVERSATION_COLLECTION.delete_one({'participants': { '$all': [user_id, contact_id] }})
+            
+            # Check if the conversation was successfully deleted
+            if deleted_conversation.deleted_count == 1:
+                return {'message': 'Conversation deleted successfully'}, 200
+            else:
+                return {'error': 'Conversation not found'}, 404
+        except Exception as e:
+            return {'error': str(e)}, 500
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

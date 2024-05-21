@@ -28,6 +28,7 @@ api.add_resource(UsersGetAll, "/api/users/get/")
 #items
 api.add_resource(ItemsResource, "/api/items/get/")
 api.add_resource(ItemsPut, "/api/item/put/")
+api.add_resource(ItemsRequisite, "/api/items/requisite/")
 
 
 #put in use
@@ -59,12 +60,15 @@ api.add_resource(GetPotMessages, '/api/gpotm/<string:pot_id>/')
 
 api.add_resource(JoinPot, '/api/pot/join/<string:user_id>/<string:pot_id>/')
 api.add_resource(LeavePot, '/api/pot/leave/<string:user_id>/<string:pot_id>/')
+api.add_resource(DeletePot, '/api/pot/delete/<string:user_id>/<string:pot_id>/')
 
 api.add_resource(PushPotMessage, '/api/pot/message/push/<string:sender_id>/<string:pot_id>/')
 api.add_resource(PushGlobalMessage, '/api/pot/global_message/push/<string:sender_id>/<string:pot_id>/')
 api.add_resource(PushPrivateMessage, '/api/pm/push/<string:sender_id>/<string:recipient_id>/')
 
 api.add_resource(AddContact, '/api/contact/add/<string:user_id>/<string:contact_id>/')
+api.add_resource(DeleteContact, '/api/contact/delete/<string:user_id>/<string:contact_id>/')
+
 
 
 
