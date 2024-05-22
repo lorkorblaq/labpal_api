@@ -26,7 +26,7 @@ pipeline {
                     sh "docker rm clinicalx_api_build || true"
                     sh "docker run -d --name clinicalx_api_build -p 2997:3000 ${DOCKER_TAG}"
                     // sh "docker exec clinicalx_api_build pytest tests/test_user_api.py"
-                    sh "docker exec clinicalx_api_build pytest --junitxml=pytest-report.xml endpoints/tests/test_user_api.py"
+                    sh "docker exec clinicalx_api_build pytest --junitxml=pytest-report.xml end_points/tests/test_user_api.py"
                     sh "docker stop clinicalx_api_build"
                     sh "docker rm clinicalx_api_build"
                     // sh "docker rmi ${DOCKER_TAG} -f"                    
