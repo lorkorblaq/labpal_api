@@ -27,8 +27,11 @@ api.add_resource(UsersGetAll, "/api/users/get/")
 
 #items
 api.add_resource(ItemsResource, "/api/items/get/")
+api.add_resource(ItemsBulkPush, "/api/items/bulkpush/")
 api.add_resource(ItemsPut, "/api/item/put/")
 api.add_resource(ItemsRequisite, "/api/items/requisite/")
+api.add_resource(ItemsDeleteResource, "/api/items/deleteall/")
+
 
 
 #put in use

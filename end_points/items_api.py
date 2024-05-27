@@ -1,8 +1,9 @@
 from flask_restful import Resource, abort, reqparse
-from flask import jsonify, make_response
+from flask import jsonify, make_response, request
 from bson import json_util, ObjectId
 from engine import db_clinical
 import math
+
 
 ITEMS_COLLECTION = db_clinical['items']
 item_parser = reqparse.RequestParser()
@@ -24,6 +25,28 @@ class ItemsResource(Resource):
         # Create a Flask response with JSON data
         # print((response))
         return response_data, 200
+class ItemsBulkPush(Resource):
+    def post(self):
+        try:
+            json_data = request.get_json()
+            if not json_data:
+                abort(400, message="No JSON data provided")
+            
+            # Ensure the required columns are present
+            required_columns = {'item', 'in stock', 'tests/vial', 'vials/pack', 'reOrderLevel', 'class', 'category', 'tests/day', 'bench'}
+
+            for entry in json_data:
+                if not required_columns.issubset(entry.keys()):
+                    abort(400, message=f"JSON data must contain keys: {', '.join(required_columns)}")
+            
+            # Insert data into the MongoDB collection
+            ITEMS_COLLECTION.insert_many(json_data)
+            
+            return make_response(jsonify({"message": "Data imported successfully"}), 201)
+        
+        except Exception as e:
+            abort(500, message=str(e))
+
 
 class ItemsPut(Resource):
     def put(self):
@@ -123,3 +146,14 @@ class ItemsRequisite(Resource):
 
         response = {"requested": results,}
         return response, 200
+
+
+class ItemsDeleteResource(Resource):
+    def delete(self):
+        try:
+            result = ITEMS_COLLECTION.delete_many({})
+            if result.deleted_count == 0:
+                abort(404, message="No items to delete")
+            return make_response(jsonify({"message": "All items deleted successfully"}), 200)
+        except Exception as e:
+            abort(500, message=str(e))
