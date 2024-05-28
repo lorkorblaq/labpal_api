@@ -9,8 +9,6 @@ USERS_COLLECTION = db_clinical['users']
 CONVERSATION_COLLECTION = db_clinical['conversations']
 MESSAGING_COLLECTION = db_clinical['messaging']
 
-app = Flask(__name__)
-api = Api(app)
 
 # Store room information
 rooms = {}
@@ -433,9 +431,3 @@ class DeleteContact(Resource):
                 return {'error': 'Conversation not found'}, 404
         except Exception as e:
             return {'error': str(e)}, 500
-
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True)

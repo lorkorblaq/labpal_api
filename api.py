@@ -12,6 +12,7 @@ from end_points.user_api import *
 from end_points.channels_api import *
 from end_points.lot_exp_api import *
 from end_points.messenger_api import *
+from end_points.organisation import *
 
 
 app = Flask(__name__)
@@ -24,6 +25,10 @@ api.add_resource(UserPut, "/api/user/put/<string:user_id>/")
 api.add_resource(UserDel, "/api/user/del/<string:user_id>/")
 api.add_resource(UserGetOne, "/api/user/get/<string:user_id>/")
 api.add_resource(UsersGetAll, "/api/users/get/")
+
+#organisations
+api.add_resource(OrganisationPush, "/api/org/push/")
+api.add_resource(GetOrganisation, "/api/org/get/<string:name>/")
 
 #items
 api.add_resource(ItemsResource, "/api/items/get/")
