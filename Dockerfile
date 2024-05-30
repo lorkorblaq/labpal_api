@@ -1,6 +1,6 @@
 # Use an official Python runtime as a parent image
 FROM python:3.11
-
+# docker build -t lorkorblaq/clinicalx_api:latest -f Dockerfile .
 # Set the working directory to /api
 WORKDIR /clinicalx_api/
 

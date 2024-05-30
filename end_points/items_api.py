@@ -11,60 +11,6 @@ item_parser.add_argument("item", type=str, help="item is required", required=Tru
 item_parser.add_argument("direction", type=str, help="Direction is required", required=True)
 item_parser.add_argument("in stock", type=int, help="Quantity is required", required=True)
 
-class ItemsResource(Resource):
-    def get(self):    
-        results = list(ITEMS_COLLECTION.find())
-        if not results:
-            abort(404, message="No Item Available")
-        item_list=[]
-        # Convert ObjectId to string for JSON serialization
-        for result in results:
-            result["_id"] = str(result["_id"])
-            item_list.append(result)
-        response_data = {"items": item_list}
-        # Create a Flask response with JSON data
-        # print((response))
-        return response_data, 200
-
-class ItemsBulkPush(Resource):
-    def post(self):
-        try:
-            json_data = request.get_json()
-            if not json_data:
-                abort(400, message="No JSON data provided")
-            
-            # Ensure the required columns are present
-            required_columns = {'item', 'in stock', 'tests/vial', 'vials/pack', 'reOrderLevel', 'class', 'category', 'tests/day', 'bench'}
-
-            for entry in json_data:
-                if not required_columns.issubset(entry.keys()):
-                    abort(400, message=f"JSON data must contain keys: {', '.join(required_columns)}")
-            
-            # Insert data into the MongoDB collection
-            ITEMS_COLLECTION.insert_many(json_data)
-            
-            return make_response(jsonify({"message": "Data imported successfully"}), 201)
-        
-        except Exception as e:
-            abort(500, message=str(e))
-
-class ItemsPut(Resource):
-    def put(self):
-        # utc_now = datetime.utcnow()
-        # wat_time = utc_now + timedelta(hours=1)
-        args = item_parser.parse_args()
-        if not args['item']:
-            abort(404, message="Item not found, kindly contact Lorkorblaq")
-        filter = {'item': args['item']}
-        if args['direction'] == "To": 
-            new_value = {'$inc': {'in stock': -args['in stock']}}
-            ITEMS_COLLECTION.update_one(filter, new_value)
-        elif args['direction'] == "From":
-            new_value = {'$inc': {'in stock': args['in stock']}}
-            ITEMS_COLLECTION.update_one(filter, new_value)
-        response = {"message": "Your data has been updated successfully",}
-        return response, 200
- 
 def requiste(bench, days, categories):
     query = {}
     if bench:
@@ -122,6 +68,60 @@ def requiste(bench, days, categories):
 
 
     # Example usage:
+
+class ItemsResource(Resource):
+    def get(self):    
+        results = list(ITEMS_COLLECTION.find())
+        if not results:
+            abort(404, message="No Item Available")
+        item_list=[]
+        # Convert ObjectId to string for JSON serialization
+        for result in results:
+            result["_id"] = str(result["_id"])
+            item_list.append(result)
+        response_data = {"items": item_list}
+        # Create a Flask response with JSON data
+        # print((response))
+        return response_data, 200
+
+class ItemsBulkPush(Resource):
+    def post(self):
+        try:
+            json_data = request.get_json()
+            if not json_data:
+                abort(400, message="No JSON data provided")
+            
+            # Ensure the required columns are present
+            required_columns = {'item', 'in stock', 'tests/vial', 'vials/pack', 'reOrderLevel', 'class', 'category', 'tests/day', 'bench'}
+
+            for entry in json_data:
+                if not required_columns.issubset(entry.keys()):
+                    abort(400, message=f"JSON data must contain keys: {', '.join(required_columns)}")
+            
+            # Insert data into the MongoDB collection
+            ITEMS_COLLECTION.insert_many(json_data)
+            
+            return make_response(jsonify({"message": "Data imported successfully"}), 201)
+        
+        except Exception as e:
+            abort(500, message=str(e))
+
+class ItemsPut(Resource):
+    def put(self):
+        # utc_now = datetime.utcnow()
+        # wat_time = utc_now + timedelta(hours=1)
+        args = item_parser.parse_args()
+        if not args['item']:
+            abort(404, message="Item not found, kindly contact Lorkorblaq")
+        filter = {'item': args['item']}
+        if args['direction'] == "To": 
+            new_value = {'$inc': {'in stock': -args['in stock']}}
+            ITEMS_COLLECTION.update_one(filter, new_value)
+        elif args['direction'] == "From":
+            new_value = {'$inc': {'in stock': args['in stock']}}
+            ITEMS_COLLECTION.update_one(filter, new_value)
+        response = {"message": "Your data has been updated successfully",}
+        return response, 200
 
 class ItemsRequisite(Resource):
     def post(self, ):
