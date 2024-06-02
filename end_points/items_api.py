@@ -11,13 +11,14 @@ item_parser.add_argument("item", type=str, help="item is required", required=Tru
 item_parser.add_argument("direction", type=str, help="Direction is required", required=True)
 item_parser.add_argument("in stock", type=int, help="Quantity is required", required=True)
 
+
 def requiste(bench, days, categories):
     query = {}
     if bench:
         query["bench"] = bench
     if categories:
         query["category"] = {"$in": categories}
-    print(query)
+    print("Query:", query)
     
     pipeline = [
         # Match documents based on the bench field
@@ -32,8 +33,16 @@ def requiste(bench, days, categories):
         }},
         {"$addFields": {
             "total_tests_in_stock": {"$multiply": ["$in_stock", "$tests_per_vial"]},
-            "total_days_to_last": {"$ceil": {"$divide": ["$total_tests_in_stock", "$tests_per_day"]}},
             "quantity_test_requested": {"$multiply": ["$tests_per_day", days]}
+        }},
+        {"$addFields": {
+            "total_days_to_last": {
+                "$cond": {
+                    "if": {"$gt": ["$tests_per_day", 0]},
+                    "then": {"$ceil": {"$divide": ["$total_tests_in_stock", "$tests_per_day"]}},
+                    "else": None
+                }
+            }
         }}
     ]
     
@@ -43,24 +52,26 @@ def requiste(bench, days, categories):
     # Convert MongoDB documents to dictionaries
     result_dicts = []
     for item in result:
-        if item.get("total_tests_in_stock") < item.get("quantity_test_requested"):
-            item["amount_needed"] = item.get("quantity_test_requested") - item.get("total_tests_in_stock")
-            amount_needed = math.ceil(item.get("amount_needed") / item.get("tests_per_vial"))
-        else:
-            item["amount_needed"] = 0
-            amount_needed = 0
+        print("Item:", item)
+        if item.get("total_tests_in_stock") is not None:
+            if item.get("total_tests_in_stock") < item.get("quantity_test_requested"):
+                item["amount_needed"] = item.get("quantity_test_requested") - item.get("total_tests_in_stock")
+                amount_needed = math.ceil(item.get("amount_needed") / item.get("tests_per_vial"))
+            else:
+                item["amount_needed"] = 0
+                amount_needed = 0
 
-        result_dict = {
-            "bench": item.get("bench", ""),
-            "in_stock": item.get("in_stock", ""),
-            "item": item.get("item", ""),
-            "tests_per_day": item.get("tests_per_day", ""),
-            "total_tests_in_stock": item.get("total_tests_in_stock", ""),
-            "quantity_test_requested": item.get("quantity_test_requested", ""),
-            "total_days_to_last": item.get("total_days_to_last", ""),
-            "amount_needed": amount_needed
-        }
-        result_dicts.append(result_dict)
+            result_dict = {
+                "bench": item.get("bench", ""),
+                "in_stock": item.get("in_stock", ""),
+                "item": item.get("item", ""),
+                "tests_per_day": item.get("tests_per_day", ""),
+                "total_tests_in_stock": item.get("total_tests_in_stock", ""),
+                "quantity_test_requested": item.get("quantity_test_requested", ""),
+                "total_days_to_last": item.get("total_days_to_last", ""),
+                "amount_needed": amount_needed
+            }
+            result_dicts.append(result_dict)
     
     # Return the result as JSON
     return result_dicts
@@ -141,7 +152,7 @@ class ItemsRequisite(Resource):
 
         response = {"requested": results,}
         return response, 200
-
+    
 class ItemsDeleteResource(Resource):
     def delete(self):
         try:
