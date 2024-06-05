@@ -11,7 +11,7 @@ password = os.getenv('MONGODB_PASSWORD')
 # uri_production = "mongodb://clinicalx:Ilupeju2024@localhost:27017"
 uri_development = f"mongodb+srv://{user}:{password}@clinicalx.aqtbwah.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri_development)
-try:
+try:    
     client.admin.command('ping')
     print("You successfully connected to Clinicalx MongoDB!")
 except Exception as e:  
