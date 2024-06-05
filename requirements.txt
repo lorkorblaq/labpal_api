@@ -16,3 +16,4 @@ Werkzeug==3.0.1
 gunicorn
 pytest
 requests
+python-dotenv

@@ -14,7 +14,6 @@ from end_points.lot_exp_api import *
 from end_points.messenger_api import *
 from end_points.organisation import *
 
-
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
