@@ -13,6 +13,7 @@ from end_points.channels_api import *
 from end_points.lot_exp_api import *
 from end_points.messenger_api import *
 from end_points.organisation import *
+from end_points.events import *
 
 app = Flask(__name__)
 api = Api(app)
@@ -24,6 +25,17 @@ api.add_resource(UserPut, "/api/user/put/<string:user_id>/")
 api.add_resource(UserDel, "/api/user/del/<string:user_id>/")
 api.add_resource(UserGetOne, "/api/user/get/<string:user_id>/")
 api.add_resource(UsersGetAll, "/api/users/get/")
+
+#events
+api.add_resource(EventPush, "/api/event/push/<string:user_id>/<string:event_type>/")
+api.add_resource(EventPut, "/api/event/put/<string:user_id>/<string:event_id>/")
+api.add_resource(EventDel, "/api/event/del/<string:user_id>/<string:event_id>/")
+api.add_resource(EventGetOne, "/api/event/get/<string:user_id>/<string:event_id>/")
+api.add_resource(EventGetAll, "/api/events/get/<string:user_id>/<string:event_type>/")
+api.add_resource(ToDoPush, "/api/event/to-do-push/<string:user_id>/")
+api.add_resource(ToDoGetOne, "/api/event/to-do-get/<string:user_id>/<string:date>/")
+api.add_resource(ToDoGetAll, "/api/event/to-do-get-all/<string:user_id>/")
+
 
 #organisations
 api.add_resource(OrganisationPush, "/api/org/push/")

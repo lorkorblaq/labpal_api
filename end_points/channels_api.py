@@ -31,7 +31,7 @@ channels_parser.add_argument("expiration", type=valid_date, required=False)
 class ChannelPush(Resource):
     def post(self, user_id):
         try:
-            utc_now = datetime.utcnow()
+            utc_now = datetime.now()
             wat_time = utc_now + timedelta(hours=1)
             args = channels_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
