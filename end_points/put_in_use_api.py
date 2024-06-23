@@ -24,15 +24,16 @@ class P_in_usePush(Resource):
             args = put_in_use_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             item = ITEMS_COLLECTION.find_one({'item': args['item']})
-            bench = item.get('bench')
-            name = user.get('firstname') + ' ' + user.get('lastname')
-            if not user:
-                return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
             if not item:
                 return {"message": "Item does not exist, kindly contact Lorkorblaq"}, 400
+            if not user:
+                return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
+            print(item)
+            bench = item.get('bench')
+            name = user.get('firstname') + ' ' + user.get('lastname')
 
             # Get the item's _id to use as a reference
-            # item_id = str(item['_id'])
+            item_id = str(item['_id'])
 
             # Insert into put_in_use collection
             piu = {
@@ -44,6 +45,8 @@ class P_in_usePush(Resource):
                 'description': args["description"],
                 'created at': wat_time,
             }
+            
+
             inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id 
             inserted_id = str(inserted_id)           
             response = {
