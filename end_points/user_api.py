@@ -2,10 +2,11 @@ from flask_restful import Resource, reqparse, abort, fields
 from flask import jsonify
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-from engine import db_clinical
+from engine import db_clinical, client, org_users_db
 
 
-USERS_COLLECTION = db_clinical['users']
+# USERS_COLLECTION = db_clinical['users']
+USERS_COLLECTION = org_users_db['users']
 print(USERS_COLLECTION.find())
 user_parser = reqparse.RequestParser()
 user_parser.add_argument("firstname", type=str, help="Name is required", required=False)

@@ -2,11 +2,9 @@ from flask_restful import Resource, reqparse, abort
 from flask import jsonify
 from bson.objectid import ObjectId
 from datetime import datetime
-from engine import db_clinical
-import logging
+from engine import db_clinical, client, org_users_db, get_org_name
 
-USERS_COLLECTION = db_clinical['users']
-EVENTS_COLLECTION = db_clinical['events']
+USERS_COLLECTION = org_users_db['users']
 TODOS_COLLECTION = db_clinical['to-do']
 
 # Custom date type function for reqparse
@@ -21,12 +19,14 @@ def valid_time(s):
         return datetime.strptime(s, "%I:%M %p").time()
     except ValueError:
         raise ValueError(f"Not a valid time: '{s}'. Use HH:MM AM/PM format.")
+
 def valid_datetime(s):
     try:
         return datetime.strptime(s, "%Y-%m-%d %I:%M %p")
     except ValueError:
         raise ValueError(f"Not a valid datetime: '{s}'. Use YYYY-MM-DD HH:MM AM/PM format.")
 # Initialize the request parser
+
 events_parser = reqparse.RequestParser()
 events_parser.add_argument("date", type=valid_date, required=False, help="Date in YYYY-MM-DD format")
 events_parser.add_argument("time", type=valid_time, required=False, help="Please state time in HH:MM AM/PM format")
@@ -44,7 +44,12 @@ events_parser.add_argument("task", type=str, action='append', required=False, he
 events_parser.add_argument("resolved", type=bool, required=False, help="True if checked, otherwise False")
 
 class EventPush(Resource):
-    def post(self, user_id, event_type):
+    def post(self, user_id, lab_name, event_type):
+        try:
+            orgname = get_org_name(user_id)
+            EVENTS_COLLECTION = client[orgname+'_db'][lab_name+'_events']
+        except ValueError as e:
+            abort(404, message=str(e)) 
         args = events_parser.parse_args()
         user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
         if not user:
@@ -60,7 +65,6 @@ class EventPush(Resource):
 
         datetimer = datetime.combine(args["date"], args["time"] if args["time"] else datetime.min.time())
         # print(datetimer)
-        date_str = datetimer.strftime("%Y-%m-%d")
 
         if event_type == 'qc':
             event.update({
@@ -100,9 +104,13 @@ class EventPush(Resource):
         EVENTS_COLLECTION.insert_one(event)
         return {"message": "Event created successfully"}, 200
 
-
 class EventGetOne(Resource):
-    def get(self, user_id, event_id):
+    def get(self, user_id, lab_name, event_id):
+        try:
+            orgname = get_org_name(user_id)
+            EVENTS_COLLECTION = client[orgname+'_db'][lab_name+'_events']
+        except ValueError as e:
+            abort(404, message=str(e)) 
         # Validate input parameters
         if not user_id or not event_id:
             return {"message": "User id and event id are required"}, 400
@@ -161,7 +169,12 @@ class EventGetOne(Resource):
         return jsonify(result_dict)
 
 class EventGetAll(Resource):
-    def get(self, user_id, event_type):
+    def get(self, user_id, lab_name, event_type):
+        try:
+            orgname = get_org_name(user_id)
+            EVENTS_COLLECTION = client[orgname+'_db'][lab_name+'_events']
+        except ValueError as e:
+            abort(404, message=str(e)) 
         if not user_id:
             return {"message": "User id is required"}, 400
         if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
@@ -171,6 +184,7 @@ class EventGetAll(Resource):
         events = EVENTS_COLLECTION.find({'event_type': event_type})
         result = []
         for event in events:
+            print(event)
             result_dict = {
                 "event_id": str(event["_id"]),
                 "user": event.get("user", ""),
@@ -212,9 +226,13 @@ class EventGetAll(Resource):
             result.append(result_dict)
         return jsonify(result)
 
-
 class EventPut(Resource):
-    def put(self, user_id, event_id):
+    def put(self, user_id, lab_name, event_id):
+        try:
+            orgname = get_org_name(user_id)
+            EVENTS_COLLECTION = client[orgname+'_db'][lab_name+'_events']
+        except ValueError as e:
+            abort(404, message=str(e)) 
         if user_id is None or event_id is None:
             return {"message": "User id and event id are required"}, 400
         if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
@@ -228,7 +246,12 @@ class EventPut(Resource):
         return {"message": "Event updated successfully"}, 200
 
 class EventDel(Resource):
-    def delete(self, user_id, event_id):
+    def delete(self, user_id, lab_name, event_id):
+        try:
+            orgname = get_org_name(user_id)
+            EVENTS_COLLECTION = client[orgname+'_db'][lab_name+'_events']
+        except ValueError as e:
+            abort(404, message=str(e)) 
         if not user_id or not event_id:
             return {"message": "User id and event id are required"}, 400
         if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
@@ -239,111 +262,6 @@ class EventDel(Resource):
         return {"message": "Event deleted successfully"}, 200
 
 
-class ToDoPush(Resource):
-    def post(self, user_id):
-        args = events_parser.parse_args()
-        user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
-        if not user:
-            return {"message": "User does not exist"}, 400
-        datetimer = datetime.combine(args["date"], args["time"] if args["time"] else datetime.min.time())
-        date_str = datetimer.strftime("%Y-%m-%d")
-        # date_str = args.get("sdate")
-        tasks = args.get("task", [])
-        if not isinstance(tasks, list):
-            tasks = [tasks]
-
-        existing_todo = TODOS_COLLECTION.find_one({"user_id": ObjectId(user_id), "date": date_str})
-        if existing_todo:
-            if existing_todo.get("tasks") is None:
-                existing_todo["tasks"] = []
-            existing_todo["tasks"].extend(tasks)
-            TODOS_COLLECTION.update_one({"_id": existing_todo["_id"]}, {"$set": {"tasks": existing_todo["tasks"]}})
-        else:
-            new_todo = {
-                "user_id": ObjectId(user_id),
-                "date": date_str,
-                "tasks": tasks
-            }
-            TODOS_COLLECTION.insert_one(new_todo)
-        
-        return {"message": "To-do added successfully"}, 200
-
-class ToDoPut(Resource):
-    def put(self, user_id, date):
-        if not user_id or not date:
-            return {"message": "User id and date are required"}, 400
-        if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
-            return {"message": "User does not exist"}, 400
-        todo = TODOS_COLLECTION.find_one({"user_id": ObjectId(user_id), "date": date})
-        if not todo:
-            return {"message": "To-do does not exist"}, 400
-        args = events_parser.parse_args()
-        update_fields = {k: v for k, v in args.items() if v is not None}
-        TODOS_COLLECTION.update_one({"_id": todo["_id"]}, {"$set": update_fields})
-        return {"message": "To-do updated successfully"}, 200
-
-
-class ToDoGetOne(Resource):
-    def get(self, user_id, date):
-        if not user_id or not date:
-            return {"message": "User id and date are required"}, 400
-        if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
-            return {"message": "User does not exist"}, 400
-        todo = TODOS_COLLECTION.find_one({"user_id": ObjectId(user_id), "date": date})
-        if not todo:
-            return {"message": "To-do does not exist"}, 400
-        return jsonify({
-            "user_id": str(todo["user_id"]),
-            "date": todo["date"],
-            "tasks": todo["tasks"]
-        })
-
-class ToDoGetAll(Resource):
-    def get(self, user_id):
-        if not user_id:
-            return {"message": "User id is required"}, 400
-        if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
-            return {"message": "User does not exist"}, 400
-        todos = TODOS_COLLECTION.find({"user_id": ObjectId(user_id)})
-        result = []
-        for todo in todos:
-            result_dict = {
-                "user_id": str(todo["user_id"]),
-                "date": todo["date"],
-                "tasks": todo["tasks"]
-            }
-            result.append(result_dict)
-        return jsonify(result)
-
-
-class ToDoDeleteTask(Resource):
-    def delete(self, user_id, date, task):
-        if not user_id or not date or not task:
-            return {"message": "User id, date and task are required"}, 400
-        if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
-            return {"message": "User does not exist"}, 400
-        todo = TODOS_COLLECTION.find_one({"user_id": ObjectId(user_id), "date": date})
-        if not todo:
-            return {"message": "To-do does not exist"}, 400
-        if task not in todo["tasks"]:
-            return {"message": "Task does not exist in to-do"}, 400
-        todo["tasks"].remove(task)
-        TODOS_COLLECTION.update_one({"_id": todo["_id"]}, {"$set": {"tasks": todo["tasks"]}})
-        return {"message": "Task deleted successfully"}, 200
-
-class ToDoDeleteDate(Resource):
-    def delete(self, user_id, date):
-        if not user_id or not date:
-            return {"message": "User id and date are required"}, 400
-        if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
-            return {"message": "User does not exist"}, 400
-        todo = TODOS_COLLECTION.find_one({"user_id": ObjectId(user_id), "date": date})
-        if not todo:
-            return {"message": "To-do does not exist"}, 400
-        TODOS_COLLECTION.delete_one({"_id": todo["_id"]})
-        return {"message": "To-do deleted successfully"}, 200
-
-class ToDoDeleteAll(Resource):
     def delete(self, user_id):
         if not user_id:
             return {"message": "User id is required"}, 400

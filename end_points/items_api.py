@@ -1,7 +1,7 @@
 from flask_restful import Resource, abort, reqparse
 from flask import jsonify, make_response, request
 from bson import json_util, ObjectId
-from engine import db_clinical
+from engine import db_clinical, client, org_users_db, get_org_name
 import math
 
 
@@ -9,10 +9,18 @@ ITEMS_COLLECTION = db_clinical['items']
 item_parser = reqparse.RequestParser()
 item_parser.add_argument("item", type=str, help="item is required", required=True)
 item_parser.add_argument("direction", type=str, help="Direction is required", required=True)
-item_parser.add_argument("in stock", type=int, help="Quantity is required", required=True)
+item_parser.add_argument("quantity", type=int, help="Quantity is required", required=True)
 
 
-def requiste(bench, days, categories):
+
+def requiste(bench, days, categories, user_id, lab_name):
+    try:
+        orgname = get_org_name(user_id)
+        ITEMS_COLLECTION = client[orgname+'_db'][lab_name+'_items']
+
+    except ValueError as e:
+        abort(404, message=str(e))
+        
     query = {}
     if bench:
         query["bench"] = bench
@@ -27,12 +35,12 @@ def requiste(bench, days, categories):
         {"$project": {
             "bench": 1,
             "item": 1,
-            "in_stock": {"$toDouble": "$in stock"},
+            "quantity": {"$toDouble": "$quantity"},
             "tests_per_day": {"$toDouble": "$tests/day"},
             "tests_per_vial": {"$toDouble": "$tests/vial"}
         }},
         {"$addFields": {
-            "total_tests_in_stock": {"$multiply": ["$in_stock", "$tests_per_vial"]},
+            "total_tests_in_stock": {"$multiply": ["$quantity", "$tests_per_vial"]},
             "quantity_test_requested": {"$multiply": ["$tests_per_day", days]}
         }},
         {"$addFields": {
@@ -63,7 +71,7 @@ def requiste(bench, days, categories):
 
             result_dict = {
                 "bench": item.get("bench", ""),
-                "in_stock": item.get("in_stock", ""),
+                "quantity": item.get("quantity", ""),
                 "item": item.get("item", ""),
                 "tests_per_day": item.get("tests_per_day", ""),
                 "total_tests_in_stock": item.get("total_tests_in_stock", ""),
@@ -81,7 +89,14 @@ def requiste(bench, days, categories):
     # Example usage:
 
 class ItemsResource(Resource):
-    def get(self):    
+    def get(self, user_id, lab_name):  
+        try:
+            orgname = get_org_name(user_id)
+            ITEMS_COLLECTION = client[orgname+'_db'][lab_name+'_items']
+
+        except ValueError as e:
+            abort(404, message=str(e))
+        
         results = list(ITEMS_COLLECTION.find())
         if not results:
             abort(404, message="No Item Available")
@@ -96,46 +111,62 @@ class ItemsResource(Resource):
         return response_data, 200
 
 class ItemsBulkPush(Resource):
-    def post(self):
+    def post(self, user_id, lab_name):
         try:
-            json_data = request.get_json()
-            if not json_data:
-                abort(400, message="No JSON data provided")
-            
-            # Ensure the required columns are present
-            required_columns = {'item', 'in stock', 'tests/vial', 'vials/pack', 'reOrderLevel', 'class', 'category', 'tests/day', 'bench'}
+            orgname = get_org_name(user_id)
+            ITEMS_COLLECTION = client[orgname+'_db'][lab_name+'_items']
 
-            for entry in json_data:
-                if not required_columns.issubset(entry.keys()):
-                    abort(400, message=f"JSON data must contain keys: {', '.join(required_columns)}")
+        except ValueError as e:
+            abort(404, message=str(e))
+        
+        json_data = request.get_json()
+        if not json_data:
+            abort(400, message="No JSON data provided")
+        
+        # Ensure the required columns are present
+        required_columns = {'item', 'quantity', 'tests/vial', 'vials/pack', 'reOrderLevel', 'class', 'category', 'tests/day', 'bench'}
+
+        for entry in json_data:
+            if not required_columns.issubset(entry.keys()):
+                abort(400, message=f"Your data must contain the columns: {', '.join(required_columns)}")
+
             
             # Insert data into the MongoDB collection
             ITEMS_COLLECTION.insert_many(json_data)
             
             return make_response(jsonify({"message": "Data imported successfully"}), 201)
         
-        except Exception as e:
-            abort(500, message=str(e))
+        # except Exception as e:
+        #     abort(500, message=str(e))
 
 class ItemsPut(Resource):
-    def put(self):
-        # utc_now = datetime.utcnow()
-        # wat_time = utc_now + timedelta(hours=1)
+    def put(self, user_id, lab_name):
+        try:
+            orgname = get_org_name(user_id)
+            ITEMS_COLLECTION = client[orgname+'_db'][lab_name+'_items']
+
+        except ValueError as e:
+            abort(404, message=str(e))
+        
         args = item_parser.parse_args()
         if not args['item']:
-            abort(404, message="Item not found, kindly contact Lorkorblaq")
+            abort(404, message="Item not provided, kindly contact Lorkorblaq")
+        elif not ITEMS_COLLECTION.find_one({'item': args['item']}):
+            abort(404, message="The item you about to update doesn't exists")
         filter = {'item': args['item']}
         if args['direction'] == "To": 
-            new_value = {'$inc': {'in stock': -args['in stock']}}
+            new_value = {'$inc': {'quantity': -args['quantity']}}
+            print(new_value)
             ITEMS_COLLECTION.update_one(filter, new_value)
         elif args['direction'] == "From":
-            new_value = {'$inc': {'in stock': args['in stock']}}
+            new_value = {'$inc': {'quantity': args['quantity']}}
+            print(new_value)
             ITEMS_COLLECTION.update_one(filter, new_value)
         response = {"message": "Your data has been updated successfully",}
         return response, 200
 
 class ItemsRequisite(Resource):
-    def post(self, ):
+    def post(self, user_id, lab_name):      
         req_parser = reqparse.RequestParser()
         req_parser.add_argument("bench", type=str, help="Bench is required", required=True)
         req_parser.add_argument("categories", type=str, action='append', required=False)
@@ -145,7 +176,7 @@ class ItemsRequisite(Resource):
         bench = args['bench']
         days = args['days']
         categories = args.get('categories', [])  # Get list of categories or empty list if not provided        
-        results = requiste(bench, days, categories)
+        results = requiste(bench, days, categories, user_id, lab_name)
         print(results)
         response = results
         # for result in results:
@@ -154,7 +185,14 @@ class ItemsRequisite(Resource):
         return response, 200
     
 class ItemsDeleteResource(Resource):
-    def delete(self):
+    def delete(self, user_id, lab_name):
+        try:
+            orgname = get_org_name(user_id)
+            ITEMS_COLLECTION = client[orgname+'_db'][lab_name+'_items']
+
+        except ValueError as e:
+            abort(404, message=str(e))
+        
         try:
             result = ITEMS_COLLECTION.delete_many({})
             if result.deleted_count == 0:
