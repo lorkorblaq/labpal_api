@@ -260,12 +260,3 @@ class EventDel(Resource):
             return {"message": "Event does not exist"}, 400
         EVENTS_COLLECTION.delete_one({'_id': ObjectId(event_id)})
         return {"message": "Event deleted successfully"}, 200
-
-
-    def delete(self, user_id):
-        if not user_id:
-            return {"message": "User id is required"}, 400
-        if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
-            return {"message": "User does not exist"}, 400
-        TODOS_COLLECTION.delete_many({"user_id": ObjectId(user_id)})
-        return {"message": "All to-dos deleted successfully"}, 200

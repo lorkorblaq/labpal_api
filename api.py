@@ -34,9 +34,11 @@ api.add_resource(EventDel, "/api/event/del/<string:user_id>/<string:lab_name>/<s
 api.add_resource(EventGetOne, "/api/event/get/<string:user_id>/<string:lab_name>/<string:event_id>/")
 api.add_resource(EventGetAll, "/api/events/get/<string:user_id>/<string:lab_name>/<string:event_type>/")
 
-api.add_resource(ToDoPush, "/api/event/to-do-push/<string:user_id>/")
-api.add_resource(ToDoGetOne, "/api/event/to-do-get/<string:user_id>/<string:date>/")
-api.add_resource(ToDoGetAll, "/api/event/to-do-get-all/<string:user_id>/")
+api.add_resource(ToDoPush, "/api/to-do/push/<string:user_id>/")
+api.add_resource(ToDoPut, "/api/to-do/put/<string:user_id>/<string:date>/")
+api.add_resource(ToDoGetOne, "/api/to-do/get/<string:user_id>/<string:date>/")
+api.add_resource(ToDoGetAll, "/api/to-do/get-all/<string:user_id>/")
+api.add_resource(ToDoDeleteDate, "/api/to-do/del/<string:user_id>/<string:date>/")
 
 
 #organisations
