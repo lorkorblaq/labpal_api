@@ -72,6 +72,8 @@ class Lot_exp_Get(Resource):
         
         for lot_exp in lot_exps:
             lot_exp["_id"] = str(lot_exp["_id"])
+            lot_exp["item"] = str(lot_exp["item"])
+            lot_exp["quantity"] = lot_exp["quantity"]
             lot_exp["expiration"] = lot_exp["expiration"].strftime("%Y-%m-%d")
             lot_exp["created at"] = lot_exp["created at"].strftime("%Y-%m-%d")
             lotexp_list.append(lot_exp)

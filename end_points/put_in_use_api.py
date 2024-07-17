@@ -29,6 +29,7 @@ class P_in_usePush(Resource):
 
         try:
             utc_now = datetime.now()
+            wat_now = utc_now + timedelta(hours=1)
             args = put_in_use_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             item = ITEMS_COLLECTION.find_one({'item': args['item']})
@@ -57,7 +58,7 @@ class P_in_usePush(Resource):
                 'lot_numb': args["lot_numb"],
                 'quantity': args["quantity"],
                 'description': args["description"],
-                'created at': utc_now,
+                'created at': wat_now,
             }
             
             inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id 
@@ -156,7 +157,7 @@ class P_in_useGetAll(Resource):
         utc_now = datetime.now()
         piu_list = [{
             "_id": str(piu['_id']),
-            "created at": piu.get('created at', utc_now).strftime("%Y-%m-%d %H:%M:%S") if 'created at' in piu else None,
+            "created at": piu.get('created at').strftime("%Y-%m-%d %H:%M:%S") if 'created at' in piu else None,
             "user": piu.get('user', 'Unknown User'),
             "item": piu.get('item', 'Unknown Item'),
             "bench": piu.get('bench', 'Unknown Bench'),

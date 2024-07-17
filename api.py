@@ -39,6 +39,7 @@ api.add_resource(ToDoPut, "/api/to-do/put/<string:user_id>/<string:date>/")
 api.add_resource(ToDoGetOne, "/api/to-do/get/<string:user_id>/<string:date>/")
 api.add_resource(ToDoGetAll, "/api/to-do/get-all/<string:user_id>/")
 api.add_resource(ToDoDeleteDate, "/api/to-do/del/<string:user_id>/<string:date>/")
+# api.add_resource(ToDoSaveOrder, '/to-do/<string:user_id>/save-order/')
 
 
 #organisations

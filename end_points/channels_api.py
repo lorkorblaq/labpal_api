@@ -40,6 +40,7 @@ class ChannelPush(Resource):
             abort(404, message=str(e))
         try:
             utc_now = datetime.now()
+            wat_now = utc_now + timedelta(hours=1)
             args = channels_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             print(user)
@@ -62,7 +63,7 @@ class ChannelPush(Resource):
                     "location": args["location"],
                     "quantity": args["quantity"],
                     "description": args["description"],
-                    'created at': utc_now,
+                    'created at': wat_now,
                 }
             if not user:
                 return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
@@ -180,10 +181,12 @@ class ChannelGetAll(Resource):
         channels = list(CHANNELS_COLLECTION.find())
         if not channels:
             abort(404, message="Channel not found")
-        utc_now = datetime.now()
+        # utc_now = datetime.now()
+        # wat_now = utc_now + timedelta(hours=1)
+
         channel_list = [{
             "_id": str(channel['_id']),
-            "created at": channel.get('created at', utc_now).strftime("%Y-%m-%d %H:%M:%S") if 'created at' in channel else None,
+            "created at": channel.get('created at').strftime("%Y-%m-%d %H:%M:%S") if 'created at' in channel else None,
             "user": channel.get('user', 'Unknown User'),
             "item": channel.get('item', 'Unknown Item'),
             "lot_numb": channel.get("lot_numb", 'Unknown Lot Number'),

@@ -2,10 +2,10 @@
 FROM python:3.11
 # docker build -t lorkorblaq/clinicalx_api:latest -f Dockerfile .
 # Set the working directory to /api
-WORKDIR /clinicalx_api/
+WORKDIR /labpal_api/
 
 # Copy the current directory contents into the container at /app
-COPY . /clinicalx_api/
+COPY . /labpal_api/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
