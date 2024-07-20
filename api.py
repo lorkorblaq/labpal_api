@@ -15,10 +15,22 @@ from end_points.messenger_api import *
 from end_points.organisation import *
 from end_points.events import *
 from end_points.to_do import *
+from end_points.billing import *
+from end_points.webhook import *
 
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
+
+
+#subscription
+api.add_resource(Customer, "/api/customer/<string:org_id>/")
+api.add_resource(Subscription, "/api/subscription/<string:org_id>/<string:plan>/")
+api.add_resource(TransactionSuccess, "/api/transactions/success/<string:org_id>/")
+api.add_resource(Transactions, "/api/transactions/<string:org_id>/")
+
+
+
 
 #users
 api.add_resource(UserPush, "/api/user/push/")
@@ -41,7 +53,6 @@ api.add_resource(ToDoGetAll, "/api/to-do/get-all/<string:user_id>/")
 api.add_resource(ToDoDeleteDate, "/api/to-do/del/<string:user_id>/<string:date>/")
 # api.add_resource(ToDoSaveOrder, '/to-do/<string:user_id>/save-order/')
 
-
 #organisations
 api.add_resource(OrganisationPush, "/api/org/push/")
 api.add_resource(GetOrganisation, "/api/org/get/<string:name>/")
@@ -52,8 +63,6 @@ api.add_resource(ItemsBulkPush, "/api/items/bulkpush/<string:user_id>/<string:la
 api.add_resource(ItemsPut, "/api/item/put/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsRequisite, "/api/items/requisite/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsDeleteResource, "/api/items/deleteall/<string:user_id>/<string:lab_name>/")
-
-
 
 #put in use
 api.add_resource(P_in_usePush, "/api/piu/push/<string:user_id>/<string:lab_name>/")
@@ -92,6 +101,9 @@ api.add_resource(PushPrivateMessage, '/api/pm/push/<string:sender_id>/<string:re
 
 api.add_resource(AddContact, '/api/contact/add/<string:user_id>/<string:contact_id>/')
 api.add_resource(DeleteContact, '/api/contact/delete/<string:user_id>/<string:contact_id>/')
+
+api.add_resource(Webhook, '/webhook/')
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000, debug=True)
