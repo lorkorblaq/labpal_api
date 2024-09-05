@@ -1,10 +1,19 @@
 from flask_restful import Resource, reqparse, abort, fields
-from flask import jsonify
+from flask import jsonify, request
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-from engine import db_clinical, client, org_users_db
+from engine import client, org_users_db, aws_secret_key, aws_key_id, aws_region 
+import boto3
+from botocore.exceptions import NoCredentialsError, PartialCredentialsError
+import uuid
+import os
 
-
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=aws_key_id,
+    aws_secret_access_key=aws_secret_key,
+    region_name=aws_region
+)
 # USERS_COLLECTION = db_clinical['users']
 USERS_COLLECTION = org_users_db['users']
 print(USERS_COLLECTION.find())
@@ -122,3 +131,44 @@ class UsersGetAll(Resource):
         } for user in users]
         response = {"users": user_list}
         return response, 200
+
+# Define the S3 bucket name
+BUCKET_NAME = 'labpal.bucket'
+FOLDER_NAME = 'userImages'
+class UploadImage(Resource):
+    def post(self, user_id):
+        user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}, {'image': 1})
+        if not user:
+            return {'error': 'User ID is required'}, 400
+        
+        if 'image' not in request.files:
+            return {'error': 'No file part'}, 400
+
+        file = request.files['image']
+
+        if file.filename == '':
+            return {'error': 'No selected file'}, 400
+
+        if file:
+            try:
+                # Extract the file extension
+                _, file_extension = os.path.splitext(file.filename)
+                # Generate a unique filename
+                file_id = user_id
+                filename = f"{file_id}{file_extension}"
+                key = f"{FOLDER_NAME}/{filename}"
+                # Upload the file to S3
+                s3_client.upload_fileobj(file, BUCKET_NAME, key)
+
+                # Generate S3 file URL (optional)
+                file_url = f"https://{BUCKET_NAME}.s3.amazonaws.com/{key}"
+                # Update the user's image URL in the database
+                user['image'] = file_url
+                USERS_COLLECTION.update_one({'_id': ObjectId(user_id)}, {"$set": user})
+                return {'message': 'File uploaded successfully', 'file_url': file_url}, 200
+            except NoCredentialsError:
+                return {'error': 'Credentials not available'}, 500
+            except PartialCredentialsError:
+                return {'error': 'Incomplete credentials provided'}, 500
+            except Exception as e:
+                return {'error': str(e)}, 500

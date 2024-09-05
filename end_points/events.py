@@ -36,9 +36,11 @@ events_parser.add_argument("items", type=str, action='append', required=False)
 events_parser.add_argument("frequency", type=str, action='append', required=False)
 events_parser.add_argument("category", type=str, required=False)
 events_parser.add_argument("rootCause", type=str, required=False)
+events_parser.add_argument("rootCauseDes", type=str, required=False)
+events_parser.add_argument("subrootCause", type=str, required=False)
+events_parser.add_argument("rootCauseDescription", type=str, required=False)
 events_parser.add_argument("actioning", type=str, required=False)
 events_parser.add_argument("occurrence", type=str, action='append', required=False)
-# events_parser.add_argument("actioning", type=str, required=False)
 events_parser.add_argument("comments", type=str, required=False)
 events_parser.add_argument("task", type=str, action='append', required=False, help="List of tasks")
 events_parser.add_argument("resolved", type=bool, required=False, help="True if checked, otherwise False")
@@ -72,6 +74,9 @@ class EventPush(Resource):
                 "machine": args["machine"],
                 "items": args["items"],
                 "rootCause": args["rootCause"],
+                "rootCauseDes": args["rootCauseDes"],
+                "subrootCause": args["subrootCause"],
+                "rootCauseDescription": args["rootCauseDescription"],
                 "actioning": args["actioning"]
             })
         elif event_type == 'machine':
@@ -92,6 +97,7 @@ class EventPush(Resource):
                 args['category'] == 'Downtime' or 'Troubleshooting'
                 event.update({
                     "resolved": args["resolved"],
+                    "subrootCause": args["subrootCause"],
                     "rootCause": args["rootCause"],
                     "actioning": args["actioning"]
                 })
@@ -184,19 +190,20 @@ class EventGetAll(Resource):
         events = EVENTS_COLLECTION.find({'event_type': event_type})
         result = []
         for event in events:
-            print(event)
             result_dict = {
                 "event_id": str(event["_id"]),
                 "user": event.get("user", ""),
                 "event_type": event.get("event_type", ""),
-                "created_at": event.get("created_at", "")
+                "created_at": event.get("created_at").strftime("%Y-%m-%d %H:%M:%S")
             }
             if event['event_type'] == 'qc':
                 result_dict.update({
-                    "date": event.get("date", ""),
+                    "date": event.get("date").strftime("%Y-%m-%d") if 'date' in event else None,
                     "machine": event.get("machine", ""),
                     "items": event.get("items", ""),
                     "rootCause": event.get("rootCause", ""),
+                    "subrootCause": event.get("subrootCause", ""),
+                    "rootCauseDescription": event.get("rootCauseDescription", ""), 
                     "actioning": event.get("actioning", ""),
                 })
             elif event['event_type'] == 'machine':
@@ -224,7 +231,10 @@ class EventGetAll(Resource):
                     "actioning": event.get("actioning", "")
                 })
             result.append(result_dict)
-        return jsonify(result)
+
+        response = {'events': result}
+        return jsonify(response)  # Return response directly
+
 
 class EventPut(Resource):
     def put(self, user_id, lab_name, event_id):

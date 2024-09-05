@@ -17,10 +17,16 @@ from end_points.events import *
 from end_points.to_do import *
 from end_points.billing import *
 from end_points.webhook import *
+from end_points.shipments import *
+from end_points.machines import *
+from end_points.org_api import *
 
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
+
+#organisation
+api.add_resource(OrgGetLabs, "/api/labs/get/<string:user_id>/")
 
 
 #subscription
@@ -38,6 +44,8 @@ api.add_resource(UserPut, "/api/user/put/<string:user_id>/")
 api.add_resource(UserDel, "/api/user/del/<string:user_id>/")
 api.add_resource(UserGetOne, "/api/user/get/<string:user_id>/")
 api.add_resource(UsersGetAll, "/api/users/get/")
+api.add_resource(UploadImage, "/api/user-image/<string:user_id>/")
+
 
 #events
 api.add_resource(EventPush, "/api/event/push/<string:user_id>/<string:lab_name>/<string:event_type>/")
@@ -59,10 +67,20 @@ api.add_resource(GetOrganisation, "/api/org/get/<string:name>/")
 
 #items
 api.add_resource(ItemsResource, "/api/items/get/<string:user_id>/<string:lab_name>/")
+api.add_resource(ItemsPush, "/api/items/push/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsBulkPush, "/api/items/bulkpush/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsPut, "/api/item/put/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsRequisite, "/api/items/requisite/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsDeleteResource, "/api/items/deleteall/<string:user_id>/<string:lab_name>/")
+
+#machines
+api.add_resource(MachinePush, "/api/machines/push/<string:user_id>/<string:lab_name>/")
+api.add_resource(MachineBulkPush, "/api/machines/bulkpush/<string:user_id>/<string:lab_name>/")
+api.add_resource(MachinePut, "/api/machine/put/<string:user_id>/<string:lab_name>/")
+api.add_resource(MachineGetOne, "/api/machine/get/<string:user_id>/<string:lab_name>/<string:machine_id>/")
+api.add_resource(MachineGetAll, "/api/machines/get/<string:user_id>/<string:lab_name>/")
+api.add_resource(MachineDel, "/api/machines/deleteall/<string:user_id>/<string:lab_name>/")
+
 
 #put in use
 api.add_resource(P_in_usePush, "/api/piu/push/<string:user_id>/<string:lab_name>/")
@@ -77,6 +95,13 @@ api.add_resource(ChannelPut, "/api/channel/put/<string:user_id>/<string:lab_name
 api.add_resource(ChannelDel, "/api/channel/delete/<string:user_id>/<string:lab_name>/<string:channel_id>/")
 api.add_resource(ChannelGetOne, "/api/channel/get/<string:user_id>/<string:lab_name>/<string:channel_id>/")
 api.add_resource(ChannelGetAll, "/api/channels/get/<string:user_id>/<string:lab_name>/")
+
+#shipments
+api.add_resource(ShipmentsPush, "/api/shipments/push/<string:user_id>/<string:lab_name>/")
+api.add_resource(ShipmentsPut, "/api/shipments/put/<string:user_id>/<string:lab_name>/")
+api.add_resource(ShipmentsDel, "/api/shipments/delete/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
+api.add_resource(ShipmentsGetOne, "/api/shipments/get/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
+api.add_resource(ShipmentsGetAll, "/api/shipments/get/<string:user_id>/<string:lab_name>/")
 
 #lot exp
 api.add_resource(Lot_exp_Get, "/api/lotexp/get/<string:user_id>/<string:lab_name>/")
@@ -102,7 +127,7 @@ api.add_resource(PushPrivateMessage, '/api/pm/push/<string:sender_id>/<string:re
 api.add_resource(AddContact, '/api/contact/add/<string:user_id>/<string:contact_id>/')
 api.add_resource(DeleteContact, '/api/contact/delete/<string:user_id>/<string:contact_id>/')
 
-api.add_resource(Webhook, '/webhook/')
+api.add_resource(Webhook, '/api/webhook/')
 
 
 if __name__ == "__main__":

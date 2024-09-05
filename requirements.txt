@@ -17,3 +17,5 @@ gunicorn
 pytest
 requests
 python-dotenv
+gevent
+boto3

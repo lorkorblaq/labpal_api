@@ -2,15 +2,23 @@ from flask_restful import Resource, abort, reqparse
 from flask import jsonify, make_response, request
 from bson import json_util, ObjectId
 from engine import db_clinical, client, org_users_db, get_org_name
+from datetime import datetime, timedelta
 import math
 
-
-ITEMS_COLLECTION = db_clinical['items']
+USERS_COLLECTION = org_users_db['users']
+ORG_COLLECTION = org_users_db['organisations']
 item_parser = reqparse.RequestParser()
-item_parser.add_argument("item", type=str, help="item is required", required=True)
-item_parser.add_argument("direction", type=str, help="Direction is required", required=True)
-item_parser.add_argument("quantity", type=int, help="Quantity is required", required=True)
+item_parser.add_argument("item", type=str, help="item is required", required=False)
+item_parser.add_argument("quantity", type=int, help="Quantity is required", required=False)
+item_parser.add_argument("tests/vial", type=int, help="Tests per vial is required", required=False)
+item_parser.add_argument("vials/pack", type=int, help="Vials per pack is required", required=False)
+item_parser.add_argument("reOrderLevel", type=int, help="Reorder level is required", required=False)
+item_parser.add_argument("class", type=str, help="Class is required", required=False)
+item_parser.add_argument("category", type=str, help="Category is required", required=False)
+item_parser.add_argument("tests/day", type=int, help="Tests per day is required", required=False)
+item_parser.add_argument("bench", type=str, help="Bench is required", required=False)
 
+    
 
 
 def requiste(bench, days, categories, user_id, lab_name):
@@ -138,6 +146,50 @@ class ItemsBulkPush(Resource):
         
         # except Exception as e:
         #     abort(500, message=str(e))
+
+class ItemsPush(Resource):
+    def post(self, user_id, lab_name):
+        try:
+            org_name = get_org_name(user_id)
+            ITEMS_COLLECTION = client[org_name+'_db'][lab_name+'_items']
+        except ValueError as e:
+            abort(404, message=str(e))
+        args = item_parser.parse_args()
+        user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+        if not user:
+            return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
+        elif not org_name:
+            return {"message": "Organisation does not exist, kindly contact Lorkorblaq"}, 400
+        labs = user.get('labs_access')
+        if lab_name in labs:
+            pass
+        
+        # item = MACHINES_COLLECTION.find_one({'item': args['item']})
+        items_list = {
+            "item": args['item'],
+            "quantity": args['quantity'],
+            "tests/vial": args['tests/vial'],
+            "vials/pack": args['vials/pack'],
+            "reOrderLevel": args['reOrderLevel'],
+            "class": args['class'],
+            "category": args['category'],
+            "tests/day": args['tests/day'],
+            "bench": args['bench'],
+            }
+        if not user:
+                return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
+        try:
+
+            inserted_id = ITEMS_COLLECTION.insert_one(items_list).inserted_id
+            inserted_id = str(inserted_id)
+
+            response = {
+                "message": "Item created successfully",
+                "machine_id": inserted_id
+            }
+            return response, 200
+        except Exception as e:
+            return {"message": "Error occured while pushing item", "error": str(e)}
 
 class ItemsPut(Resource):
     def put(self, user_id, lab_name):
