@@ -4,8 +4,8 @@ from bson.objectid import ObjectId
 import os
 load_dotenv(find_dotenv())
 
-uri_development = os.getenv('URI_DEVELOPMENT')
-uri_production = os.getenv('URI_PRODUCTION')
+uri_production = os.getenv('URI_DEVELOPMENT')
+# uri_production = os.getenv('URI_PRODUCTION')
 paystack_secret_key = os.getenv('PAYSTACK_SECRET_KEY')
 aws_key_id = os.getenv('AWS_ACCESS_KEY_ID')
 aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')

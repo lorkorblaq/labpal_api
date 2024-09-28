@@ -20,11 +20,14 @@ from end_points.webhook import *
 from end_points.shipments import *
 from end_points.machines import *
 from end_points.org_api import *
+from end_points.admin import Health
 
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
+
+api.add_resource(Health, "/health")
 #organisation
 api.add_resource(OrgGetLabs, "/api/labs/get/<string:user_id>/")
 

@@ -3604,3 +3604,84 @@
 2024-09-04 20:41:18,656 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2024 20:41:18] "OPTIONS /api/event/push/66d8b30ab00425016841fea4/labbbb/qc/ HTTP/1.1" 200 -
 2024-09-04 20:41:19,900 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2024 20:41:19] "POST /api/event/push/66d8b30ab00425016841fea4/labbbb/qc/ HTTP/1.1" 200 -
 2024-09-04 20:41:25,530 - werkzeug - INFO - 127.0.0.1 - - [04/Sep/2024 20:41:25] "[35m[1mGET /api/events/get/66d8b30ab00425016841fea4/labbbb/qc/ HTTP/1.1[0m" 500 -
+2024-09-05 15:22:58,407 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.80:3000
+2024-09-05 15:22:58,407 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-05 15:22:58,409 - werkzeug - INFO -  * Restarting with stat
+2024-09-05 15:23:01,544 - werkzeug - WARNING -  * Debugger is active!
+2024-09-05 15:23:01,544 - werkzeug - INFO -  * Debugger PIN: 671-213-726
+2024-09-05 15:23:02,641 - werkzeug - INFO - 127.0.0.1 - - [05/Sep/2024 15:23:02] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-07 13:50:57,757 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://127.0.0.1:3000
+2024-09-07 13:50:57,758 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-07 13:50:57,759 - werkzeug - INFO -  * Restarting with stat
+2024-09-07 13:50:58,363 - werkzeug - WARNING -  * Debugger is active!
+2024-09-07 13:50:58,482 - werkzeug - INFO -  * Debugger PIN: 391-794-763
+2024-09-07 14:32:42,085 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/engine/__init__.py', reloading
+2024-09-07 14:32:42,322 - werkzeug - INFO -  * Restarting with stat
+2024-09-07 14:32:51,766 - werkzeug - WARNING -  * Debugger is active!
+2024-09-07 14:32:51,767 - werkzeug - INFO -  * Debugger PIN: 391-794-763
+2024-09-09 09:07:38,378 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.80:3000
+2024-09-09 09:07:38,379 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-09 09:07:38,380 - werkzeug - INFO -  * Restarting with stat
+2024-09-09 09:07:41,946 - werkzeug - WARNING -  * Debugger is active!
+2024-09-09 09:07:41,948 - werkzeug - INFO -  * Debugger PIN: 465-303-689
+2024-09-10 21:31:02,516 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.43.80:3000
+2024-09-10 21:31:02,517 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-10 21:31:02,520 - werkzeug - INFO -  * Restarting with stat
+2024-09-10 21:31:05,921 - werkzeug - WARNING -  * Debugger is active!
+2024-09-10 21:31:05,922 - werkzeug - INFO -  * Debugger PIN: 938-770-661
+2024-09-16 19:14:22,402 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-16 19:14:22,402 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-16 19:14:22,404 - werkzeug - INFO -  * Restarting with stat
+2024-09-16 19:14:24,453 - werkzeug - WARNING -  * Debugger is active!
+2024-09-16 19:14:24,454 - werkzeug - INFO -  * Debugger PIN: 109-561-358
+2024-09-24 17:24:13,020 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://127.0.0.1:3000
+2024-09-24 17:24:13,020 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-24 17:24:13,021 - werkzeug - INFO -  * Restarting with stat
+2024-09-24 17:24:13,628 - werkzeug - WARNING -  * Debugger is active!
+2024-09-24 17:24:13,739 - werkzeug - INFO -  * Debugger PIN: 453-986-899
+2024-09-24 17:25:21,862 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/engine/__init__.py', reloading
+2024-09-24 17:25:22,472 - werkzeug - INFO -  * Restarting with stat
+2024-09-24 17:25:23,033 - werkzeug - WARNING -  * Debugger is active!
+2024-09-24 17:25:23,034 - werkzeug - INFO -  * Debugger PIN: 453-986-899
+2024-09-24 17:40:46,523 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/engine/__init__.py', reloading
+2024-09-24 17:40:47,205 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 13:18:10,600 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-28 13:18:10,601 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-28 13:18:10,602 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 13:18:12,371 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 13:18:12,487 - werkzeug - INFO -  * Debugger PIN: 128-915-651
+2024-09-28 13:21:05,681 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 13:21:05] "[33mGET /api/item/get/668124f083e39d5a020d2f79/main/ HTTP/1.1[0m" 404 -
+2024-09-28 13:21:30,716 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 13:21:30] "[33mGET /api/items/get/668124f083e39d5a020d2f79/main/ HTTP/1.1[0m" 404 -
+2024-09-28 13:22:41,659 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 13:22:41] "[33mGET /api/items/get/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 404 -
+2024-09-28 13:24:07,891 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 13:24:07] "[33mGET /api/items/get/669b163979c49e3780678b8a/main/ HTTP/1.1[0m" 404 -
+2024-09-28 13:29:23,154 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 13:29:23] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-28 14:43:27,120 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 14:43:27] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-28 18:38:12,265 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://127.0.0.1:3000
+2024-09-28 18:38:12,266 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-28 18:38:12,267 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 18:38:12,866 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 18:38:12,990 - werkzeug - INFO -  * Debugger PIN: 129-240-888
