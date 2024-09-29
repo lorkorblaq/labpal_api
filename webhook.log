@@ -3685,3 +3685,437 @@
 2024-09-28 18:38:12,267 - werkzeug - INFO -  * Restarting with stat
 2024-09-28 18:38:12,866 - werkzeug - WARNING -  * Debugger is active!
 2024-09-28 18:38:12,990 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 18:42:46,144 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 18:42:46] "[33mPOST /api/items/bulkpush/668124f083e39d5a020d2f79/main/ HTTP/1.1[0m" 404 -
+2024-09-28 18:44:04,852 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/engine/__init__.py', reloading
+2024-09-28 18:44:05,469 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 18:44:18,623 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 18:44:18,624 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 18:44:25,672 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 18:44:25] "[33mPOST /api/items/bulkpush/668124f083e39d5a020d2f79/main/ HTTP/1.1[0m" 404 -
+2024-09-28 18:48:54,797 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 18:48:54] "[31m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-28 18:49:49,112 - werkzeug - INFO - 127.0.0.1 - - [28/Sep/2024 18:49:49] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-28 18:55:51,255 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 18:55:52,015 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:15:57,123 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-28 19:15:57,123 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-28 19:15:57,124 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:15:58,686 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:15:58,687 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:22:10,921 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:22:11,494 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:22:20,469 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:22:20,470 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:22:30,576 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:22:31,154 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:22:33,662 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:22:33,663 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:22:53,911 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:22:54,522 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:22:56,238 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:22:56,239 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:23:14,414 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:23:14,953 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:23:16,671 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:23:16,672 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:25:10,324 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:25:10,656 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:25:20,205 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:25:20,206 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:25:36,372 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:25:37,022 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:25:38,887 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:25:38,888 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:36:05,770 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:36:06,261 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:36:17,022 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:36:17,022 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:42:23,830 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:42:24,424 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:42:31,839 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:42:31,840 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 19:42:58,250 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-28 19:42:58,723 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 19:43:00,326 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 19:43:00,326 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-28 21:59:42,724 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://127.0.0.1:3000
+2024-09-28 21:59:42,724 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-28 21:59:42,725 - werkzeug - INFO -  * Restarting with stat
+2024-09-28 21:59:43,368 - werkzeug - WARNING -  * Debugger is active!
+2024-09-28 21:59:43,369 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-29 07:16:25,111 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/engine/__init__.py', reloading
+2024-09-29 07:16:25,670 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 07:16:35,819 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 07:16:35,820 - werkzeug - INFO -  * Debugger PIN: 129-240-888
+2024-09-29 11:14:21,109 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 11:14:21,110 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 11:14:21,112 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 11:14:23,603 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 11:14:23,793 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 11:25:29,015 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:25:29] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 11:26:31,155 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:26:31] "[31m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 11:31:13,075 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 11:31:13,480 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 11:31:20,352 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 11:31:20,353 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 11:34:41,728 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2024-09-29 11:34:42,307 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 11:34:48,911 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 11:34:48,911 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 11:36:44,090 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:36:44] "[35m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 500 -
+2024-09-29 11:36:59,052 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:36:59] "POST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 11:42:30,209 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:42:30] "POST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 11:43:17,709 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:43:17] "POST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 11:43:35,009 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:43:35] "[31m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 11:46:09,873 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 11:46:10,521 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 11:46:17,478 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 11:46:17,478 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 11:46:50,726 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:46:50] "POST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 11:59:05,074 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 11:59:05,628 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 11:59:12,227 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 11:59:12,228 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 11:59:14,108 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 11:59:14] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:00:48,929 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:00:49,410 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:00:55,709 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:00:55,709 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:01:00,102 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:01:00] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:02:14,305 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:02:14,924 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:02:21,175 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:02:21,176 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:06:42,063 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:06:42,677 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:06:49,000 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:06:49,001 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:06:50,414 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:06:50] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:07:38,784 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:07:38] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:07:40,431 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:07:40] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:07:48,363 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:07:48] "[31m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:11:48,094 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:11:48] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:13:37,984 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:13:37] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:13:59,884 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:13:59] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 12:14:29,376 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:14:29] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 12:17:13,889 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:17:14,291 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:17:48,117 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 12:17:48,117 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 12:17:48,118 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:17:49,909 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:17:49,910 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:17:58,258 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:17:58] "POST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 12:18:24,188 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:18:24,651 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:18:26,314 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:18:26,314 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:18:41,162 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:18:41] "POST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 12:18:47,864 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:18:47] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 12:19:34,774 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:19:35,183 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:19:41,728 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:19:41,730 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:34:24,206 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:34:24,668 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:34:33,037 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:34:33,038 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:37:01,973 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:37:02,558 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:37:09,006 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:37:09,007 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:37:23,248 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:37:23] "[35m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 12:41:34,641 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:41:34] "[35m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 12:43:23,054 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:43:23] "[33mGET /api/items/get/668124f083e39d5a020d2f79/main/ HTTP/1.1[0m" 404 -
+2024-09-29 12:43:28,331 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:43:28] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 12:43:43,554 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:43:43] "GET /api/items/get/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 12:44:37,109 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:44:37,704 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:44:44,216 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:44:44,216 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:47:02,147 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2024-09-29 12:47:02,652 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:50:12,541 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 12:50:12,541 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 12:50:12,542 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:50:14,318 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:50:14,319 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:50:18,726 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:50:18] "[35m[1mPUT /api/item/put/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 500 -
+2024-09-29 12:53:50,830 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 12:53:51,200 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 12:54:01,534 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 12:54:01,535 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 12:54:01,982 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:54:01] "PUT /api/item/put/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 12:55:10,558 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 12:55:10] "PUT /api/item/put/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:00:12,121 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:00:12,644 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:02:18,199 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 13:02:18,199 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 13:02:18,200 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:02:20,120 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:02:20,121 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:02:25,023 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:02:25] "[31m[1mPUT /api/item/put/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 13:06:02,721 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:06:03,324 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:06:09,741 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:06:09,742 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:06:10,035 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:06:10] "[31m[1mPUT /api/item/put/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 13:06:26,916 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:06:26] "[31m[1mPUT /api/item/put/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 13:07:10,212 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:07:10,764 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:07:12,399 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:07:12,400 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:11:04,949 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:11:05,474 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:11:12,330 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:11:12,331 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:11:16,879 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:11:16] "[31m[1mPOST /api/items/push/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 400 -
+2024-09-29 13:22:10,845 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:22:11,290 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:22:21,387 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:22:21,387 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:22:31,476 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:22:32,088 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:22:33,766 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:22:33,766 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:22:48,950 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:22:48] "POST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:23:13,089 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:23:13,638 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:23:15,241 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:23:15,241 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:23:23,990 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:23:23] "POST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:24:00,572 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:24:00] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 13:24:06,409 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:24:06] "POST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:25:10,306 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:25:10] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 13:27:56,253 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 13:27:56,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 13:27:56,254 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:27:57,792 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:27:57,793 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:28:10,343 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:28:10] "POST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:29:52,641 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:29:52] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 13:30:59,477 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:30:59] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/main/ HTTP/1.1[0m" 201 -
+2024-09-29 13:33:36,305 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:33:36,907 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:33:43,199 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:33:43,200 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:34:00,428 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:34:00] "[33mPOST /api/items/requisite/668124f083e39d5a020d2f79/main/ HTTP/1.1[0m" 404 -
+2024-09-29 13:34:18,267 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:34:18] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:34:39,670 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:34:39] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:41:32,424 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:41:33,044 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:41:41,275 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:41:41,276 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:41:41,640 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:41:41] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:41:44,920 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:41:44] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:43:04,885 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 13:43:05,448 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 13:43:11,474 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 13:43:11,475 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 13:43:30,742 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:43:30] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:43:56,265 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:43:56] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 13:44:35,110 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 13:44:35] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:00:08,861 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:00:08] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:00:14,625 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:00:15,259 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:00:21,299 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:00:21,299 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:00:25,003 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:00:25] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:01:53,947 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:01:54,509 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:02:02,779 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:02:02,780 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:02:06,724 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:02:06] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:18:12,270 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:18:12,881 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:18:21,168 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:18:21,169 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:19:35,685 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:19:35] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:30:12,003 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:30:12,572 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:30:27,863 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 14:30:27,864 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 14:30:27,864 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:30:29,716 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:30:29,716 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:30:33,904 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:30:33] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:30:49,898 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:30:50,455 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:30:52,270 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:30:52,271 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:31:24,520 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:31:25,078 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:31:26,883 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:31:26,884 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:37:10,191 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:37:10,884 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:37:19,402 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:37:19,403 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:37:20,101 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:37:20] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:41:56,457 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:41:57,008 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:42:03,329 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:42:03,330 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:42:09,400 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:42:10,029 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:42:11,883 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:42:11,883 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:42:32,067 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:42:32,570 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:42:34,423 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:42:34,424 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:42:49,105 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:42:49] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:46:47,338 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 14:46:47,976 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:46:59,355 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:46:59,356 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:46:59,708 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:46:59] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:48:41,060 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 14:48:41] "GET /api/items/get/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 14:52:16,795 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2024-09-29 14:52:17,427 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:52:25,629 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:52:25,629 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 14:52:34,721 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2024-09-29 14:52:35,289 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 14:52:37,102 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 14:52:37,102 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 15:11:01,719 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:11:01] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:12:39,902 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:12:39] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:12:50,788 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:12:50] "OPTIONS /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:12:51,132 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:12:51] "DELETE /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:12:57,517 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:12:57] "[33mGET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 404 -
+2024-09-29 15:15:27,658 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:15:27] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:15:27,943 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:15:27] "[31m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-09-29 15:16:25,061 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:16:25] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:22:48,938 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:22:48] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:22:56,429 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:22:56] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 201 -
+2024-09-29 15:28:06,391 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:28:06] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:28:13,464 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:28:13] "OPTIONS /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:28:13,890 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:28:13] "DELETE /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:28:18,772 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:28:18] "[33mGET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 404 -
+2024-09-29 15:28:26,003 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:28:26] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:28:28,463 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:28:28] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 201 -
+2024-09-29 15:29:56,285 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:29:56] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:30:06,936 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:30:06] "POST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:33:21,212 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:33:21] "[31m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-09-29 15:44:30,346 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:44:30] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:44:36,831 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:44:36] "OPTIONS /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:44:37,246 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:44:37] "DELETE /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:44:45,781 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:44:45] "[33mGET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 404 -
+2024-09-29 15:44:52,885 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:44:52] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:44:59,579 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:44:59] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 201 -
+2024-09-29 15:45:12,023 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:45:12] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:56:45,575 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:56:45] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:56:51,233 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:56:51] "OPTIONS /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:56:51,643 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:56:51] "DELETE /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:56:57,684 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:56:57] "[33mGET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 404 -
+2024-09-29 15:57:04,954 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:57:04] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 15:57:07,514 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 15:57:07] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 201 -
+2024-09-29 16:01:00,214 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:01:00] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:01:05,481 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:01:05] "OPTIONS /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:01:05,884 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:01:05] "DELETE /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:01:13,184 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:01:13] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:01:16,942 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:01:16] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 201 -
+2024-09-29 16:02:17,284 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:17] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:02:24,325 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:24] "OPTIONS /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:02:24,934 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:24] "DELETE /api/items/deleteall/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:02:29,577 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:29] "[33mGET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 404 -
+2024-09-29 16:02:33,835 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:33] "OPTIONS /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:02:36,707 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:36] "[35m[1mPOST /api/items/bulkpush/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 201 -
+2024-09-29 16:02:48,199 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:02:48] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:22:57,855 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:22:57] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:24:53,345 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:24:53] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:32:50,946 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:32:50] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:34:48,631 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:34:48] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:48:01,106 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:48:01] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:48:32,755 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:48:32] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:48:53,272 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:48:53] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:49:20,567 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:49:20] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:49:34,162 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:49:34] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:50:27,458 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:50:27] "OPTIONS /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:50:33,666 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:50:33] "POST /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 16:52:32,259 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 16:52:33,423 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 16:52:45,152 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 16:52:45,154 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 16:52:47,757 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:52:47] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 16:54:17,425 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 16:54:17,915 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 16:54:36,365 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 16:54:36,366 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 16:54:40,761 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:54:40] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 16:55:03,649 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 16:55:04,281 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 16:55:16,206 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-09-29 16:55:16,206 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-09-29 16:55:16,207 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 16:55:17,683 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 16:55:17,684 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 16:55:41,984 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 16:55:42,698 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 16:55:49,815 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 16:55:49,815 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 16:56:47,347 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/items_api.py', reloading
+2024-09-29 16:56:48,035 - werkzeug - INFO -  * Restarting with stat
+2024-09-29 16:56:49,908 - werkzeug - WARNING -  * Debugger is active!
+2024-09-29 16:56:49,908 - werkzeug - INFO -  * Debugger PIN: 379-256-599
+2024-09-29 16:56:51,025 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 16:56:51] "POST /api/items/requisite/669a2dbbb172f732a1323e26/main/ HTTP/1.1" 200 -
+2024-09-29 17:00:47,544 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:00:47] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:01:05,570 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:01:05] "OPTIONS /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:01:08,534 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:01:08] "POST /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:09:19,445 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:09:19] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:09:38,117 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:09:38] "OPTIONS /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:09:41,485 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:09:41] "POST /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:11:37,525 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:11:37] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:15:19,166 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:15:19] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:15:52,347 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:15:52] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:17:05,223 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:17:05] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:18:12,920 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:18:12] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 17:18:57,424 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 17:18:57] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:21:51,348 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:21:51] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:22:12,193 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:22:12] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:22:19,409 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:22:19] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:30:08,226 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:30:08] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:30:52,847 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:30:52] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:31:50,226 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:31:50] "OPTIONS /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:31:51,610 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:31:51] "POST /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:33:21,161 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:33:21] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:33:33,151 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:33:33] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:33:42,609 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:33:42] "OPTIONS /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:33:43,722 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:33:43] "POST /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:36:46,969 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:36:46] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:37:14,388 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:37:14] "OPTIONS /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:37:15,442 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:37:15] "POST /api/items/requisite/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:39:32,161 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:39:32] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:41:00,790 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:41:00] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:41:46,297 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:41:46] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:41:46,307 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:41:46] "OPTIONS /api/channel/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:41:46,974 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:41:46] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:41:47,884 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:41:47] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:41:52,378 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:41:52] "POST /api/channel/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-09-29 18:42:00,269 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2024 18:42:00] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -

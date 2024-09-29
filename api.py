@@ -38,9 +38,6 @@ api.add_resource(Subscription, "/api/subscription/<string:org_id>/<string:plan>/
 api.add_resource(TransactionSuccess, "/api/transactions/success/<string:org_id>/")
 api.add_resource(Transactions, "/api/transactions/<string:org_id>/")
 
-
-
-
 #users
 api.add_resource(UserPush, "/api/user/push/")
 api.add_resource(UserPut, "/api/user/put/<string:user_id>/")
@@ -49,7 +46,6 @@ api.add_resource(UserGetOne, "/api/user/get/<string:user_id>/")
 api.add_resource(UsersGetAll, "/api/users/get/")
 api.add_resource(UploadImage, "/api/user-image/<string:user_id>/")
 
-
 #events
 api.add_resource(EventPush, "/api/event/push/<string:user_id>/<string:lab_name>/<string:event_type>/")
 api.add_resource(EventPut, "/api/event/put/<string:user_id>/<string:lab_name>/<string:event_id>/")
@@ -57,19 +53,19 @@ api.add_resource(EventDel, "/api/event/del/<string:user_id>/<string:lab_name>/<s
 api.add_resource(EventGetOne, "/api/event/get/<string:user_id>/<string:lab_name>/<string:event_id>/")
 api.add_resource(EventGetAll, "/api/events/get/<string:user_id>/<string:lab_name>/<string:event_type>/")
 
+# api.add_resource(ToDoSaveOrder, '/to-do/<string:user_id>/save-order/')
 api.add_resource(ToDoPush, "/api/to-do/push/<string:user_id>/")
 api.add_resource(ToDoPut, "/api/to-do/put/<string:user_id>/<string:date>/")
 api.add_resource(ToDoGetOne, "/api/to-do/get/<string:user_id>/<string:date>/")
 api.add_resource(ToDoGetAll, "/api/to-do/get-all/<string:user_id>/")
 api.add_resource(ToDoDeleteDate, "/api/to-do/del/<string:user_id>/<string:date>/")
-# api.add_resource(ToDoSaveOrder, '/to-do/<string:user_id>/save-order/')
 
 #organisations
 api.add_resource(OrganisationPush, "/api/org/push/")
 api.add_resource(GetOrganisation, "/api/org/get/<string:name>/")
 
 #items
-api.add_resource(ItemsResource, "/api/items/get/<string:user_id>/<string:lab_name>/")
+api.add_resource(ItemsGet, "/api/items/get/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsPush, "/api/items/push/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsBulkPush, "/api/items/bulkpush/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsPut, "/api/item/put/<string:user_id>/<string:lab_name>/")
@@ -83,7 +79,6 @@ api.add_resource(MachinePut, "/api/machine/put/<string:user_id>/<string:lab_name
 api.add_resource(MachineGetOne, "/api/machine/get/<string:user_id>/<string:lab_name>/<string:machine_id>/")
 api.add_resource(MachineGetAll, "/api/machines/get/<string:user_id>/<string:lab_name>/")
 api.add_resource(MachineDel, "/api/machines/deleteall/<string:user_id>/<string:lab_name>/")
-
 
 #put in use
 api.add_resource(P_in_usePush, "/api/piu/push/<string:user_id>/<string:lab_name>/")
@@ -131,7 +126,6 @@ api.add_resource(AddContact, '/api/contact/add/<string:user_id>/<string:contact_
 api.add_resource(DeleteContact, '/api/contact/delete/<string:user_id>/<string:contact_id>/')
 
 api.add_resource(Webhook, '/api/webhook/')
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000, debug=True)
