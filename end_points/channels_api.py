@@ -3,6 +3,7 @@ from flask_restful import Resource, reqparse, abort, fields, marshal_with
 from bson import ObjectId
 from datetime import datetime, timedelta
 from engine import db_clinical, client, org_users_db, get_org_name
+from werkzeug.exceptions import HTTPException
 
 # CHANNELS_COLLECTION = db_clinical['channels']
 # ITEMS_COLLECTION = db_clinical['items']
@@ -29,63 +30,107 @@ def valid_date(s):
 
 channels_parser.add_argument("expiration", type=valid_date, required=False)
 
+
 class ChannelPush(Resource):
     def post(self, user_id, lab_name):
         try:
+            # Fetch organization and collections
             org_name = get_org_name(user_id)
-            ITEMS_COLLECTION = client[org_name+'_db'][lab_name+'_items']
-            CHANNELS_COLLECTION = client[org_name+'_db'][lab_name+'_channels']
-            LOT_EXP_COLLECTION = client[org_name+'_db'][lab_name+'_lot_exp']
+            ITEMS_COLLECTION = client[org_name + '_db'][lab_name + '_items']
+            CHANNELS_COLLECTION = client[org_name + '_db'][lab_name + '_channels']
+            LOT_EXP_COLLECTION = client[org_name + '_db'][lab_name + '_lot_exp']
         except ValueError as e:
             abort(404, message=str(e))
+
         try:
+            # Get the current time
             utc_now = datetime.now()
             wat_now = utc_now + timedelta(hours=1)
+            
+            # Parse arguments and get user information
             args = channels_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
-            print(user)
-            print(org_name)
-            if not user:
-                return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
-            elif not org_name:
-                return {"message": "Organisation does not exist, kindly contact Lorkorblaq"}, 400
-            labs = user.get('labs_access')
-            if lab_name in labs:
-                pass
             
+            if not user:
+                abort(400, message="User does not exist, kindly contact Lorkorblaq")
+            
+            if not org_name:
+                abort(400, message="Organisation does not exist, kindly contact Lorkorblaq")
+            
+            # Verify lab access
+            labs = user.get('labs_access')
+            if lab_name not in labs:
+                abort(403, message="You do not have access to this lab")
+
+            # Fetch item from the collection
             item = ITEMS_COLLECTION.find_one({'item': args['item']})
+            if not item:
+                abort(400, message="Item does not exist, kindly contact Lorkorblaq")
+            
+            current_quantity = item.get('quantity', 0)
+
+            # Check the conditions for "To" direction first
+            if args['direction'] == "To":
+                if current_quantity == 0:
+                    abort(400, message="Item is already at zero quantity, cannot reduce further")
+                elif current_quantity - args['quantity'] < 0:
+                    abort(400, message="Quantity will result in a negative value and can't be allowed")
+
+            # Prepare the channel data
             name = user.get('firstname') + ' ' + user.get('lastname')
             channel = {
-                    "user":  name, 
-                    "item": args["item"], 
-                    "lot_numb": args["lot_numb"],
-                    "direction": args["direction"],
-                    "location": args["location"],
-                    "quantity": args["quantity"],
-                    "description": args["description"],
-                    'created at': wat_now,
-                }
-            if not user:
-                return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
-            if not item:
-                return {"message": "Item does not exist, kindly contact Lorkorblaq"}, 400
-
+                "user": name, 
+                "item": args["item"], 
+                "lot_numb": args["lot_numb"],
+                "direction": args["direction"],
+                "location": args["location"],
+                "quantity": args["quantity"],
+                "description": args["description"],
+                'created at': wat_now,
+            }
+            
+            # Insert the channel after validation passes
             inserted_id = CHANNELS_COLLECTION.insert_one(channel).inserted_id
             inserted_id = str(inserted_id)
-            if inserted_id:
-                if args['direction'] == 'To':
-                    ITEMS_COLLECTION.update_one({'item': args['item']}, {'$inc': {'quantity': -args['quantity']}})
-                    LOT_EXP_COLLECTION.update_one({'lot_numb': args['lot_numb']}, {'$inc': {'quantity': -args['quantity']}})
-                elif args['direction'] == 'From':
-                    ITEMS_COLLECTION.update_one({'item': args['item']}, {'$inc': {'quantity': args['quantity']}})
-                    LOT_EXP_COLLECTION.update_one({'lot_numb': args['lot_numb']}, {'$inc': {'quantity': args['quantity']}})
+
+            # Update the item and lot quantity based on the direction
+            if args['direction'] == 'To':
+                # Update the item's quantity by decreasing it
+                ITEMS_COLLECTION.update_one(
+                    {'item': args['item']},
+                    {'$inc': {'quantity': -args['quantity']}}
+                )
+                # Update the lot expiry collection as well
+                LOT_EXP_COLLECTION.update_one(
+                    {'lot_numb': args['lot_numb']},
+                    {'$inc': {'quantity': -args['quantity']}}
+                )
+            elif args['direction'] == 'From':
+                # Update the item's quantity by increasing it
+                ITEMS_COLLECTION.update_one(
+                    {'item': args['item']},
+                    {'$inc': {'quantity': args['quantity']}}
+                )
+                LOT_EXP_COLLECTION.update_one(
+                    {'lot_numb': args['lot_numb']},
+                    {'$inc': {'quantity': args['quantity']}}
+                )
+
+            # Return success response
             response = {
                 "message": "Channel created successfully",
                 "channel_id": inserted_id
             }
             return response, 200
+        
+        except HTTPException as e:
+            # Let HTTP exceptions (abort) pass through without being caught
+            raise e
         except Exception as e:
-            return {"message": "Error occured while pushing channel item", "error": str(e)}
+            # Handle any other error that occurs after validation
+            return {"message": "Error occurred while pushing channel item", "error": str(e)}
+
+
 
 class ChannelPut(Resource):    
     def put(self, user_id, lab_name, channel_id):

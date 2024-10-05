@@ -3,6 +3,8 @@ from flask_restful import Resource, reqparse, abort, fields, marshal_with
 from bson import ObjectId
 from datetime import datetime, timedelta
 from engine import db_clinical, client, org_users_db, get_org_name
+from werkzeug.exceptions import HTTPException
+
 
 # PUT_IN_USE_COLLECTION = db_clinical['put in use']
 ITEMS_COLLECTION = db_clinical['items']
@@ -20,6 +22,7 @@ put_in_use_parser.add_argument("description", type=str, help="Description is req
 class P_in_usePush(Resource):
     def post(self, user_id, lab_name):
         try:
+            # Fetch organization and collections
             org_name = get_org_name(user_id)
             ITEMS_COLLECTION = client[org_name + '_db'][lab_name + '_items']
             PUT_IN_USE_COLLECTION = client[org_name + '_db'][lab_name + '_piu']
@@ -28,28 +31,42 @@ class P_in_usePush(Resource):
             abort(404, message=str(e))
 
         try:
+            # Get the current time
             utc_now = datetime.now()
             wat_now = utc_now + timedelta(hours=1)
+
+            # Parse arguments
             args = put_in_use_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+
+            # Validate user existence
+            if not user:
+                abort(400, message="User does not exist, kindly contact support")
+
+            # Fetch item and lot data
             item = ITEMS_COLLECTION.find_one({'item': args['item']})
             lot_exp = LOT_EXP_COLLECTION.find_one({'lot_numb': args['lot_numb']})
+
+            # Validate item and lot existence
             if not item:
-                return {"message": "Item does not exist, kindly contact support"}, 400
-            if not user:
-                return {"message": "User does not exist, kindly contact support"}, 400
+                abort(400, message="Item does not exist, kindly contact support")
             if not lot_exp:
-                return {"message": "Lot number does not exist, kindly contact support"}, 400
+                abort(400, message="Lot number does not exist, kindly contact support")
+
+            # Validate lot association with item
             if lot_exp['item'] != args['item']:
-                return {"message": "Lot number is not associated with the given item, kindly contact support"}, 400
+                abort(400, message="Lot number is not associated with the given item, kindly contact support")
+
+            # Validate quantity availability
             if item['quantity'] < args['quantity']:
-                return {"message": "Quantity is more than available quantity"}, 400
-            
-            print(item)
+                abort(400, message="Quantity to be put in use is more than available quantity in stock")
+            if args['quantity'] <= 0:
+                abort(400, message="Quantity in must be greater than zero")
+
+            # Prepare the data to insert
             bench = item.get('bench')
             name = user.get('firstname') + ' ' + user.get('lastname')
 
-            # Insert into put_in_use collection
             piu = {
                 'user': name,
                 'item': args["item"],
@@ -61,22 +78,30 @@ class P_in_usePush(Resource):
                 'created at': wat_now,
             }
             
-            inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id 
+            # Insert the item into the put in use collection
+            inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id
             inserted_id = str(inserted_id)
+
             if inserted_id:
+                # Update item and lot quantity
                 ITEMS_COLLECTION.update_one({'item': args['item']}, {'$inc': {'quantity': -args['quantity']}})
                 LOT_EXP_COLLECTION.update_one({'lot_numb': args['lot_numb']}, {'$inc': {'quantity': -args['quantity']}})
             else:
-                return {"message": "Error occurred while pushing put in use item"}, 400
+                abort(400, message="Error occurred while pushing put in use item")
 
+            # Return success response
             response = {
                 "message": "Item put in use successfully",
                 'piu_id': inserted_id
             }
             return response, 200
+        
+        except HTTPException as e:
+            # Let HTTP exceptions (abort) pass through without being caught
+            raise e
         except Exception as e:
+            # Handle any other error that occurs
             return {"message": "Error occurred while pushing put in use item", "error": str(e)}
-
 
 class P_in_usePut(Resource):
     def put(self, user_id, lab_name, piu_id):
