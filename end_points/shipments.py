@@ -118,12 +118,17 @@ class ShipmentsPut(Resource):
             dropoff_time = shipment.get('dropoff_time')
             if pickup_time and dropoff_time:
                 duration = dropoff_time - pickup_time
-                duration_days = f"{duration.days}D"
-                duration_hours = f"{duration.seconds // 3600}H"
-                duration_minutes = f"{(duration.seconds % 3600) // 60}M"
-                duration_seconds = f"{duration.seconds % 60}S"
+                total_minutes = duration.total_seconds() // 60  # Convert to minutes
+                shipment['duration'] = total_minutes
+            # if pickup_time and dropoff_time:
+            #     duration = dropoff_time - pickup_time
+            #     print('duration', duration)
+            #     duration_days = f"{duration.days}D"
+            #     duration_hours = f"{duration.seconds // 3600}H"
+            #     duration_minutes = f"{(duration.seconds % 3600) // 60}M"
+            #     duration_seconds = f"{duration.seconds % 60}S"
 
-                shipment['duration'] = f"{duration_days}:{duration_hours}:{duration_minutes}:{duration_seconds}"
+                # shipment['duration'] = f"{duration_days}:{duration_hours}:{duration_minutes}:{duration_seconds}"
 
 
         SHIPMENTS_COLLECTION.replace_one({'shipment_id': shipment_id}, shipment)

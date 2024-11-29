@@ -131,53 +131,87 @@ class ChannelPush(Resource):
             return {"message": "Error occurred while pushing channel item", "error": str(e)}
 
 
-
-class ChannelPut(Resource):    
+class ChannelPut(Resource):
     def put(self, user_id, lab_name, channel_id):
         try:
+            # Fetch organization and collections
             org_name = get_org_name(user_id)
             ITEMS_COLLECTION = client[org_name + '_db'][lab_name + '_items']
             CHANNELS_COLLECTION = client[org_name + '_db'][lab_name + '_channels']
         except ValueError as e:
             abort(404, message=str(e))
 
-        utc_now = datetime.now()
-        args = channels_parser.parse_args()
-        channel = CHANNELS_COLLECTION.find_one({'_id': ObjectId(channel_id)})
-        if not channel:
-            abort(404, message="Channel not found")
+        try:
+            utc_now = datetime.now()
+            args = channels_parser.parse_args()
+            
+            # Find the channel document by its ID
+            channel = CHANNELS_COLLECTION.find_one({'_id': ObjectId(channel_id)})
+            if not channel:
+                abort(404, message="Channel not found")
 
-        # Retrieve the current quantity before updates
-        current_quantity = channel.get('quantity', 0)
-        new_quantity = args.get('quantity')
+            # Retrieve the current quantity before updates
+            current_quantity = channel.get('quantity', 0)
+            new_quantity = args.get('quantity')
 
-        if new_quantity is not None:
-            try:
-                new_quantity = float(new_quantity)
-                # Calculate the difference
-                quantity_diff = new_quantity - current_quantity
+            # Check if the new quantity is provided
+            if new_quantity is not None:
+                try:
+                    new_quantity = float(new_quantity)
 
-                if channel['direction'] == 'To':
-                    ITEMS_COLLECTION.update_one({'item': channel['item']}, {'$inc': {'quantity': -quantity_diff}})
-                elif channel['direction'] == 'From':
-                    ITEMS_COLLECTION.update_one({'item': channel['item']}, {'$inc': {'quantity': quantity_diff}})
-            except ValueError:
-                abort(400, message="Quantity must be a valid number")
+                    # Prevent zero or negative quantity
+                    if new_quantity <= 0:
+                        abort(400, message="Quantity must be greater than zero")
 
-        # Update the channel with new values
-        for key, value in args.items():
-            if value is not None:
-                # Convert empty strings to None
-                if isinstance(value, str) and value.strip() == '':
-                    value = None
-                channel[key] = value
+                    # Calculate the difference in quantity for update
+                    quantity_diff = new_quantity - current_quantity
 
-        channel['updated_at'] = utc_now
-        CHANNELS_COLLECTION.replace_one({'_id': ObjectId(channel_id)}, channel)
+                    # Fetch the item to check the current stock
+                    item = ITEMS_COLLECTION.find_one({'item': channel['item']})
+                    if not item:
+                        abort(400, message="Item not found in inventory")
 
-        response = {"message": "Your data has been updated successfully"}
-        return response, 200
-    
+                    # Validate based on the channel direction
+                    if channel['direction'] == 'To':
+                        # Ensure reducing quantity doesn't go below zero
+                        if item['quantity'] - quantity_diff < 0:
+                            abort(400, message="Reducing quantity will result in negative item quantity")
+                        
+                        # Update the item and reduce quantity
+                        ITEMS_COLLECTION.update_one(
+                            {'item': channel['item']},
+                            {'$inc': {'quantity': -quantity_diff}}
+                        )
+                    elif channel['direction'] == 'From':
+                        # Update the item and increase quantity
+                        ITEMS_COLLECTION.update_one(
+                            {'item': channel['item']},
+                            {'$inc': {'quantity': quantity_diff}}
+                        )
+                except ValueError:
+                    abort(400, message="Quantity must be a valid number")
+
+            # Update the channel with new values
+            for key, value in args.items():
+                if value is not None:
+                    # Convert empty strings to None
+                    if isinstance(value, str) and value.strip() == '':
+                        value = None
+                    channel[key] = value
+
+            channel['updated_at'] = utc_now
+            CHANNELS_COLLECTION.replace_one({'_id': ObjectId(channel_id)}, channel)
+
+            response = {"message": "Your data has been updated successfully"}
+            return response, 200
+
+        except HTTPException as e:
+            # Let HTTP exceptions (abort) pass through without being caught
+            raise e
+        except Exception as e:
+            # Handle any other error that occurs after validation
+            return {"message": "Error occurred while updating channel item", "error": str(e)}
+   
 class ChannelDel(Resource):
      def delete(self, user_id, lab_name, channel_id):
         try:

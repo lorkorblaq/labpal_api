@@ -52,6 +52,7 @@ api.add_resource(EventPut, "/api/event/put/<string:user_id>/<string:lab_name>/<s
 api.add_resource(EventDel, "/api/event/del/<string:user_id>/<string:lab_name>/<string:event_id>/")
 api.add_resource(EventGetOne, "/api/event/get/<string:user_id>/<string:lab_name>/<string:event_id>/")
 api.add_resource(EventGetAll, "/api/events/get/<string:user_id>/<string:lab_name>/<string:event_type>/")
+api.add_resource(EventByCreatedAt, "/api/event/by_created_at/<string:user_id>/<string:lab_name>/<string:created_at>/")
 
 # api.add_resource(ToDoSaveOrder, '/to-do/<string:user_id>/save-order/')
 api.add_resource(ToDoPush, "/api/to-do/push/<string:user_id>/")

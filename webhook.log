@@ -4816,3 +4816,687 @@
 2024-10-05 21:44:54,672 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2024 21:44:54] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
 2024-10-05 21:48:01,172 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/put_in_use_api.py', reloading
 2024-10-05 21:48:03,462 - werkzeug - INFO -  * Restarting with stat
+2024-10-06 11:58:18,391 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-10-06 11:58:18,392 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-06 11:58:18,393 - werkzeug - INFO -  * Restarting with stat
+2024-10-06 11:58:20,538 - werkzeug - WARNING -  * Debugger is active!
+2024-10-06 11:58:20,641 - werkzeug - INFO -  * Debugger PIN: 740-869-725
+2024-10-06 12:03:44,742 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:03:44] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:05,063 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:05] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:05,648 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:05] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:05,656 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:05] "OPTIONS /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:06,263 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:06] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:06,860 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:06] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:08,516 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:08] "[31m[1mPOST /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-10-06 12:04:21,177 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:21] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:21,827 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:21] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:21,835 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:21] "OPTIONS /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:22,414 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:22] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:22,850 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:22] "[31m[1mPOST /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-10-06 12:04:23,055 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:23] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:36,980 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:36] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:37,589 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:37] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:40,378 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:40] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:04:41,055 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:04:41] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:06:47,589 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:06:47] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:04,941 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:04] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:05,613 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:05] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:08,290 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:08] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:08,990 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:08] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:39,524 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:39] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:56,269 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:56] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:56,934 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:56] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:07:59,665 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:07:59] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:08:00,345 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:00] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:08:19,002 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:19] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:08:19,654 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:19] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:08:19,659 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:19] "OPTIONS /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:08:20,286 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:20] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:08:20,694 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:20] "[31m[1mPOST /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-10-06 12:08:20,999 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:08:20] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:09:03,885 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:09:03] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:09:23,805 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:09:23] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:09:24,490 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:09:24] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:09:27,050 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:09:27] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:09:27,665 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:09:27] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:09:58,386 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:09:58] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:32,935 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:32] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:33,624 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:33] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:33,630 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:33] "OPTIONS /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:34,441 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:34] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:34,851 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:34] "[31m[1mPOST /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-10-06 12:11:35,157 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:35] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:46,442 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:46] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:47,138 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:47] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:49,187 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:49] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:11:49,802 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:11:49] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:13:30,989 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:13:30] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:13:47,609 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:13:47] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:13:48,282 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:13:48] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:13:50,228 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:13:50] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:13:50,824 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:13:50] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:05,076 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:05] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:16,467 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:16] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:17,215 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:17] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:18,735 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:18] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:19,412 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:19] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:22,037 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:22] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:22,626 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:22] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:24,226 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:24] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:24,942 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:24] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:38,495 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:38] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:39,279 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:39] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:41,177 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:41] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:41,872 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:41] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:50,262 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:50] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:50,953 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:50] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:50,961 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:50] "OPTIONS /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:51,672 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:51] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:14:52,053 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:52] "[31m[1mPOST /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-10-06 12:14:52,264 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:14:52] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:29,289 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:29] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:30,173 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:30] "GET /api/lotexp/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:30,185 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:30] "OPTIONS /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:30,780 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:30] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:31,481 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:31] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:31,914 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:31] "POST /api/piu/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:15:42,823 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:15:42] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:24:10,447 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/channels_api.py', reloading
+2024-10-06 12:24:10,927 - werkzeug - INFO -  * Restarting with stat
+2024-10-06 12:24:20,625 - werkzeug - WARNING -  * Debugger is active!
+2024-10-06 12:24:20,626 - werkzeug - INFO -  * Debugger PIN: 740-869-725
+2024-10-06 12:24:31,425 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:24:31] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:25:48,452 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:25:48] "GET /api/items/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:26:35,652 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:26:35] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:26:40,213 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:26:40] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:26:41,785 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:26:41] "PUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:26:55,127 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:26:55] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:26:56,016 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:26:56] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:27:04,935 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:27:04] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:29:54,894 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:29:54] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:29:55,727 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:29:55] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:30:03,172 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:30:03] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:30:10,794 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:30:10] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:30:14,855 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:30:14] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:30:15,776 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:30:15] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:36:07,461 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:07] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:36:12,996 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:12] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:36:14,404 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:14] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:36:27,763 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:27] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:36:32,781 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:32] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:36:36,627 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:36] "PUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:36:48,204 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:48] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:36:57,676 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:57] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:36:58,854 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:36:58] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:37:35,084 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:37:35] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:37:44,111 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:37:44] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271c14e3a741167cfcaaf/ HTTP/1.1" 200 -
+2024-10-06 12:37:47,079 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:37:47] "PUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271c14e3a741167cfcaaf/ HTTP/1.1" 200 -
+2024-10-06 12:37:56,407 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:37:56] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:38:01,317 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:38:01] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:38:03,405 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:38:03] "PUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:38:04,154 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:38:04] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271c14e3a741167cfcaaf/ HTTP/1.1" 200 -
+2024-10-06 12:38:06,259 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:38:06] "PUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271c14e3a741167cfcaaf/ HTTP/1.1" 200 -
+2024-10-06 12:38:08,444 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:38:08] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:38:12,601 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:38:12] "PUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:43:49,492 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:43:49] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:43:54,048 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:43:54] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:43:54,051 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:43:54] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:43:56,539 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:43:56] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:44:01,674 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:44:01] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:44:19,595 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:44:19] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:44:25,023 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:44:25] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:44:25,024 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:44:25] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:44:26,539 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:44:26] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:44:26,756 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:44:26] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:45:40,638 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:45:40] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:45:45,527 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:45:45] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:45:47,002 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:45:47] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:46:01,832 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:46:01] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:46:07,757 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:46:07] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:46:08,512 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:46:08] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:48:38,988 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:48:38] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:48:43,603 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:48:43] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:48:45,257 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:48:45] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:50:10,575 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:10] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:50:14,929 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:14] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:50:16,900 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:16] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:50:38,304 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:38] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:50:42,379 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:42] "OPTIONS /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1" 200 -
+2024-10-06 12:50:43,190 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:43] "[31m[1mPUT /api/channel/put/669a2dbbb172f732a1323e26/clinicals/670271d94e3a741167cfcab0/ HTTP/1.1[0m" 400 -
+2024-10-06 12:50:48,620 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:48] "GET /api/channels/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:50:57,230 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:50:57] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:51:07,468 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:51:07] "OPTIONS /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:51:08,833 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:51:08] "PUT /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:51:34,754 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:51:34] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:51:40,963 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:51:40] "OPTIONS /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:51:45,507 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:51:45] "PUT /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:51:47,519 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:51:47] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:52:05,538 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:52:05] "OPTIONS /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:52:07,452 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:52:07] "PUT /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:52:11,621 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:52:11] "PUT /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:52:14,611 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:52:14] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:52:21,678 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:52:21] "OPTIONS /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:52:23,905 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:52:23] "PUT /api/piu/put/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:53:26,735 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:53:26] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:53:51,127 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:53:51] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:54:17,829 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:54:17] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:54:41,415 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:54:41] "GET /api/piu/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-06 12:54:44,101 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:54:44] "OPTIONS /api/piu/delete/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-06 12:54:46,162 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2024 12:54:46] "DELETE /api/piu/delete/669a2dbbb172f732a1323e26/clinicals/67027153e02b1bc1e119d1f7/ HTTP/1.1" 200 -
+2024-10-13 23:03:50,226 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.25.1.174:3000
+2024-10-13 23:03:50,227 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-13 23:03:50,228 - werkzeug - INFO -  * Restarting with stat
+2024-10-13 23:03:53,581 - werkzeug - WARNING -  * Debugger is active!
+2024-10-13 23:03:53,585 - werkzeug - INFO -  * Debugger PIN: 128-306-386
+2024-10-13 23:05:26,231 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:05:26] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:06:58,541 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:06:58] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:07:28,996 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:07:28] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:07:34,132 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:07:34] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:07:39,512 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:07:39] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:07:49,216 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:07:49] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:08:16,752 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:08:16] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:08:20,721 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:08:20] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:09:44,542 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:09:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:09:57,644 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:09:57] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:10:46,338 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:10:46] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:10:46,459 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:10:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-13 23:13:30,533 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:13:30] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:13:32,966 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:13:32] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-13 23:13:36,051 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:13:36] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:13:40,282 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:13:40] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:13:44,352 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:13:44] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:15:50,777 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:15:50] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-13 23:17:20,840 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-13 23:17:21,403 - werkzeug - INFO -  * Restarting with stat
+2024-10-13 23:21:13,230 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.25.1.174:3000
+2024-10-13 23:21:13,231 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-13 23:21:13,232 - werkzeug - INFO -  * Restarting with stat
+2024-10-13 23:21:16,322 - werkzeug - WARNING -  * Debugger is active!
+2024-10-13 23:21:16,323 - werkzeug - INFO -  * Debugger PIN: 128-306-386
+2024-10-13 23:21:22,906 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:21:22] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-13 23:21:26,000 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2024 23:21:26] "[33mGET /api/event/by_created_at/669a2dbbb172f732a1323e26/clinicals/2024-08-29%2010:43:41/ HTTP/1.1[0m" 404 -
+2024-10-14 00:12:38,661 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-14 00:12:39,277 - werkzeug - INFO -  * Restarting with stat
+2024-10-14 00:12:42,911 - werkzeug - WARNING -  * Debugger is active!
+2024-10-14 00:12:42,911 - werkzeug - INFO -  * Debugger PIN: 128-306-386
+2024-10-14 00:13:42,611 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:13:42] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:14:23,173 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:14:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:15:11,028 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:15:11] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:15:34,720 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:15:34] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:18:23,038 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:18:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:18:53,321 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:18:53] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:19:46,750 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:19:46] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:20:04,030 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:20:04] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:20:09,623 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:20:09] "OPTIONS /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d042cdc68c58faf9d37ea5/ HTTP/1.1" 200 -
+2024-10-14 00:20:10,944 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:20:10] "DELETE /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d042cdc68c58faf9d37ea5/ HTTP/1.1" 200 -
+2024-10-14 00:20:18,925 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:20:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:21:36,211 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:21:36] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:22:54,177 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:22:54] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:23:56,725 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:23:56] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:24:16,256 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:24:16] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:24:23,688 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:24:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:24:56,112 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:24:56] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:25:59,817 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:25:59] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:26:06,903 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:26:06] "OPTIONS /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d3e01c6b5b2c763b4f6108/ HTTP/1.1" 200 -
+2024-10-14 00:26:08,225 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:26:08] "DELETE /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d3e01c6b5b2c763b4f6108/ HTTP/1.1" 200 -
+2024-10-14 00:26:32,497 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:26:32] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:27:24,428 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:27:24] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:28:49,037 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:28:49] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:29:14,185 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:29:14] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:29:47,846 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:29:47] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:32:19,978 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:32:19] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:32:29,941 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:32:29] "OPTIONS /api/event/del/669a2dbbb172f732a1323e26/clinicals/66ded092e9cdbe465b66a994/ HTTP/1.1" 200 -
+2024-10-14 00:32:31,264 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:32:31] "DELETE /api/event/del/669a2dbbb172f732a1323e26/clinicals/66ded092e9cdbe465b66a994/ HTTP/1.1" 200 -
+2024-10-14 00:32:37,706 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:32:37] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:33:39,951 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:33:39] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:34:01,165 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:01] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:34:05,787 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:05] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:34:09,116 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:09] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:34:17,325 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:17] "OPTIONS /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d33cdc3fe94b2143556b95/ HTTP/1.1" 200 -
+2024-10-14 00:34:18,646 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:18] "DELETE /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d33cdc3fe94b2143556b95/ HTTP/1.1" 200 -
+2024-10-14 00:34:26,769 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:26] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:34:29,983 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:29] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:34:40,525 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:40] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:34:45,149 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:45] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:34:48,680 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:34:48] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:35:02,105 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:35:02] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:35:15,589 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:35:15] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:35:20,750 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:35:20] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:40:03,069 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:03] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:40:04,893 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:04] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:40:08,824 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:08] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:40:25,364 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:25] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:40:28,167 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:28] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:40:32,855 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:32] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:40:36,778 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:36] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:40:44,017 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:40:47,806 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:40:47] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:41:14,840 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:41:14] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:41:44,645 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:41:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:42:01,148 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:01] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-14 00:42:06,624 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:06] "OPTIONS /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d3db356b5b2c763b4f6107/ HTTP/1.1" 200 -
+2024-10-14 00:42:07,945 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:07] "DELETE /api/event/del/669a2dbbb172f732a1323e26/clinicals/66d3db356b5b2c763b4f6107/ HTTP/1.1" 200 -
+2024-10-14 00:42:13,537 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:13] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:42:30,117 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:30] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:42:31,187 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:31] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 00:42:49,662 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:49] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-14 00:42:52,099 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 00:42:52] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-14 01:08:48,373 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2024 01:08:48] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 18:52:29,033 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-10-17 18:52:29,034 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-17 18:52:29,035 - werkzeug - INFO -  * Restarting with stat
+2024-10-17 18:52:31,695 - werkzeug - WARNING -  * Debugger is active!
+2024-10-17 18:52:31,696 - werkzeug - INFO -  * Debugger PIN: 584-499-510
+2024-10-17 19:03:18,735 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-17 19:03:19,273 - werkzeug - INFO -  * Restarting with stat
+2024-10-17 19:03:26,416 - werkzeug - WARNING -  * Debugger is active!
+2024-10-17 19:03:26,416 - werkzeug - INFO -  * Debugger PIN: 584-499-510
+2024-10-17 19:04:59,887 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-17 19:05:00,494 - werkzeug - INFO -  * Restarting with stat
+2024-10-17 19:05:10,098 - werkzeug - WARNING -  * Debugger is active!
+2024-10-17 19:05:10,099 - werkzeug - INFO -  * Debugger PIN: 584-499-510
+2024-10-17 19:06:34,412 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:06:34] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:07:06,445 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:07:06] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:07:27,817 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:07:27] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:12:24,112 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-17 19:12:24,642 - werkzeug - INFO -  * Restarting with stat
+2024-10-17 19:12:34,031 - werkzeug - WARNING -  * Debugger is active!
+2024-10-17 19:12:34,031 - werkzeug - INFO -  * Debugger PIN: 584-499-510
+2024-10-17 19:13:25,779 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-17 19:13:26,395 - werkzeug - INFO -  * Restarting with stat
+2024-10-17 19:13:29,230 - werkzeug - WARNING -  * Debugger is active!
+2024-10-17 19:13:29,231 - werkzeug - INFO -  * Debugger PIN: 584-499-510
+2024-10-17 19:13:34,288 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/events.py', reloading
+2024-10-17 19:13:34,883 - werkzeug - INFO -  * Restarting with stat
+2024-10-17 19:13:37,928 - werkzeug - WARNING -  * Debugger is active!
+2024-10-17 19:13:37,928 - werkzeug - INFO -  * Debugger PIN: 584-499-510
+2024-10-17 19:17:00,519 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:17:00] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:20:44,383 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:20:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:20:48,236 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:20:48] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:20:53,329 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:20:53] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e03f6b5b2c763b4f6109 HTTP/1.1[0m" 308 -
+2024-10-17 19:20:59,500 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:20:59] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:21:02,011 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:21:02] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:21:04,810 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:21:04] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:21:09,100 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:21:09] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:21:15,190 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:21:15] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:21:18,603 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:21:18] "[32mOPTIONS /api/event/put/undefined/undefined/670c07cea8817e039ae16067 HTTP/1.1[0m" 308 -
+2024-10-17 19:21:18,605 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:21:18] "[32mOPTIONS /api/event/put/undefined/undefined/670c07cea8817e039ae16067 HTTP/1.1[0m" 308 -
+2024-10-17 19:22:55,856 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:22:55] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:23:57,545 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:23:57] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:24:34,023 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:24:34] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:25:13,101 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:25:13] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:25:53,616 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:25:53] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:27:06,154 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:27:06] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:27:23,370 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:27:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:27:39,609 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:27:39] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:29:45,315 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:29:45] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:30:01,819 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:01] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:05,015 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:05] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:20,455 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:20] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:30:22,958 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:22] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:24,268 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:24] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:30:27,499 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:27] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:28,319 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:28] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:29,796 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:29] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:30:31,372 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:31] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:33,196 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:33] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:37,025 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:37] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:30:39,712 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:39] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:30:41,061 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:41] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:30:44,743 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:30:44,928 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:30:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:31:58,283 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:31:58] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:31:59,443 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:31:59] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:32:07,309 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:32:07] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:32:48,993 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:32:48] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:32:50,308 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:32:50] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:32:57,617 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:32:57] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:33:53,182 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:33:53] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:37:21,395 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:37:21] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:48:44,838 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:48:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:12,725 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:12] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:13,520 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:13] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:23,234 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:50,997 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:50] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:51,915 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:51] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:56,972 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:56] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:49:58,851 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:49:58] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-17 19:50:05,259 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:50:05] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:50:08,016 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:50:08] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:50:11,296 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:50:11] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:52:53,381 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:52:53] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:52:55,102 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:52:55] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:53:03,517 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:53:03] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:57:26,701 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:57:26] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:57:36,348 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:57:36] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:57:36,929 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:57:36] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-17 19:57:49,762 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:57:49] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:57:53,549 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:57:53] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:58:09,071 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:58:09] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:58:10,801 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:58:10] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:58:18,406 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:58:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 19:58:33,313 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:58:33] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-17 19:58:37,516 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:58:37] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:58:43,789 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:58:43] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:59:39,654 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:59:39] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 19:59:40,453 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 19:59:40] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-17 20:00:33,908 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 20:00:33] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-17 20:00:43,751 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 20:00:43] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-17 20:00:45,063 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2024 20:00:45] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 08:48:47,735 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.25.1.174:3000
+2024-10-18 08:48:47,736 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 08:48:47,737 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 08:48:51,016 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 08:48:51,016 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 08:49:11,354 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 08:49:11] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 08:49:18,907 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 08:49:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 08:49:21,949 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 08:49:21] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 08:49:24,846 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 08:49:24] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 08:49:42,165 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 08:49:42] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 08:49:42,702 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 08:49:42] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:00:36,100 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:00:36] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:00:36,632 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:00:36] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:02:02,935 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:02] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:02:18,337 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:18] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:02:18,870 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:18] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:02:28,153 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:28] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:02:28,687 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:28] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:02:42,338 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:42] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:02:43,415 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:43] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:02:48,800 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:48] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:02:50,072 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:50] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:02:51,138 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:51] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:02:59,756 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:02:59] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:03:14,184 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:03:14] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:03:14,716 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:03:14] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:08:15,060 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:08:15] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:08:17,487 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:08:17] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:08:41,574 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:08:41] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:08:42,101 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:08:42] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:10:05,245 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:10:05] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:10:28,483 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:10:28] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:10:29,015 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:10:29] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:12:49,588 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:12:49] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:13:03,693 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:13:03] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:13:04,229 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:13:04] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:18:46,509 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.25.1.174:3000
+2024-10-18 09:18:46,510 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 09:18:46,511 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 09:18:51,480 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 09:18:51,480 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 09:19:25,642 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:19:25] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:19:39,818 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:19:39] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:19:40,300 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:19:40] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:24:54,704 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:24:54] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:25:09,326 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:25:09] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:25:12,377 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:25:12] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:26:25,977 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:26:25] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:26:35,653 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:26:35] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:26:36,143 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:26:36] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:28:18,605 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:28:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 09:28:32,794 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:28:32] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:28:33,307 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:28:33] "[31m[1mPOST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1[0m" 400 -
+2024-10-18 09:29:06,561 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:29:06] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:29:07,563 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:29:07] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:50:52,206 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:50:52] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:50:54,805 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:50:54] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 09:57:08,516 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 09:57:08] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:10:12,813 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.25.1.174:3000
+2024-10-18 10:10:12,813 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 10:10:12,814 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 10:10:15,452 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 10:10:15,452 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 10:11:18,273 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:11:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:11:54,746 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:11:54] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:12:10,446 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:10] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:12:11,128 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:11] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:12:18,505 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:12:46,812 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:46] "[32mOPTIONS /api/event/put/undefined/undefined/6712266a36f4b546afea24f4 HTTP/1.1[0m" 308 -
+2024-10-18 10:12:48,585 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:48] "[32mOPTIONS /api/event/put/undefined/undefined/6712266a36f4b546afea24f4 HTTP/1.1[0m" 308 -
+2024-10-18 10:12:56,822 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:56] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:12:57,745 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:12:57] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:13:02,851 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:13:02] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:13:04,979 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:13:04] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:18:44,050 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:18:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:19:03,858 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:19:03] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:21:15,190 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:21:15] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:21:41,717 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:21:41] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:21:56,194 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:21:56] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:27:35,998 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:27:35] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:27:47,833 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:27:47] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:27:48,535 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:27:48] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:27:56,726 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:27:56] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:27:59,498 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:27:59] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:28:00,550 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:28:00] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:28:29,219 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:28:29] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:28:42,987 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:28:42] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:28:44,044 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:28:44] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:28:49,015 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:28:49] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:28:50,779 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:28:50] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:29:27,907 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:29:27] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:29:45,724 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:29:45] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:29:46,782 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:29:46] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:29:50,578 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:29:50] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:29:51,736 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:29:51] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:30:31,709 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:30:31] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:30:45,064 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:30:45] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:30:46,122 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:30:46] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 10:30:49,904 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:30:49] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 10:30:51,007 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 10:30:51] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:15:02,864 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.25.1.174:3000
+2024-10-18 14:15:02,864 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 14:15:02,865 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 14:15:07,365 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 14:15:07,366 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 14:15:26,726 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:15:26] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:17:17,401 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:17:17] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:17:18,497 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:17:18] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:17:27,207 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:17:27] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:17:31,447 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:17:31] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:17:59,867 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:17:59] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:18:00,938 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:18:00] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:18:23,632 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:18:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:18:25,456 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:18:25] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:19:04,859 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:19:04] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:19:05,934 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:19:05] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:19:16,635 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:19:16] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:19:18,692 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:19:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:19:55,326 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:19:55] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:20:42,023 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:20:42] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:20:45,656 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:20:45] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:21:44,950 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:21:44] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:23:13,098 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:23:13] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:23:33,342 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:23:33] "OPTIONS /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:23:34,419 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:23:34] "POST /api/event/push/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:24:01,483 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:24:01] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:24:04,836 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:24:04] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:24:14,155 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:24:14] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:24:27,325 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:24:27] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:24:29,208 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:24:29] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:28:35,969 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:28:35] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:29:14,566 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:14] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:29:16,109 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:16] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:29:25,496 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:25] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:29:28,465 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:28] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:29:30,499 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:30] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:29:40,834 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:40] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:29:43,076 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:43] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:29:49,107 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:29:49] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-18 14:30:43,624 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:30:43] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:30:47,380 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:30:47] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:31:18,351 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:31:20,839 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:20] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-18 14:31:23,604 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:23] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:31:25,585 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:25] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:31:27,516 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:27] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:31:28,585 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:28] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:31:30,599 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:30] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:31:32,268 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:32] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-18 14:31:35,034 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:35] "[32mOPTIONS /api/event/put/undefined/undefined/67115e42370827c9d9ff1bb7 HTTP/1.1[0m" 308 -
+2024-10-18 14:31:35,036 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:35] "[32mOPTIONS /api/event/put/undefined/undefined/67115e42370827c9d9ff1bb7 HTTP/1.1[0m" 308 -
+2024-10-18 14:31:39,852 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:39] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:31:42,617 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:31:42] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-18 14:34:19,623 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:19] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:20,628 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:20] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:22,260 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:22] "[32mOPTIONS /api/event/put/undefined/undefined/66d9b816e9cdbe465b66a98f HTTP/1.1[0m" 308 -
+2024-10-18 14:34:23,384 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:23] "[32mOPTIONS /api/event/put/undefined/undefined/66d9b816e9cdbe465b66a98f HTTP/1.1[0m" 308 -
+2024-10-18 14:34:24,808 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:24] "[32mOPTIONS /api/event/put/undefined/undefined/670c5ae612c409e0f9dde837 HTTP/1.1[0m" 308 -
+2024-10-18 14:34:25,660 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:25] "[32mOPTIONS /api/event/put/undefined/undefined/670c5ae612c409e0f9dde837 HTTP/1.1[0m" 308 -
+2024-10-18 14:34:32,301 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:32] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:33,486 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:33] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:34,418 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:34] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:35,231 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:35] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:41,279 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:41] "[32mOPTIONS /api/event/put/undefined/undefined/66d3e07b6b5b2c763b4f610a HTTP/1.1[0m" 308 -
+2024-10-18 14:34:45,430 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:45] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:34:56,541 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:56] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:34:59,805 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:34:59] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:35:05,592 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:05] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:35:19,376 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:19] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:19,378 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:19] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:20,273 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:20] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:20,277 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:20] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:30,184 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:30] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:30,187 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:30] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:31,606 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:31] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:31,614 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:31] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:32,314 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:32] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:35:32,317 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:35:32] "[32mOPTIONS /api/event/put/undefined/undefined/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:41:18,800 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:41:18] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:41:23,727 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:41:23] "[32mOPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:41:39,670 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:41:39] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:41:50,803 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:41:50] "[32mOPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115c4f370827c9d9ff1bb5 HTTP/1.1[0m" 308 -
+2024-10-18 14:42:06,093 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:42:06] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:42:09,098 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:42:09] "[32mOPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67125fdedc2fc5206628e1c4 HTTP/1.1[0m" 308 -
+2024-10-18 14:42:17,610 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:42:17] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/machine/ HTTP/1.1" 200 -
+2024-10-18 14:42:21,176 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:42:21] "[32mOPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115e30370827c9d9ff1bb6 HTTP/1.1[0m" 308 -
+2024-10-18 14:45:59,286 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:45:59] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:46:02,161 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:46:02] "[32mOPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals//67115c4f370827c9d9ff1bb5/ HTTP/1.1[0m" 308 -
+2024-10-18 14:47:31,299 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:47:31] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:47:35,266 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:47:35] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115c4f370827c9d9ff1bb5/ HTTP/1.1" 200 -
+2024-10-18 14:47:36,613 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:47:36] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115c4f370827c9d9ff1bb5/ HTTP/1.1" 200 -
+2024-10-18 14:47:43,064 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:47:43] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:47:46,021 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:47:46] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/6711581f370827c9d9ff1bb1/ HTTP/1.1" 200 -
+2024-10-18 14:47:47,357 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:47:47] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/6711581f370827c9d9ff1bb1/ HTTP/1.1" 200 -
+2024-10-18 14:51:54,044 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:51:54] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:51:56,947 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:51:56] "[32mOPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals//67115c4f370827c9d9ff1bb5/ HTTP/1.1[0m" 308 -
+2024-10-18 14:52:41,606 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:52:41] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:52:47,768 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:52:47] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/6702cc234e3a741167cfcab1/ HTTP/1.1" 200 -
+2024-10-18 14:52:49,111 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:52:49] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/6702cc234e3a741167cfcab1/ HTTP/1.1" 200 -
+2024-10-18 14:53:07,444 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:53:07] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/6702cc234e3a741167cfcab1/ HTTP/1.1" 200 -
+2024-10-18 14:53:08,781 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:53:08] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/6702cc234e3a741167cfcab1/ HTTP/1.1" 200 -
+2024-10-18 14:54:52,817 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:54:52] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:55:00,044 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:55:00] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115852370827c9d9ff1bb2/ HTTP/1.1" 200 -
+2024-10-18 14:55:01,382 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:55:01] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115852370827c9d9ff1bb2/ HTTP/1.1" 200 -
+2024-10-18 14:55:03,102 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:55:03] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115852370827c9d9ff1bb2/ HTTP/1.1" 200 -
+2024-10-18 14:55:04,075 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:55:04] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115852370827c9d9ff1bb2/ HTTP/1.1" 200 -
+2024-10-18 14:55:31,794 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:55:31] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/670c07cea8817e039ae16067/ HTTP/1.1" 200 -
+2024-10-18 14:55:33,131 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:55:33] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/670c07cea8817e039ae16067/ HTTP/1.1" 200 -
+2024-10-18 14:56:09,571 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:56:09] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/qc/ HTTP/1.1" 200 -
+2024-10-18 14:56:12,404 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:56:12] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/6711581f370827c9d9ff1bb1/ HTTP/1.1" 200 -
+2024-10-18 14:56:13,741 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:56:13] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/6711581f370827c9d9ff1bb1/ HTTP/1.1" 200 -
+2024-10-18 14:56:24,783 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:56:24] "GET /api/events/get/669a2dbbb172f732a1323e26/clinicals/operations/ HTTP/1.1" 200 -
+2024-10-18 14:56:26,326 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:56:26] "OPTIONS /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115e42370827c9d9ff1bb7/ HTTP/1.1" 200 -
+2024-10-18 14:56:27,666 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 14:56:27] "PUT /api/event/put/669a2dbbb172f732a1323e26/clinicals/67115e42370827c9d9ff1bb7/ HTTP/1.1" 200 -
+2024-10-18 15:18:31,045 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:18:31] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:18:31,865 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:18:31] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:32:57,821 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:32:57] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:32:58,622 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:32:58] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:37:34,618 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:37:35,193 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:37:37,697 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:37:37,697 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 15:37:48,822 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:37:49,406 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:37:52,618 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:37:52,618 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 15:38:00,704 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:38:01,301 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:38:04,754 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:38:04,755 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 15:38:16,784 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:38:16] "OPTIONS /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:38:18,141 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:38:18] "POST /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:38:24,109 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:38:24] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:38:24,920 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:38:24] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:38:33,428 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:38:33] "OPTIONS /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:38:34,249 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:38:34] "[35m[1mPUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 500 -
+2024-10-18 15:39:02,616 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:39:03,221 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:39:06,849 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:39:06,850 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 15:39:08,400 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:39:08] "OPTIONS /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:39:09,217 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:39:09] "[35m[1mPUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 500 -
+2024-10-18 15:39:56,618 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:39:57,223 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:40:00,639 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:40:00,639 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 15:40:03,104 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:40:03] "OPTIONS /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:40:03,714 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:40:03] "[35m[1mPUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 500 -
+2024-10-18 15:40:09,385 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:40:09] "[35m[1mPUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 500 -
+2024-10-18 15:42:52,143 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:42:52,511 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:42:55,542 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:42:55,543 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-18 15:42:59,133 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:42:59] "OPTIONS /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:42:59,906 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:42:59] "PUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:43:39,231 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:43:39] "OPTIONS /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:43:40,334 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:43:40] "POST /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:03,121 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:03] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:03,811 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:03] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:16,987 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:16] "OPTIONS /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:17,772 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:17] "PUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:25,258 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:25] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:26,110 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:26] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:43,056 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:43] "OPTIONS /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:44:44,216 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:44:44] "POST /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:01,035 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:01] "OPTIONS /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:01,886 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:01] "[31m[1mPOST /api/shipments/push/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1[0m" 400 -
+2024-10-18 15:47:07,358 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:07] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:08,099 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:08] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:17,925 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:17] "OPTIONS /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:18,756 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:18] "PUT /api/shipments/put/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:23,309 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:23] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:47:23,972 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2024 15:47:23] "GET /api/shipments/get/669a2dbbb172f732a1323e26/clinicals/ HTTP/1.1" 200 -
+2024-10-18 15:48:47,536 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2024-10-18 15:48:48,131 - werkzeug - INFO -  * Restarting with stat
+2024-10-18 15:48:51,934 - werkzeug - WARNING -  * Debugger is active!
+2024-10-18 15:48:51,935 - werkzeug - INFO -  * Debugger PIN: 102-519-935
+2024-10-20 10:24:56,829 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://172.20.10.3:3000
+2024-10-20 10:24:56,831 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-20 10:24:56,833 - werkzeug - INFO -  * Restarting with stat
+2024-10-20 10:24:59,088 - werkzeug - WARNING -  * Debugger is active!
+2024-10-20 10:24:59,089 - werkzeug - INFO -  * Debugger PIN: 393-216-969
+2024-11-20 20:23:12,758 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.134:3000
+2024-11-20 20:23:12,764 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-20 20:23:12,776 - werkzeug - INFO -  * Restarting with stat
+2024-11-20 20:23:15,487 - werkzeug - WARNING -  * Debugger is active!
+2024-11-20 20:23:15,488 - werkzeug - INFO -  * Debugger PIN: 305-660-739

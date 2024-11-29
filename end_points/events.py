@@ -62,7 +62,8 @@ class EventPush(Resource):
         event = {
             "user": f"{user.get('firstname')} {user.get('lastname')}",
             "event_type": event_type,
-            "created_at": datetime.now()
+            "created_at": datetime.now(),
+            "resolved": args["resolved"],
         }
 
         datetimer = datetime.combine(args["date"], args["time"] if args["time"] else datetime.min.time())
@@ -96,7 +97,6 @@ class EventPush(Resource):
             else:
                 args['category'] == 'Downtime' or 'Troubleshooting'
                 event.update({
-                    "resolved": args["resolved"],
                     "subrootCause": args["subrootCause"],
                     "rootCause": args["rootCause"],
                     "actioning": args["actioning"]
@@ -136,7 +136,8 @@ class EventGetOne(Resource):
             "event_id": str(event["_id"]),
             "user": event.get("user", ""),
             "event_type": event.get("event_type", ""),
-            "created_at": event.get("created_at", "")
+            "created_at": event.get("created_at", ""),
+            "resolved": event.get("resolved", "")
         }
         if event['event_type'] == 'qc':
             result_dict.update({
@@ -194,7 +195,8 @@ class EventGetAll(Resource):
                 "event_id": str(event["_id"]),
                 "user": event.get("user", ""),
                 "event_type": event.get("event_type", ""),
-                "created_at": event.get("created_at").strftime("%Y-%m-%d %H:%M:%S")
+                "created_at": event.get("created_at").strftime("%Y-%m-%d %H:%M:%S"),
+                "resolved": event.get("resolved", "")
             }
             if event['event_type'] == 'qc':
                 result_dict.update({
@@ -235,7 +237,6 @@ class EventGetAll(Resource):
         response = {'events': result}
         return jsonify(response)  # Return response directly
 
-
 class EventPut(Resource):
     def put(self, user_id, lab_name, event_id):
         try:
@@ -270,3 +271,27 @@ class EventDel(Resource):
             return {"message": "Event does not exist"}, 400
         EVENTS_COLLECTION.delete_one({'_id': ObjectId(event_id)})
         return {"message": "Event deleted successfully"}, 200
+
+class EventByCreatedAt(Resource):
+    def get(self, user_id, lab_name, created_at):
+        try:
+            orgname = get_org_name(user_id)
+            EVENTS_COLLECTION = client[orgname + '_db'][lab_name + '_events']
+        except ValueError as e:
+            abort(404, message=str(e)) 
+
+        # Convert the string 'created_at' to a datetime object
+        try:
+            created_at_dt = datetime.strptime(created_at, '%Y-%m-%d %H:%M:%S') 
+        except ValueError:
+            return {"message": "Invalid date format"}, 400
+
+        # Query the event by created_at
+        event = EVENTS_COLLECTION.find_one({'created_at': created_at_dt})
+        if not event:
+            return {"message": "Event not found"}, 404
+        
+        # Return the event ID
+        return {"_id": str(event['_id'])}, 200
+
+# Add the route to the API
