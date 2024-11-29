@@ -1,5 +1,4 @@
 apienv/
 __pycache__
-.pytest_cache/
 engine/__pycache__
 engine/.env
