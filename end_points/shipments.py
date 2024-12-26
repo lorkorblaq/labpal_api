@@ -16,7 +16,7 @@ shipments_parser.add_argument("created_at", type=str, required=False)
 shipments_parser.add_argument("create_lat_lng", type=str, help="Latitude and Longitude are required", required=False)
 shipments_parser.add_argument("shipment_id", type=str, help="shipment id is required", required=False)
 shipments_parser.add_argument("numb_of_packs", type=int, help="Number of packages is required", required=False)
-
+shipments_parser.add_argument("weight", type=float, help="Weight of packages is required", required=False)
 shipments_parser.add_argument("picked_by", type=str, required=False)
 shipments_parser.add_argument("pickup_loc", type=str, help="Pickup location is required", required=False)
 shipments_parser.add_argument("pickup_time", type=str, required=False)
@@ -56,6 +56,7 @@ class ShipmentsPush(Resource):
                 "created_at": utc_now,
                 "shipment_id": args['shipment_id'],
                 "numb_of_packs": args['numb_of_packs'],
+                "weight": args['weight'],
                 "pickup_loc": args['pickup_loc'],
                 "dropoff_loc": args['dropoff_loc'],
                 "create_lat_lng": args['create_lat_lng'],
@@ -149,15 +150,24 @@ class ShipmentsGetOne(Resource):
                 abort(404, message="Channel not found")
             # for shipment in shipment:
             response = {
-                    "_id":str(shipment['_id']),
-                    "created at":shipment['created at'].strftime("%Y-%m-%d %H:%M:%S"),
-                    "user":shipment['user'],
-                    "item":shipment['item'],
-                    "lot_numb": shipment["lot_numb"],
-                    "direction": shipment["direction"],
-                    "location": shipment["location"],
-                    "quantity":shipment['quantity'],
-                    "description":shipment['description']}
+                    "id": str(shipment['_id']),
+                    "created_at": shipment.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in shipment else None,
+                    "created_by": shipment.get('created_by', 'Unknown User'),
+                    "picked_by": shipment.get('picked_by', 'Not yet picked'),
+                    "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
+                    "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
+                    "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
+                    "weight": shipment.get("weight", 'Unknown weight'),
+                    "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
+                    "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
+                    "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
+                    "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'Not yet dropped',
+                    "create_lat_lng": shipment.get('create_lat_lng', 'location'),
+                    "pickup_lat_lng": shipment.get('pickup_lat_lng', 'Not yet picked'),
+                    "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet dropped'),
+                    "duration": shipment.get('duration', 0),
+                    "description": shipment.get('description', 'No Description'),
+                    "completed": shipment.get('completed', False)}
             return response, 200
         except Exception as e:
             return {"message": "Error occured while fetching put in use item", "error": str(e)}
@@ -183,6 +193,7 @@ class ShipmentsGetAll(Resource):
             "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
             "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
             "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
+            "weight": shipment.get("weight", 'Unknown weight'),
             "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
             "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
             "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
