@@ -115,7 +115,7 @@ class ShipmentsPut(Resource):
             shipment['completed'] = 'Yes'
 
             # Calculate the duration between pickup_time and dropoff_time
-            pickup_time = shipment.get('created_at')
+            pickup_time = shipment.get('pickup_time')
             dropoff_time = shipment.get('dropoff_time')
             if pickup_time and dropoff_time:
                 duration = dropoff_time - pickup_time

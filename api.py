@@ -18,6 +18,7 @@ from end_points.to_do import *
 from end_points.billing import *
 from end_points.webhook import *
 from end_points.shipments import *
+from end_points.pickup import *
 from end_points.machines import *
 from end_points.org_api import *
 from end_points.admin import Health
@@ -101,6 +102,13 @@ api.add_resource(ShipmentsPut, "/api/shipments/put/<string:user_id>/<string:lab_
 api.add_resource(ShipmentsDel, "/api/shipments/delete/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
 api.add_resource(ShipmentsGetOne, "/api/shipments/get/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
 api.add_resource(ShipmentsGetAll, "/api/shipments/get/<string:user_id>/<string:lab_name>/")
+
+#requests-pickup
+api.add_resource(RequestsPush, "/api/request-pickup/push/<string:user_id>/")
+api.add_resource(RequestPut, "/api/request-pickup/put/<string:user_id>/")
+api.add_resource(RequestDel, "/api/request-pickup/delete/<string:user_id>/<string:request_id>/")
+api.add_resource(RequestGetOne, "/api/request-pickup/get/<string:user_id>/<string:request_id>/")
+api.add_resource(RequestGetAll, "/api/request-pickup/get/<string:user_id>/")
 
 #lot exp
 api.add_resource(Lot_exp_Get, "/api/lotexp/get/<string:user_id>/<string:lab_name>/")
