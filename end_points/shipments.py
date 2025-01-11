@@ -15,8 +15,11 @@ shipments_parser = reqparse.RequestParser()
 shipments_parser.add_argument("created_at", type=str, required=False)
 shipments_parser.add_argument("create_lat_lng", type=str, help="Latitude and Longitude are required", required=False)
 shipments_parser.add_argument("shipment_id", type=str, help="shipment id is required", required=False)
+shipments_parser.add_argument("top", type=str, help="Type of package is required", required=False)
 shipments_parser.add_argument("numb_of_packs", type=int, help="Number of packages is required", required=False)
 shipments_parser.add_argument("weight", type=float, help="Weight of packages is required", required=False)
+shipments_parser.add_argument("vendor", type=str, help="Vendor is required", required=False)
+
 shipments_parser.add_argument("picked_by", type=str, required=False)
 shipments_parser.add_argument("pickup_loc", type=str, help="Pickup location is required", required=False)
 shipments_parser.add_argument("pickup_time", type=str, required=False)
@@ -36,6 +39,7 @@ class ShipmentsPush(Resource):
         try:
             org_name = get_org_name(user_id)
             SHIPMENTS_COLLECTION = client[org_name+'_db'][lab_name+'_shipments']
+            LAB_COLLECTION = client[org_name+'_db']["labs"]
         except ValueError as e:
             abort(404, message=str(e))
         try:
@@ -51,17 +55,33 @@ class ShipmentsPush(Resource):
             name = user.get('firstname') + ' ' + user.get('lastname')
             print('user_id2', user_id)
             utc_now = datetime.now()
+            fromLab = args['pickup_loc']
+            toLab = args['dropoff_loc']
+            fromRegion = LAB_COLLECTION.find_one({'lab_name': fromLab}, {'region': 1}).get('region')
+            toRegion = LAB_COLLECTION.find_one({'lab_name': toLab}, {'region': 1}).get('region')
+            print('fromRegion', fromRegion)
+            print('toRegion', toRegion)
+            if fromRegion == "lagos":
+                firstInitalToRegion = toRegion[0].upper()
+                Rcode = f"L{firstInitalToRegion}-{utc_now.strftime('%y%m%d%H%M%S')}"
+            elif toRegion == "lagos":
+                firstInitalFromRegion = fromRegion[0].upper()
+                Rcode = f"F{firstInitalFromRegion}-{utc_now.strftime('%y%m%d%H%M%S')}"
             data = {
                 "created_by": name,
                 "created_at": utc_now,
-                "shipment_id": args['shipment_id'],
+                "shipment_id": Rcode,
+                "top": args['top'],
                 "numb_of_packs": args['numb_of_packs'],
                 "weight": args['weight'],
-                "pickup_loc": args['pickup_loc'],
-                "dropoff_loc": args['dropoff_loc'],
+                "vendor": args['vendor'],
+                "pickup_loc": fromLab,
+                "dropoff_loc": toLab,
+                "from_region": fromRegion,
+                "to_region": toRegion,
                 "create_lat_lng": args['create_lat_lng'],
                 "description": args['description'],
-                "completed": 'No'
+                "status": 'pending'
                 }
             shipments_data = SHIPMENTS_COLLECTION.find_one({'shipment_id': args['shipment_id']})
 
@@ -106,13 +126,14 @@ class ShipmentsPut(Resource):
             shipment['picked_by'] = picked
             shipment['pickup_time'] = utc_now
             shipment['updated_at'] = utc_now
+            shipment['status'] = 'in-transit'
 
         dropped = args.get('dropoff_by')
         if dropped:
             shipment['dropoff_by'] = dropped
             shipment['dropoff_time'] = utc_now
             shipment['updated_at'] = utc_now
-            shipment['completed'] = 'Yes'
+            shipment['status'] = 'delivered'
 
             # Calculate the duration between pickup_time and dropoff_time
             pickup_time = shipment.get('pickup_time')
@@ -156,10 +177,14 @@ class ShipmentsGetOne(Resource):
                     "picked_by": shipment.get('picked_by', 'Not yet picked'),
                     "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
                     "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
+                    "top": shipment.get('top', 'Unknown type of package'),
                     "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
                     "weight": shipment.get("weight", 'Unknown weight'),
+                    "vendor": shipment.get("vendor", 'Unknown vendor'),
                     "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
                     "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
+                    "from_region": shipment.get("from_region", 'Unknown region'),
+                    "to_region": shipment.get("to_region", 'Unknown region'),
                     "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
                     "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'Not yet dropped',
                     "create_lat_lng": shipment.get('create_lat_lng', 'location'),
@@ -167,7 +192,7 @@ class ShipmentsGetOne(Resource):
                     "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet dropped'),
                     "duration": shipment.get('duration', 0),
                     "description": shipment.get('description', 'No Description'),
-                    "completed": shipment.get('completed', False)}
+                    "status": shipment.get('status', "not yet created")}
             return response, 200
         except Exception as e:
             return {"message": "Error occured while fetching put in use item", "error": str(e)}
@@ -192,10 +217,14 @@ class ShipmentsGetAll(Resource):
             "picked_by": shipment.get('picked_by', 'Not yet picked'),
             "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
             "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
+            "top": shipment.get('top', 'Unknown type of package'),
             "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
             "weight": shipment.get("weight", 'Unknown weight'),
+            "vendor": shipment.get("vendor", 'Unknown vendor'),
             "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
             "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
+            "from_region": shipment.get("from_region", 'Unknown region'),
+            "to_region": shipment.get("to_region", 'Unknown region'),
             "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
             "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'Not yet dropped',
             "create_lat_lng": shipment.get('create_lat_lng', 'location'),
@@ -203,7 +232,7 @@ class ShipmentsGetAll(Resource):
             "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet dropped'),
             "duration": shipment.get('duration', 0),
             "description": shipment.get('description', 'No Description'),
-            "completed": shipment.get('completed', False)
+            "status": shipment.get('status', "not yet created"),
         } for shipment in shipments]
 
         response = {"shipments": shipment_list}

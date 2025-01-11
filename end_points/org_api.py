@@ -28,7 +28,8 @@ class OrgGetLabs(Resource):
             "lab_name": lab.get('lab_name', 'Unknown User'),
             "managers_email": lab.get('managers_email', 'Unknown Item'),
             "users": lab.get('users', 'Unknown Bench'),
-            "org_id": lab.get('org_id', 'Unknown Machine')
+            "org_id": lab.get('org_id', 'Unknown Machine'),
+            "region": lab.get('region', 'Unknown Region')
         } for lab in labs]
         response = make_response({'labs':lab_list}, 200)
         # response.set_cookie('labs', lab_list, max_age=60*60*24 )

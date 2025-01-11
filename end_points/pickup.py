@@ -19,6 +19,9 @@ pickup_parser.add_argument("numb_of_samples", type=int, help="Number of samples 
 pickup_parser.add_argument("accepted_by", type=str, required=False)
 pickup_parser.add_argument("pickup_time", type=str, required=False)
 
+pickup_parser.add_argument("assigned_to", type=str, required=False)
+
+
 pickup_parser.add_argument("picked_by", type=str, required=False)
 pickup_parser.add_argument("pickup_loc", type=str, help="Pickup location is required", required=False)
 pickup_parser.add_argument("pickup_time", type=str, required=False)
@@ -96,6 +99,7 @@ class RequestsPush(Resource):
                 "create_lat_lng": args['create_lat_lng'],
                 "description": args['description'],
                 "completed": 'No'
+                
                 }
             print(data)
             request_data = REQUEST_COLLECTION.find_one({'request_id': args['request_id']})
@@ -142,6 +146,12 @@ class RequestPut(Resource):
             request['accepted_time'] = utc_now
             request['accepted'] = 'Yes'
             request['updated_at'] = utc_now
+        assigned = args.get('assigned_to')
+        if accepted:
+            request['accepted_by'] = accepted
+            request['accepted_time'] = utc_now
+            request['accepted'] = 'Yes'
+            request['updated_at'] = utc_now
         picked = args.get('picked_by')
         if picked:
             request['picked_by'] = picked
@@ -183,14 +193,22 @@ class RequestGetOne(Resource):
                     "id": str(request['_id']),
                     "created_at": request.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in request else None,
                     "created_by": request.get('created_by', 'Unknown User'),
-                    "accepted": request.get('accepted', 'No'),
                     "accepted_by": request.get('accepted_by', 'Unknown User'),
                     "accepted_time": request.get('accepted_time').strftime("%Y-%m-%d %H:%M:%S") if 'accepted_time' in request else None,
                     "picked_by": request.get('picked_by', 'Not yet picked'),
                     "request_id": request.get('request_id', 'Unknown request id'),
-                    "numb_of_samples": request.get("numb_of_samples", 'Unknown numb of samples'),
-                    "pickup_loc": request.get("pickup_loc", 'Not yet picked'),
+                    "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
+
+                    "accepted": request.get('accepted', 'No'),
+                    "assigned": request.get('assigned', 'No'),
+                    "atPickup": request.get('atPickup', 'No'),
+                    "picked": request.get('picked', 'No'),
+                    "enroute": request.get('enroute', 'No'),
+
+                    "assignedTime": request.get('assignedTime').strftime("%Y-%m-%d %H:%M:%S") if 'assignedTime' in request else 'Not yet assigned',
+                    "atPickupTime": request.get('atPickupTime').strftime("%Y-%m-%d %H:%M:%S") if 'atPickupTime' in request else 'Not yet at pick up',
                     "pickup_time": request.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in request else 'Not yet picked',
+                    "pickup_loc": request.get("pickup_loc", 'Not yet picked'),
                     "dropoff_time": request.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in request else 'Not yet dropped',
                     "create_lat_lng": request.get('create_lat_lng', 'location'),
                     "dropoff_lat_lng": request.get('dropoff_lat_lng', 'Not yet dropped'),
@@ -218,13 +236,22 @@ class RequestGetAll(Resource):
             "id": str(request['_id']),
             "created_at": request.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in request else None,
             "created_by": request.get('created_by', 'Unknown User'),
-            "accepted": request.get('accepted', 'No'),
             "accepted_by": request.get('accepted_by', 'Unknown User'),
             "accepted_time": request.get('accepted_time').strftime("%Y-%m-%d %H:%M:%S") if 'accepted_time' in request else None,
             "picked_by": request.get('picked_by', 'Not yet picked'),
             "request_id": request.get('request_id', 'Unknown request id'),
             "numb_of_samples": request.get("numb_of_samples", 'Unknown numb of samples'),
             "pickup_loc": request.get("pickup_loc", 'Not yet picked'),
+            "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
+            
+            "accepted": request.get('accepted', 'No'),
+            "assigned": request.get('assigned', 'No'),
+            "atPickup": request.get('atPickup', 'No'),
+            "picked": request.get('picked', 'No'),
+            "enroute": request.get('enroute', 'No'),
+
+            "assignedTime": request.get('assignedTime').strftime("%Y-%m-%d %H:%M:%S") if 'assignedTime' in request else 'Not yet assigned',
+            "atPickupTime": request.get('atPickupTime').strftime("%Y-%m-%d %H:%M:%S") if 'atPickupTime' in request else 'Not yet at pick up',
             "pickup_time": request.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in request else 'Not yet picked',
             "dropoff_time": request.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in request else 'Not yet dropped',
             "create_lat_lng": request.get('create_lat_lng', 'location'),
