@@ -99,7 +99,7 @@ def requiste(bench, days, categories, user_id, lab_name):
     # Convert MongoDB documents to dictionaries
     result_dicts = []
     for item in result:
-        print("Item:", item)
+        # print("Item:", item)
         if item.get("total_baseUnit_in_store") is not None:
             if item.get("total_baseUnit_in_store") < item.get("quantity_baseUnit_requested"):
                 item["amount_needed"] = item.get("quantity_baseUnit_requested") - item.get("total_baseUnit_in_store")
@@ -108,20 +108,22 @@ def requiste(bench, days, categories, user_id, lab_name):
                 item["amount_needed"] = 0
                 amount_needed = 0
 
-            result_dict = {
-                "bench": item.get("bench", ""),
-                "quantity": item.get("quantity", ""),
-                "item": item.get("item", ""),
-                "baseUnit": item.get("baseUnit",""),
-                "storeUnit": item.get("storeUnit",""),
-                "baseUnit/storeUnit": item.get("baseUnit/storeUnit",""),
-                "baseUnit_per_day": item.get("baseUnit_per_day", ""),
-                "total_baseUnit_in_store": item.get("total_baseUnit_in_store", ""),
-                "quantity_baseUnit_requested": item.get("quantity_baseUnit_requested", ""),
-                "total_days_to_last": item.get("total_days_to_last", ""),
-                "amount_needed": amount_needed
-            }
-            result_dicts.append(result_dict)
+            # Only add to result_dicts if amount_needed is greater than 0
+            if amount_needed > 0:
+                result_dict = {
+                    "bench": item.get("bench", ""),
+                    "quantity": item.get("quantity", ""),
+                    "item": item.get("item", ""),
+                    "baseUnit": item.get("baseUnit",""),
+                    "storeUnit": item.get("storeUnit",""),
+                    "baseUnit/storeUnit": item.get("baseUnit/storeUnit",""),
+                    "baseUnit_per_day": item.get("baseUnit_per_day", ""),
+                    "total_baseUnit_in_store": item.get("total_baseUnit_in_store", ""),
+                    "quantity_baseUnit_requested": item.get("quantity_baseUnit_requested", ""),
+                    "total_days_to_last": item.get("total_days_to_last", ""),
+                    "amount_needed": amount_needed
+                }
+                result_dicts.append(result_dict)
     
     # Return the result as JSON
     return result_dicts

@@ -29,6 +29,7 @@ class Lot_exp_Push(Resource):
             abort(404, message=str(e))
 
         utc_now = datetime.now()
+        wat_now = utc_now + timedelta(hours=1)
         args = lot_exp_parser.parse_args()
         user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
         lot_exp = {
@@ -36,11 +37,11 @@ class Lot_exp_Push(Resource):
                 "lot_numb": args["lot_numb"],
                 "expiration": args["expiration"],
                 "quantity": 0,
-                "created at": utc_now,
+                "created at": wat_now,
             }
         item = ITEMS_COLLECTION.find_one({'item': args['item']})
         if not item:
-            return {"message": "Item does not exist, kindly contact Lorkorblaq"}, 400
+            return {"message": "Item does not exist, kindly contact the admin"}, 400
         elif LOT_EXP_COLLECTION.find_one({'lot_numb': args['lot_numb']}):
             return {"message": "Lot number already exists"}, 400
         else:
@@ -66,7 +67,7 @@ class Lot_exp_Get(Resource):
         lot_exps = list(LOT_EXP_COLLECTION.find())
         # print(results)
         if not lot_exps:
-            abort(404, message="No Item Available")
+            abort(404, message="No lot available, kindly add via Channels")
         lotexp_list=[]
         # Convert ObjectId to string for JSON serialization
         

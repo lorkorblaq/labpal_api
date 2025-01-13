@@ -41,7 +41,7 @@ class P_in_usePush(Resource):
 
             # Validate user existence
             if not user:
-                abort(400, message="User does not exist, kindly contact support")
+                abort(400, message="User does not exist, kindly contact support.")
 
             # Fetch item and lot data
             item = ITEMS_COLLECTION.find_one({'item': args['item']})
@@ -49,9 +49,9 @@ class P_in_usePush(Resource):
 
             # Validate item and lot existence
             if not item:
-                abort(400, message="Item does not exist, kindly contact support")
+                abort(400, message="Item does not exist, kindly contact support.")
             if not lot_exp:
-                abort(400, message="Lot number does not exist, kindly contact support")
+                abort(400, message="Lot number does not exist, kindly contact support.")
 
             # Validate lot association with item
             if lot_exp['item'] != args['item']:
@@ -59,9 +59,9 @@ class P_in_usePush(Resource):
 
             # Validate quantity availability
             if item['quantity'] < args['quantity']:
-                abort(400, message="Quantity to be put in use is more than available quantity in stock")
+                abort(400, message="Quantity to be put in use is more than available quantity in stock.")
             if args['quantity'] <= 0:
-                abort(400, message="Quantity in must be greater than zero")
+                abort(400, message="Quantity in must be greater than zero.")
 
             # Prepare the data to insert
             bench = item.get('bench')
@@ -77,13 +77,29 @@ class P_in_usePush(Resource):
                 'description': args["description"],
                 'created at': wat_now,
             }
-            
+            # item and lot data
+            item = ITEMS_COLLECTION.find_one({'item': args['item']})
+            lot = LOT_EXP_COLLECTION.find_one({'lot_numb': args['lot_numb']})
+
+            # Validation checks
+            if not item:
+                abort(400, message="Item not found.")
+            elif not lot:
+                abort(400, message="Lot number not found.")
+            elif item['quantity'] <= 0:
+                abort(400, message="Item quantity is already at zero.")
+            elif lot['quantity'] <= 0:
+                abort(400, message="Lot quantity is already at zero.")
+            elif item['quantity'] < args['quantity']:
+                abort(400, message="Quantity will result in a negative value and can't be allowed.")
+            elif lot['quantity'] < args['quantity']:
+                abort(400, message="Insufficient quantity in the specified lot to fulfill the request.")
+
             # Insert the item into the put in use collection
             inserted_id = PUT_IN_USE_COLLECTION.insert_one(piu).inserted_id
             inserted_id = str(inserted_id)
 
             if inserted_id:
-                # Update item and lot quantity
                 ITEMS_COLLECTION.update_one({'item': args['item']}, {'$inc': {'quantity': -args['quantity']}})
                 LOT_EXP_COLLECTION.update_one({'lot_numb': args['lot_numb']}, {'$inc': {'quantity': -args['quantity']}})
             else:
@@ -98,9 +114,11 @@ class P_in_usePush(Resource):
         
         except HTTPException as e:
             # Let HTTP exceptions (abort) pass through without being caught
+            print(e)
             raise e
         except Exception as e:
             # Handle any other error that occurs
+            print(e)
             return {"message": "Error occurred while pushing put in use item", "error": str(e)}
 
 class P_in_usePut(Resource):
