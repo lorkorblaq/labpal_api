@@ -113,6 +113,7 @@ api.add_resource(RequestGetAll, "/api/request-pickup/get/<string:user_id>/")
 #lot exp
 api.add_resource(Lot_exp_Get, "/api/lotexp/get/<string:user_id>/<string:lab_name>/")
 api.add_resource(Lot_exp_Push, "/api/lotexp/push/<string:user_id>/<string:lab_name>/")
+api.add_resource(Lot_exp_Bulk_Push, "/api/lotexp/bulkpush/<string:user_id>/<string:lab_name>/")
 
 #messenger
 api.add_resource(CreatePot, '/api/pot/create/<string:user_id>/')

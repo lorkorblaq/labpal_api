@@ -8224,3 +8224,107 @@
 2025-01-13 02:09:00,408 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 02:09:00] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
 2025-01-13 02:09:09,532 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 02:09:09] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
 2025-01-13 02:09:28,032 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 02:09:28] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 08:09:41,283 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.134:3000
+2025-01-13 08:09:41,284 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-13 08:09:41,286 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:09:42,967 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:09:42,969 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:19:54,038 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot.py', reloading
+2025-01-13 08:19:54,539 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:20:11,883 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:20:11,884 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:24:21,050 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:24:21,664 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:24:24,803 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:24:24,803 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:32:22,915 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:32:23,451 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:32:35,464 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:32:35,464 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:44:35,430 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:44:36,020 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:44:53,534 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:44:53,535 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:48:18,311 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:48:18,753 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:48:36,585 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:48:36,586 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:49:34,166 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:49:34,743 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:49:52,479 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:49:52,479 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:50:14,669 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2025-01-13 08:50:15,183 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:50:17,341 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:50:17,342 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:56:57,230 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:56:57,675 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:57:00,775 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:57:00,775 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 08:57:29,119 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 08:57:29,748 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 08:57:31,473 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 08:57:31,473 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:13:19,448 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:13:20,057 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:13:43,094 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:13:43,095 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:15:02,630 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:15:02] "GET /api/items/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:16:19,035 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:16:19] "[33mPOST /api/api/lotexp/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 404 -
+2025-01-13 09:16:42,606 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:16:42] "[33mPOST /api/api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 404 -
+2025-01-13 09:16:54,684 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:16:54] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:17:04,238 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:17:04] "GET /api/items/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:18:39,812 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:18:39] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:19:39,920 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:19:39] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:21:08,173 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:21:08,713 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:21:26,278 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:21:26,279 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:21:27,301 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:21:27,922 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:21:30,209 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:21:30,210 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:21:54,170 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:21:54] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:22:25,682 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:22:26,248 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:22:44,402 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:22:44,403 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:22:46,093 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:22:46] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:23:00,609 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:23:01,319 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:23:03,316 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:23:03,317 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:28:44,433 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:28:45,096 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:28:48,031 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:28:48,032 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:31:50,815 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:31:51,521 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:31:55,250 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:31:55,251 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:32:10,314 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:32:10] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:32:38,754 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:32:39,372 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:32:41,866 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:32:41,867 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:33:47,145 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:33:47] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:37:11,458 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:37:11] "[35m[1mGET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-01-13 09:38:50,048 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:38:50] "[35m[1mGET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-01-13 09:42:20,977 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:42:20] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:42:36,765 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:42:36] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:43:02,410 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:43:02] "[35m[1mGET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-01-13 09:45:15,325 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/lot_exp_api.py', reloading
+2025-01-13 09:45:15,873 - werkzeug - INFO -  * Restarting with stat
+2025-01-13 09:45:39,636 - werkzeug - WARNING -  * Debugger is active!
+2025-01-13 09:45:39,637 - werkzeug - INFO -  * Debugger PIN: 983-580-017
+2025-01-13 09:45:40,265 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:45:40] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:46:23,910 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:46:23] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:46:29,181 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:46:29] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:46:35,049 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:46:35] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:47:00,018 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:47:00] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:47:04,013 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:47:04] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:47:23,589 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:47:23] "POST /api/lotexp/bulkpush/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-01-13 09:47:28,550 - werkzeug - INFO - 127.0.0.1 - - [13/Jan/2025 09:47:28] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
