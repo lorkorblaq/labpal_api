@@ -43,6 +43,10 @@ events_parser.add_argument("actioning", type=str, required=False)
 events_parser.add_argument("occurrence", type=str, action='append', required=False)
 events_parser.add_argument("comments", type=str, required=False)
 events_parser.add_argument("task", type=str, action='append', required=False, help="List of tasks")
+events_parser.add_argument("errorStage", type=str, required=False)
+events_parser.add_argument("barcode", type=str, required=False)
+events_parser.add_argument("locationInvolved", type=str, required=False)
+events_parser.add_argument("incidenceText", type=str, required=False)
 events_parser.add_argument("resolved", type=bool, required=False, help="True if checked, otherwise False")
 
 class EventPush(Resource):
@@ -56,7 +60,7 @@ class EventPush(Resource):
         user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
         if not user:
             return {"message": "User does not exist"}, 400
-        if event_type not in ['qc', 'machine', 'operations', 'tasks']:
+        if event_type not in ['incidence','qc', 'machine', 'operations', 'tasks']:
             return {"message": "Event type not supported"}, 400
 
         event = {
@@ -65,11 +69,25 @@ class EventPush(Resource):
             "created_at": datetime.now(),
             "resolved": args["resolved"],
         }
+        # date_part = datetime.strptime(args["date"], '%Y-%m-%d').date()  # Assuming date is in 'YYYY-MM-DD' format
+        # time_part = datetime.strptime(args["time"], '%I:%M %p').time() if "time" in args and args["time"] else datetime.min.time()
 
+        # Combine date and time
+        # datetimer = datetime.combine(date_part, time_part)
         datetimer = datetime.combine(args["date"], args["time"] if args["time"] else datetime.min.time())
-        # print(datetimer)
-
-        if event_type == 'qc':
+        print(datetimer)
+        if event_type == 'incidence':
+            event.update({
+                "date": datetimer,
+                "machine": args["machine"],
+                "items": args["items"],
+                "errorStage": args["errorStage"],
+                "barcode": args["barcode"],
+                "locationInvolved": args["locationInvolved"],
+                "incidenceText": args["incidenceText"],
+                "actioning": args["actioning"]
+            })
+        elif event_type == 'qc':
             event.update({
                 "date": datetimer,
                 "machine": args["machine"],
@@ -139,7 +157,18 @@ class EventGetOne(Resource):
             "created_at": event.get("created_at", ""),
             "resolved": event.get("resolved", "")
         }
-        if event['event_type'] == 'qc':
+        if event['event_type'] == 'incidence':
+            result_dict.update({
+                "date": event.get("date", ""),
+                "machine": event.get("machine", ""),
+                "items": event.get("items", ""),
+                "errorStage": event.get("errorStage", ""),
+                "barcode": event.get("barcode", ""),
+                "locationInvolved": event.get("locationInvolved", ""),
+                "incidenceText": event.get("incidenceText", ""),
+                "actioning": event.get("actioning", ""),
+            })
+        elif event['event_type'] == 'qc':
             result_dict.update({
                 "date": event.get("date", ""),
                 "machine": event.get("machine", ""),
@@ -186,7 +215,7 @@ class EventGetAll(Resource):
             return {"message": "User id is required"}, 400
         if not USERS_COLLECTION.find_one({'_id': ObjectId(user_id)}):
             return {"message": "User does not exist"}, 400
-        if event_type not in ['qc', 'machine', 'operations', 'tasks']:
+        if event_type not in ['incidence','qc', 'machine', 'operations', 'tasks']:
             return {"message": "Event type not supported"}, 400
         events = EVENTS_COLLECTION.find({'event_type': event_type})
         result = []
@@ -198,7 +227,18 @@ class EventGetAll(Resource):
                 "created_at": event.get("created_at").strftime("%Y-%m-%d %H:%M:%S"),
                 "resolved": event.get("resolved", "")
             }
-            if event['event_type'] == 'qc':
+            if event['event_type'] == 'incidence':
+                result_dict.update({
+                    "date": event.get("date").strftime("%Y-%m-%d %H:%M:%S") if 'date' in event else None,
+                    "machine": event.get("machine", ""),
+                    "items": event.get("items", ""),
+                    "errorStage": event.get("errorStage", ""),
+                    "barcode": event.get("barcode", ""),
+                    "locationInvolved": event.get("locationInvolved", ""),
+                    "incidenceText": event.get("incidenceText", ""),
+                    "actioning": event.get("actioning", "")
+                })
+            elif event['event_type'] == 'qc':
                 result_dict.update({
                     "date": event.get("date").strftime("%Y-%m-%d") if 'date' in event else None,
                     "machine": event.get("machine", ""),

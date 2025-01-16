@@ -61,7 +61,6 @@ class Lot_exp_Push(Resource):
                 return {"message": "Error occured while pushing item", "error": str(e)}
 
 
-
 class Lot_exp_Bulk_Push(Resource):
     def post(self, user_id, lab_name):
         try:
@@ -89,16 +88,6 @@ class Lot_exp_Bulk_Push(Resource):
         required_columns = {'item', 'lot_numb', 'expiration', 'quantity'}
         not_found_items = []
 
-        # Check each entry in the provided JSON data to ensure all required columns are present
-        # for entry in json_data:
-        #     if not required_columns.issubset(entry.keys()):
-        #         # If any required column is missing, return a 400 error with a detailed message
-        #         abort(400, message=f"Your data must contain the columns: {', '.join(required_columns)}")
-        #     try:
-        #         entry['expiration'] = parser.parse(entry['expiration'])
-        #     except Exception as e:
-        #         abort(400, message=f"Invalid expiration date format for lot {entry['lot_numb']}: {e}")
-
 
         try:
             for entry in json_data:
@@ -116,51 +105,41 @@ class Lot_exp_Bulk_Push(Resource):
                 lot_numb = entry['lot_numb']
                 quantity_to_add = entry['quantity']
 
-                # Use upsert to handle both new and existing lots
-                LOT_EXP_COLLECTION.update_one(
-                    {'lot_numb': lot_numb},
-                    {
-                        '$inc': {'quantity': quantity_to_add},
-                        '$setOnInsert': {
-                            'item': item_name,
-                            'expiration': entry['expiration'],
-                            'created at': wat_now
+                # Check if the item exists in ITEMS_COLLECTION
+                item_exists = ITEMS_COLLECTION.find_one({'item': item_name})
+
+                if item_exists:
+                    # Use upsert to handle both new and existing lots
+                    LOT_EXP_COLLECTION.update_one(
+                        {'lot_numb': lot_numb},
+                        {
+                            '$inc': {'quantity': quantity_to_add},
+                            '$setOnInsert': {
+                                'item': item_name,
+                                'expiration': entry['expiration'],
+                                'created at': wat_now
+                            },
+                            '$set': {'updated at': wat_now}
                         },
-                        '$set': {'updated at': wat_now}
-                    },
-                    upsert=True
-                )
-
-                # Update the corresponding item in ITEMS_COLLECTION
-                item_result = ITEMS_COLLECTION.update_one(
-                    {'item': item_name},
-                    {'$inc': {'quantity': quantity_to_add}}
-                )
-
-                # If no document was modified in ITEMS_COLLECTION, the item was not found
-                if item_result.matched_count == 0:
+                        upsert=True
+                    )
+                else:
+                    # Item not found in ITEMS_COLLECTION
                     not_found_items.append(item_name)
 
-            # Insert only the new items into the MongoDB collection
+            # Prepare response
             response = {"message": "Lot numbers inserted successfully"}
             if not_found_items:
-                response['note'] = f"The following items were not found in your inventory and were not updated: {', '.join(not_found_items)}"
+                response['note'] = f"The following items were not found in your inventory and were not updated on the lot and expiration data kind create them first: {', '.join(not_found_items)}"
 
             return response, 200
+
         except pymongo.errors.BulkWriteError as bwe:
             # Handle MongoDB bulk write errors
             abort(500, message=f"Bulk write error: {bwe.details}")
         except Exception as e:
             # Handle general errors
             abort(500, message=str(e))
-
-
-
-
-
-
-
-
 
 
 class Lot_exp_Get(Resource):
