@@ -161,9 +161,9 @@ class Lot_exp_Get(Resource):
             lot_exp["_id"] = str(lot_exp["_id"])
             lot_exp["item"] = str(lot_exp["item"])
             lot_exp["quantity"] = lot_exp["quantity"]
-            lot_exp["expiration"] = lot_exp["expiration"].strftime("%Y-%m-%d")
-            lot_exp["created at"] = lot_exp["created at"].strftime("%Y-%m-%d")
-            lot_exp["updated at"] = lot_exp["updated at"].strftime("%Y-%m-%d")
+            lot_exp["expiration"] = lot_exp["expiration"].strftime("%Y-%m-%d") if "expiration" in lot_exp else None
+            lot_exp["created at"] = lot_exp["created at"].strftime("%Y-%m-%d") if "created at" in lot_exp else None
+            lot_exp["updated at"] = lot_exp["updated at"].strftime("%Y-%m-%d") if "updated at" in lot_exp else None
             lotexp_list.append(lot_exp)
         response_data = {"lotexp": lotexp_list}
         # Create a Flask response with JSON data

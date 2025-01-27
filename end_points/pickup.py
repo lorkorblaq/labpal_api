@@ -43,42 +43,9 @@ pickup_parser.add_argument("urgency_level", type=str, required=False)
 pickup_parser.add_argument("tracking_url", type=str, required=False)
 pickup_parser.add_argument("eta", type=str, required=False)
 
-{
-  "_id": { "$oid": "676fb569fb709aa659a5b966" },
-  "created_by": "Olorunfemi Oloko",
-  "created_at": { "$date": "2024-12-28T09:23:04.882Z" },
-  "request_id": "IFom86T",
-  "pickup_loc": "clinicals_lagos",
-  "dropoff_loc": "city_hospital_ikeja",
-  "numb_of_samples": 3,
-  "create_lat_lng": "6.545021",
-  "delivery_status": "In Transit",
-  "current_lat_lng": "6.593421,3.350635",
-  "eta": "2024-12-28T10:30:00Z",
-  "description": "Safe",
-  "completed": "No",
-  "accepted": "Yes",
-  "rider_info": {
-    "name": "Miracle John",
-    "phone": "+2348012345678",
-    "vehicle": "Bike",
-    "current_lat_lng": "6.593421,3.350635"
-  },
-  "route_info": {
-    "pickup_time": "2024-12-28T09:30:00Z",
-    "waypoints": [
-      { "lat_lng": "6.558112,3.342745", "description": "Checkpoint 1" },
-      { "lat_lng": "6.580987,3.345612", "description": "Checkpoint 2" }
-    ]
-  },
-  "urgency_level": "Standard",
-  "tracking_url": "https://yourapp.com/track/IFom86T"
-}
-
-
-
 class RequestsPush(Resource):
     def post(self, user_id):
+        wat_now = datetime.now()
         try:
             org_name = get_org_name(user_id)
             REQUEST_COLLECTION = client[org_name+'_db']['request_pickup']
@@ -118,8 +85,10 @@ class RequestsPush(Resource):
 
         except Exception as e:
             return {"message": "Error occured while creating request", "error": str(e)}
-class RequestPut(Resource):    
+        
+class RequestPut(Resource):
     def put(self, user_id):
+        wat_now = datetime.now()
         args = pickup_parser.parse_args()
         request_id = args.get('request_id')
         
@@ -141,7 +110,6 @@ class RequestPut(Resource):
                 abort(400, message="Request has already been accepted")
             request['accepted_time'] = wat_now
             request['accepted'] = 'yes'
-            request['updated_at'] = wat_now
 
         assigned = args.get('assigned_to')
         if assigned:
@@ -151,7 +119,7 @@ class RequestPut(Resource):
                 abort(400, message="Request has already been assigned")
             request['assignedTime'] = wat_now
             request['assigned'] = 'yes'
-            request['updated_at'] = wat_now
+            request['assigned_to'] = assigned
 
         enroute = args.get('enroute_by')
         if enroute:
@@ -161,7 +129,6 @@ class RequestPut(Resource):
                 abort(400, message="Request is already enroute")
             request['enrouteTime'] = wat_now
             request['enroute'] = 'yes'
-            request['updated_at'] = wat_now
 
         atPickup = args.get('atPickup')
         if atPickup:
@@ -171,7 +138,6 @@ class RequestPut(Resource):
                 abort(400, message="Request is already at pickup")
             request['atPickupTime'] = wat_now
             request['atPickup'] = 'yes'
-            request['updated_at'] = wat_now
 
         picked = args.get('picked_by')
         if picked:
@@ -182,7 +148,6 @@ class RequestPut(Resource):
             request['picked_by'] = picked
             request['pickup_time'] = wat_now
             request['picked'] = 'yes'
-            request['updated_at'] = wat_now
 
         dropped = args.get('dropped_by')
         if dropped:
@@ -191,7 +156,6 @@ class RequestPut(Resource):
             if request.get('completed') == 'yes':
                 abort(400, message="Request has already been completed")
             request['dropoff_time'] = wat_now
-            request['updated_at'] = wat_now
             request['completed'] = 'yes'
 
             # Calculate the duration between pickup_time and dropoff_time
@@ -207,70 +171,6 @@ class RequestPut(Resource):
         
         response = {"message": "Your data has been updated successfully"}
         return response, 200
-
-# class RequestPut(Resource):    
-#     def put(self, user_id):
-#         args = pickup_parser.parse_args()
-#         request_id = args.get('request_id')
-#         try:
-#             org_name = get_org_name(user_id)
-#             REQUEST_COLLECTION = client[org_name+'_db']['request_pickup']
-#         except ValueError as e:
-#             abort(404, message=str(e))
-
-#         request = REQUEST_COLLECTION.find_one({'request_id': request_id})
-#         if not request:
-#             abort(404, message="Request not found")
-
-#         # Update the request with new values
-#         for key, value in args.items():
-#             if value is not None:
-#                 if isinstance(value, str) and value.strip() == '':
-#                     value = None
-#                 request[key] = value
-
-#         accepted = args.get('accepted_by')
-#         if accepted:
-#             request['accepted_time'] = wat_now
-#             request['accepted'] = 'yes'
-#             request['updated_at'] = wat_now
-#         assigned = args.get('assigned_to')
-#         if assigned:
-#             request['assignedTime'] = wat_now
-#             request['assigned'] = 'yes'
-#             request['updated_at'] = wat_now
-#         enroute = args.get('enroute_by')
-#         if enroute:
-#             request['enrouteTime'] = wat_now
-#             request['enroute'] = 'yes'
-#             request['updated_at'] = wat_now
-#         atPickup = args.get('atPickup')
-#         if atPickup:
-#             request['atPickupTime'] = wat_now
-#             request['atPickup'] = 'yes'
-#             request['updated_at'] = wat_now
-#         picked = args.get('picked_by')
-#         if picked:
-#             request['picked_by'] = picked
-#             request['pickup_time'] = wat_now
-#             request['picked'] = 'yes'
-#             request['updated_at'] = wat_now
-#         dropped = args.get('dropped_by')
-#         if dropped:
-#             request['dropoff_time'] = wat_now
-#             request['updated_at'] = wat_now
-#             request['completed'] = 'yes'
-
-#             # Calculate the duration between pickup_time and dropoff_time
-#             pickup_time = request.get('pickup_time')
-#             dropoff_time = request.get('dropoff_time')
-#             if pickup_time and dropoff_time:
-#                 duration = dropoff_time - pickup_time
-#                 total_minutes = duration.total_seconds() // 60  # Convert to minutes
-#                 request['duration'] = total_minutes
-#         REQUEST_COLLECTION.replace_one({'request_id': request_id}, request)
-#         response = {"message": "Your data has been updated successfully"}
-#         return response, 200
     
 class RequestGetOne(Resource):
     def get(self,user_id, request_id):
@@ -285,35 +185,36 @@ class RequestGetOne(Resource):
                 abort(404, message="Channel not found")
             # for request in request:
             response = {
-                    "id": str(request['_id']),
-                    "created_at": request.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in request else 'Not yet created',
-                    "created_by": request.get('created_by', 'Unknown User'),
-                    "accepted_by": request.get('accepted_by', 'Unknown User'),
-                    "accepted_time": request.get('accepted_time').strftime("%Y-%m-%d %H:%M:%S") if 'accepted_time' in request else 'Not yet accepted',
-                    "picked_by": request.get('picked_by', 'Not yet picked'),
-                    "request_id": request.get('request_id', 'Unknown request id'),
-                    "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
-                    
-                    "assigned_to": request.get('assigned_to', 'not yet assigned'),
-                    "assigned_by": request.get('assigned_by', 'not yet assigned'),
+                "id": str(request['_id']),
+                "created_at": request.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in request else None,
+                "created_by": request.get('created_by', 'Unknown User'),
+                "accepted_by": request.get('accepted_by', 'Unknown User'),
+                "accepted_time": request.get('accepted_time').strftime("%Y-%m-%d %H:%M:%S") if 'accepted_time' in request else None,
+                "picked_by": request.get('picked_by', 'Not yet picked'),
+                "request_id": request.get('request_id', 'Unknown request id'),
+                "numb_of_samples": request.get("numb_of_samples", 'Unknown numb of samples'),
+                "pickup_loc": request.get("pickup_loc", 'Not yet picked'),
+                "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
+                
+                "assigned_to": request.get('assigned_to', 'not yet assigned'),
+                "assigned_by": request.get('assigned_by', 'not yet assigned'),
 
-                    "assigned": request.get('assigned', 'no'),
-                    "accepted": request.get('accepted', 'no'),
-                    "atPickup": request.get('atPickup', 'no'),
-                    "picked": request.get('picked', 'no'),
-                    "enroute": request.get('enroute', 'no'),
+                "accepted": request.get('accepted', 'no'),
+                "assigned": request.get('assigned', 'no'),
+                "atPickup": request.get('atPickup', 'no'),
+                "picked": request.get('picked', 'no'),
+                "enroute": request.get('enroute', 'no'),
 
-                    "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
-                    "assignedTime": request.get('assignedTime').strftime("%Y-%m-%d %H:%M:%S") if 'assignedTime' in request else 'Not yet assigned',
-                    "atPickupTime": request.get('atPickupTime').strftime("%Y-%m-%d %H:%M:%S") if 'atPickupTime' in request else 'Not yet at pick up',
-                    "pickup_time": request.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in request else 'Not yet picked',
-                    "pickup_loc": request.get("pickup_loc", 'Not yet picked'),
-                    "dropoff_time": request.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in request else 'Not yet dropped',
-                    "create_lat_lng": request.get('create_lat_lng', 'location'),
-                    "dropoff_lat_lng": request.get('dropoff_lat_lng', 'Not yet dropped'),
-                    "duration": request.get('duration', 0),
-                    "description": request.get('description', 'No Description'),
-                    "completed": request.get('completed', False)}
+                "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
+                "assignedTime": request.get('assignedTime').strftime("%Y-%m-%d %H:%M:%S") if 'assignedTime' in request else 'Not yet assigned',
+                "atPickupTime": request.get('atPickupTime').strftime("%Y-%m-%d %H:%M:%S") if 'atPickupTime' in request else 'Not yet at pick up',
+                "pickup_time": request.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in request else 'Not yet picked',
+                "dropoff_time": request.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in request else 'Not yet dropped',
+                "create_lat_lng": request.get('create_lat_lng', 'location'),
+                "dropoff_lat_lng": request.get('dropoff_lat_lng', 'Not yet dropped'),
+                "duration": request.get('duration', 0),
+                "description": request.get('description', 'No Description'),
+                "completed": request.get('completed', False)}
             return response, 200
         except Exception as e:
             return {"message": "Error occured while fetching request", "error": str(e)}
@@ -344,11 +245,11 @@ class RequestGetAll(Resource):
             "assigned_to": request.get('assigned_to', 'not yet assigned'),
             "assigned_by": request.get('assigned_by', 'not yet assigned'),
 
-            "accepted": request.get('accepted', 'No'),
-            "assigned": request.get('assigned', 'No'),
-            "atPickup": request.get('atPickup', 'No'),
-            "picked": request.get('picked', 'No'),
-            "enroute": request.get('enroute', 'No'),
+            "accepted": request.get('accepted', 'no'),
+            "assigned": request.get('assigned', 'no'),
+            "atPickup": request.get('atPickup', 'no'),
+            "picked": request.get('picked', 'no'),
+            "enroute": request.get('enroute', 'no'),
 
             "enrouteTime": request.get('enrouteTime').strftime("%Y-%m-%d %H:%M:%S") if 'enrouteTime' in request else 'Not yet enroute',
             "assignedTime": request.get('assignedTime').strftime("%Y-%m-%d %H:%M:%S") if 'assignedTime' in request else 'Not yet assigned',

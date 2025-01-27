@@ -35,6 +35,10 @@ channels_parser.add_argument("expiration", type=valid_date, required=False)
 
 class ChannelPush(Resource):
     def post(self, user_id, lab_name):
+        wat_now = datetime.now()
+
+        print("wat",wat_now)
+
         try:
             # Fetch organization and collections
             org_name = get_org_name(user_id)
@@ -45,10 +49,10 @@ class ChannelPush(Resource):
             abort(404, message=str(e))
 
         try:           
-            # Parse arguments and get user information
+            # Parse arguments and get user informationB
             args = channels_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
-            
+            print('args',args,user)
             if not user:
                 abort(400, message="User does not exist, kindly contact Lorkorblaq")
             
@@ -109,6 +113,7 @@ class ChannelPush(Resource):
                     "expiration": args["expiration"],
                     "quantity": args["quantity"],
                     "created at": wat_now,
+                    "update at": wat_now
                 }
                 if lot:
                     LOT_EXP_COLLECTION.update_one(
@@ -175,6 +180,7 @@ class ChannelPush(Resource):
 
 class ChannelPut(Resource):
     def put(self, user_id, lab_name, channel_id):
+        wat_now = datetime.now()
         try:
             # Fetch organization and collections
             org_name = get_org_name(user_id)
@@ -317,7 +323,6 @@ class ChannelGetAll(Resource):
         } for channel in channels]
 
         response = {"channels": channel_list}
-        print(response)
         return response, 200
 
         
