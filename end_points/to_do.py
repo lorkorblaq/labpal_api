@@ -16,10 +16,10 @@ def valid_date(s):
         raise ValueError(f"Not a valid date: '{s}'. Use YYYY-MM-DD format.")
 
 
-    try:
-        return datetime.strptime(s, "%Y-%m-%d %I:%M %p")
-    except ValueError:
-        raise ValueError(f"Not a valid datetime: '{s}'. Use YYYY-MM-DD HH:MM AM/PM format.")
+    # try:
+    #     return datetime.strptime(s, "%Y-%m-%d %I:%M %p")
+    # except ValueError:
+    #     raise ValueError(f"Not a valid datetime: '{s}'. Use YYYY-MM-DD HH:MM AM/PM format.")
 # Initialize the request parser
 
 events_parser = reqparse.RequestParser()

@@ -9,8 +9,6 @@ from engine import client, org_users_db, get_org_name
 
 USERS_COLLECTION = org_users_db['users']
 ORG_COLLECTION = org_users_db['organisations']
-utc_now = datetime.now()
-wat_now = utc_now + timedelta(hours=1)
 
 pickup_parser = reqparse.RequestParser()
 

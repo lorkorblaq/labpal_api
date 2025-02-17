@@ -292,55 +292,41 @@ class ItemsPush(Resource):
             return {"message": "Error occurred while pushing item", "error": str(e)}
 
 class ItemsPut(Resource):
-    def put(self, user_id, lab_name):
+    def put(self, user_id, lab_name, item_id):
         try:
             # Retrieve the organization name based on the user ID
             orgname = get_org_name(user_id)
             # Access the specific items collection for the lab in the user's database
+            print(orgname, f"{lab_name}_items", item_id)
             ITEMS_COLLECTION = client[orgname+'_db'][lab_name+'_items']
+
+            print(ITEMS_COLLECTION)
         except ValueError as e:
             # If a ValueError occurs (e.g., invalid user ID), return a 404 error with the exception message
             abort(404, message=str(e))
+
+        item = ITEMS_COLLECTION.find_one({'_id': ObjectId(item_id)})
+        print(item)
+        if not item:
+            item = ITEMS_COLLECTION.find_one({'_id':item_id})
+            if not item:
+                abort(404, message="The item you are about to update doesn't exist")
         
         # Parse the incoming request arguments (assuming item_parser is predefined)
-        args = item_parser.parse_args()
+        args = item_parser.parse_args()    
         
-        # Check if the 'item' argument is provided in the request
-        if not args['item']:
-            abort(404, message="Item not provided, kindly contact Lorkorblaq")
-        
-        # Retrieve the item document from the collection
-        item = ITEMS_COLLECTION.find_one({'item': args['item']})
-        
-        # Check if the item exists in the collection
-        if not item:
-            abort(404, message="The item you are about to update doesn't exist")
-        
-        # Get the current quantity of the item
-        current_quantity = item.get('quantity', 0)
+        # Update the Items with new values
+        for key, value in args.items():
+            if value is not None:
+                # Convert empty strings to None
+                if isinstance(value, str) and value.strip() == '':
+                    value = None
+                item[key] = value
 
-        # If the direction is "To", decrease the quantity by the specified amount
-        if args['direction'] == "To":
-            # Ensure the new quantity will not be negative
-            if current_quantity == 0:
-                abort(400, message="Item is already at zero quantity, cannot reduce further")
-            elif current_quantity - args['quantity'] < 0:
-                abort(400, message="Quantity will result in a negative value and can't be allowed")
-            
-            
-            # Update the item's quantity by decreasing it
-            new_value = {'$inc': {'quantity': -args['quantity']}}
-            ITEMS_COLLECTION.update_one({'item': args['item']}, new_value)
-        
-        # If the direction is "From", increase the quantity by the specified amount
-        elif args['direction'] == "From":
-            # Update the item's quantity by increasing it
-            new_value = {'$inc': {'quantity': args['quantity']}}
-            ITEMS_COLLECTION.update_one({'item': args['item']}, new_value)
-        
-        # Return a success message after the update is applied
+        ITEMS_COLLECTION.replace_one({'_id': ObjectId(item_id)}, item)
+
         response = {"message": "Your data has been updated successfully"}
-        return response, 200  # Return the response with a 200 OK status
+        return response, 200
 
 class ItemsRequisite(Resource):
     def post(self, user_id, lab_name):  

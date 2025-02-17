@@ -22,8 +22,8 @@ channels_parser.add_argument("direction", type=str, help="Direction is required"
 channels_parser.add_argument("location", type=str, help="Location is required", required=False)
 channels_parser.add_argument("quantity", type=int, help="Quantity is required", required=False)
 channels_parser.add_argument("description", type=str, required=False)
-utc_now = datetime.now()
-wat_now = utc_now + timedelta(hours=1)
+# utc_now = datetime.now() + timedelta(hours=1)
+# wat_now = utc_now + timedelta(hours=1)
 def valid_date(s):
     try:
         return datetime.strptime(s, "%Y-%m-%d")

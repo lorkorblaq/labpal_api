@@ -9,8 +9,6 @@ from dateutil import parser
 
 USERS_COLLECTION = org_users_db['users']
 lot_exp_parser = reqparse.RequestParser()
-utc_now = datetime.now()
-wat_now = utc_now + timedelta(hours=1)
 
 def valid_date(s):
     try:
@@ -25,6 +23,7 @@ lot_exp_parser.add_argument("expiration", type=valid_date, help="expiration is r
 
 class Lot_exp_Push(Resource):
     def post(self, user_id, lab_name):
+        wat_now = datetime.now()
         try:
             org_name = get_org_name(user_id)
             ITEMS_COLLECTION = client[org_name + '_db'][lab_name + '_items']
@@ -63,6 +62,7 @@ class Lot_exp_Push(Resource):
 
 class Lot_exp_Bulk_Push(Resource):
     def post(self, user_id, lab_name):
+        wat_now = datetime.now()
         try:
             # Retrieve the organization name based on user ID
             orgname = get_org_name(user_id)
@@ -119,7 +119,7 @@ class Lot_exp_Bulk_Push(Resource):
                                 'expiration': entry['expiration'],
                                 'created at': wat_now
                             },
-                            '$set': {'updated at': wat_now}
+                            # '$set': {'updated at': wat_now}
                         },
                         upsert=True
                     )
@@ -163,7 +163,7 @@ class Lot_exp_Get(Resource):
             lot_exp["quantity"] = lot_exp["quantity"]
             lot_exp["expiration"] = lot_exp["expiration"].strftime("%Y-%m-%d") if "expiration" in lot_exp else None
             lot_exp["created at"] = lot_exp["created at"].strftime("%Y-%m-%d") if "created at" in lot_exp else None
-            lot_exp["updated at"] = lot_exp["updated at"].strftime("%Y-%m-%d") if "updated at" in lot_exp else None
+            # lot_exp["updated at"] = lot_exp["updated at"].strftime("%Y-%m-%d") if "updated at" in lot_exp else None
             lotexp_list.append(lot_exp)
         response_data = {"lotexp": lotexp_list}
         # Create a Flask response with JSON data

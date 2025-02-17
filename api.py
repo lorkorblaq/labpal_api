@@ -70,7 +70,7 @@ api.add_resource(GetOrganisation, "/api/org/get/<string:name>/")
 api.add_resource(ItemsGet, "/api/items/get/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsPush, "/api/items/push/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsBulkPush, "/api/items/bulkpush/<string:user_id>/<string:lab_name>/")
-api.add_resource(ItemsPut, "/api/item/put/<string:user_id>/<string:lab_name>/")
+api.add_resource(ItemsPut, "/api/item/put/<string:user_id>/<string:lab_name>/<string:item_id>/")
 api.add_resource(ItemsRequisite, "/api/items/requisite/<string:user_id>/<string:lab_name>/")
 api.add_resource(ItemsDeleteResource, "/api/items/deleteall/<string:user_id>/<string:lab_name>/")
 
