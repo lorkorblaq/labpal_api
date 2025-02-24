@@ -29,6 +29,7 @@ class OrgGetLabs(Resource):
             "managers_email": lab.get('managers_email', 'Unknown Item'),
             "users": lab.get('users', 'Unknown Bench'),
             "org_id": lab.get('org_id', 'Unknown Machine'),
+            "area": lab.get('area', 'Unknown Area'),
             "region": lab.get('region', 'Unknown Region')
         } for lab in labs]
         response = make_response({'labs':lab_list}, 200)
