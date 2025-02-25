@@ -19,6 +19,7 @@ shipments_parser.add_argument("top", type=str, help="Type of package is required
 shipments_parser.add_argument("numb_of_packs", type=int, help="Number of packages is required", required=False)
 shipments_parser.add_argument("weight", type=float, help="Weight of packages is required", required=False)
 shipments_parser.add_argument("vendor", type=str, help="Vendor is required", required=False)
+shipments_parser.add_argument("price", type=str, required=False)
 
 shipments_parser.add_argument("picked_by", type=str, required=False)
 shipments_parser.add_argument("pickup_loc", type=str, help="Pickup location is required", required=False)
@@ -77,6 +78,7 @@ class ShipmentsPush(Resource):
                 "vendor": args['vendor'],
                 "pickup_loc": fromLab,
                 "dropoff_loc": toLab,
+                "price": args['price'],
                 "from_region": fromRegion,
                 "to_region": toRegion,
                 "create_lat_lng": args['create_lat_lng'],
