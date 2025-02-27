@@ -1,8 +1,9 @@
 from flask import jsonify, request
 from flask_restful import Resource, reqparse, abort, fields, marshal_with
 from bson import ObjectId
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from engine import client, org_users_db, get_org_name
+from pymongo import DESCENDING
 
 # SHIPMENTS_COLLECTION = db_clinical['channels']
 # ITEMS_COLLECTION = db_clinical['items']
@@ -20,6 +21,8 @@ shipments_parser.add_argument("numb_of_packs", type=int, help="Number of package
 shipments_parser.add_argument("weight", type=float, help="Weight of packages is required", required=False)
 shipments_parser.add_argument("vendor", type=str, help="Vendor is required", required=False)
 shipments_parser.add_argument("price", type=str, required=False)
+
+shipments_parser.add_argument("vendor_name", type=str, required=False)
 
 shipments_parser.add_argument("picked_by", type=str, required=False)
 shipments_parser.add_argument("pickup_loc", type=str, help="Pickup location is required", required=False)
@@ -39,7 +42,7 @@ class ShipmentsPush(Resource):
     def post(self, user_id, lab_name):
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db'][lab_name+'_shipments']
+            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
             LAB_COLLECTION = client[org_name+'_db']["labs"]
         except ValueError as e:
             abort(404, message=str(e))
@@ -47,56 +50,124 @@ class ShipmentsPush(Resource):
             args = shipments_parser.parse_args()
             user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
             if not user:
-                return {"message": "User does not exist, kindly contact Lorkorblaq"}, 400
+                return {"message": "User does not exist, kindly contact admin"}, 400
             elif not org_name:
                 return {"message": "Organisation does not exist, kindly contact Lorkorblaq"}, 400
             labs = user.get('labs_access')
             if lab_name in labs:
                 pass
+
             name = user.get('firstname') + ' ' + user.get('lastname')
             print('user_id2', user_id)
-            utc_now = datetime.now()
-            fromLab = args['pickup_loc']
-            toLab = args['dropoff_loc']
-            fromRegion = LAB_COLLECTION.find_one({'lab_name': fromLab}, {'region': 1}).get('region')
-            toRegion = LAB_COLLECTION.find_one({'lab_name': toLab}, {'region': 1}).get('region')
-            print('fromRegion', fromRegion)
-            print('toRegion', toRegion)
-            if fromRegion == "lagos":
-                firstInitalToRegion = toRegion[0].upper()
-                Rcode = f"L{firstInitalToRegion}-{utc_now.strftime('%y%m%d%H%M%S')}"
-            elif toRegion == "lagos":
-                firstInitalFromRegion = fromRegion[0].upper()
-                Rcode = f"F{firstInitalFromRegion}-{utc_now.strftime('%y%m%d%H%M%S')}"
+            utc_now = datetime.now()   
+            fromLab = LAB_COLLECTION.find_one({'lab_name': args['pickup_loc'].lower()}, {'lab_name': 1, 'region': 1})
+            toLab = LAB_COLLECTION.find_one({'lab_name': args['dropoff_loc'].lower()}, {'lab_name': 1, 'region': 1})
+
+            # Ensure fromLab and toLab exist before calling .get()
+            fromLabName = fromLab.get('lab_name') if fromLab else None
+            toLabName = toLab.get('lab_name') if toLab else None
+            print('shipments_data', 'shipments_data')
+            print('fromLab', fromLabName)
+            print('toLab', toLabName)
+
+            # Check if labs exist
+            if not fromLabName:
+                return {"message": f"The {args['pickup_loc']} location not found"}, 400
+            if not toLabName:
+                return {"message": f"The {args['dropoff_loc']} location not found"}, 400
+            
+            # Ensure that at least one of them is "central store"
+            if fromLabName != "central_store" and toLabName != "central_store":
+                return {"message": "Either pickup or dropoff location must be central store"}, 400
+            
+            # Extract regions
+            fromRegion = fromLab.get('region')
+            toRegion = toLab.get('region')
+
+            # Validate region existence
+            if not fromRegion:
+                return {"message": f"The {args['pickup_loc']} location is missing region data"}, 400
+            if not toRegion:
+                return {"message": f"The {args['dropoff_loc']} location is missing region data"}, 400
+
+            #Define the pricing based on regions
+            REGION_PRICING = {
+                "north": 18000,
+                "west": 8000,
+                "east": 9000
+            }
+
+            if fromLabName == "central_store":
+                price = REGION_PRICING.get(toRegion, 0)  # Default to 0 if region is unknown
+                firstInitialToRegion = toRegion[0].upper()
+                Rcode = f"L{firstInitialToRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
+                regionCode = f"LN" if toRegion.lower() == "north" else f"LW" if toRegion.lower() == "west" else f"LE" if toRegion.lower() == "east" else f"LS" if toRegion.lower() == "south" else f"LU"
+            elif toLabName == "central_store":
+                price = REGION_PRICING.get(fromRegion, 0)
+                firstInitialFromRegion = fromRegion[0].upper()
+                Rcode = f"F{firstInitialFromRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
+                regionCode = f"FN" if fromRegion.lower() == "north" else f"FW" if fromRegion.lower() == "west" else f"FE" if fromRegion.lower() == "east" else f"FS" if fromRegion.lower() == "south" else f"FU"
+            
+
+            # **Generate the Serial Number for the Current Month**
+            current_month = utc_now.strftime('%Y-%m')
+            latest_shipment = SHIPMENTS_COLLECTION.find_one(
+                {
+                    "created_at": {"$gte": datetime(utc_now.year, utc_now.month, 1)},
+                    "shipment_id": {"$regex": f"^{regionCode}"}  # Filter by region code prefix
+                },
+                sort=[("created_at", DESCENDING)]
+            )
+
+            if latest_shipment and "shipment_id" in latest_shipment:
+                try:
+                    last_serial = int(latest_shipment["shipment_id"].split("-")[-1])  # Extract last serial
+                    new_serial = last_serial + 1
+                except ValueError:
+                    new_serial = 1  # Fallback in case of parsing issue
+            else:
+                new_serial = 1  # Start from 1 if no shipments exist for the month
+
+            # Final `shipment_id` with serial number
+            shipment_id = f"{Rcode}{new_serial:03d}"  # Formats as "001", "002", etc.
+
             data = {
                 "created_by": name,
                 "created_at": utc_now,
-                "shipment_id": Rcode,
+                "shipment_id": shipment_id,
                 "top": args['top'],
                 "numb_of_packs": args['numb_of_packs'],
                 "weight": args['weight'],
                 "vendor": args['vendor'],
-                "pickup_loc": fromLab,
-                "dropoff_loc": toLab,
-                "price": args['price'],
+                "pickup_loc": fromLab.get('lab_name'),
+                "dropoff_loc": toLab.get('lab_name'),
+                "price": price,
                 "from_region": fromRegion,
                 "to_region": toRegion,
                 "create_lat_lng": args['create_lat_lng'],
                 "description": args['description'],
                 "status": 'pending'
-                }
-            shipments_data = SHIPMENTS_COLLECTION.find_one({'shipment_id': args['shipment_id']})
+            }
+            try:
+                print('shipments_data', 'shipments_data')
+                result = SHIPMENTS_COLLECTION.insert_one(data)
+                print('resultship', result)
+                # Verify insert success
+                if result.inserted_id:
+                    inserted_id = str(result.inserted_id)
+                    response = {
+                        "message": "Shipent created successfully",
+                        "tracking_id": inserted_id
+                    }
+                    print('response', response)
+                    return response, 200
+                else:
+                    print("🚨 MongoDB insert failed!")  # Debugging log
+                    return {"message": "Failed to create shipment, please try again."}, 500  
 
-            if not shipments_data:
-                inserted_id = SHIPMENTS_COLLECTION.insert_one(data).inserted_id
-                inserted_id = str(inserted_id)
-                response = {
-                    "message": "Shipment created successfully",
-                    "tracking_id": inserted_id
-                }
-                return response, 200
-            else:
-                return {"message": "Shipment already exists"}, 400
+            except Exception as e:
+                print("🔥 Error during MongoDB insert:", str(e))  # Print full error
+                return {"message": "Error occurred while creating shipment", "error": str(e)}, 500
 
         except Exception as e:
             return {"message": "Error occured while creating shipment", "error": str(e)}
@@ -107,7 +178,7 @@ class ShipmentsPut(Resource):
         shipment_id = args.get('shipment_id')
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db'][lab_name+'_shipments']
+            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
 
@@ -164,7 +235,7 @@ class ShipmentsGetOne(Resource):
     def get(self,user_id, lab_name, shipment_id):
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db'][lab_name+'_shipments']
+            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
         try:
@@ -181,6 +252,7 @@ class ShipmentsGetOne(Resource):
                     "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
                     "top": shipment.get('top', 'Unknown type of package'),
                     "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
+                    "price": shipment.get("price", 'Unknown price'),
                     "weight": shipment.get("weight", 'Unknown weight'),
                     "vendor": shipment.get("vendor", 'Unknown vendor'),
                     "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
@@ -203,7 +275,7 @@ class ShipmentsGetAll(Resource):
     def get(self, user_id, lab_name):
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db'][lab_name+'_shipments']
+            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
         shipments = list(SHIPMENTS_COLLECTION.find())
@@ -221,6 +293,7 @@ class ShipmentsGetAll(Resource):
             "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
             "top": shipment.get('top', 'Unknown type of package'),
             "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
+            "price": shipment.get("price", 'Unknown price'),
             "weight": shipment.get("weight", 'Unknown weight'),
             "vendor": shipment.get("vendor", 'Unknown vendor'),
             "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
@@ -241,12 +314,52 @@ class ShipmentsGetAll(Resource):
         return response, 200
 
 class ShipmentsDel(Resource):
-     def delete(self, user_id, lab_name, shipment_id):
+    def delete(self, user_id, lab_name, shipment_id):
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db'][lab_name+'_shipments']
+            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
-
         SHIPMENTS_COLLECTION.delete_one({'_id': ObjectId(shipment_id)})
         return jsonify({"message": "Item has been deleted successfully"})
+     
+
+class VendorCreate(Resource):
+    def post(self, user_id):
+        try:
+            user = USERS_COLLECTION.find_one({'_id': ObjectId(user_id)})
+            if not user:
+                return {"message": "User does not exist, kindly contact admin"}, 400
+            
+            org_name = get_org_name(user_id)
+            VENDOR_COLLECTION = client[org_name+'_db']['vendors']
+        except ValueError as e:
+            abort(404, message=str(e))
+        args = shipments_parser.parse_args()
+        vendor = args.get('vendor_name')
+        if not vendor:
+            return {"message": "Vendor name is required"}, 400
+        vendor_data = {"name": vendor}
+        result = VENDOR_COLLECTION.insert_one(vendor_data)
+        if result.inserted_id:
+            return {"message": "Vendor created successfully"}, 200
+        else:
+            return {"message": "Failed to create vendor, please try again."}, 500
+
+class VendorGetAll(Resource):
+    def get(self, user_id):
+        try:
+            org_name = get_org_name(user_id)
+            VENDOR_COLLECTION = client[org_name+'_db']['vendors']
+        except ValueError as e:
+            abort(404, message=str(e))
+        vendors = list(VENDOR_COLLECTION.find())
+        if not vendors:
+            abort(404, message="Vendors not found")
+        vendor_list = [{
+            "id": str(vendor['_id']),
+            "name": vendor.get('name', 'Unknown Vendor'),
+        } for vendor in vendors]
+
+        response = {"vendors": vendor_list}
+        return response, 200

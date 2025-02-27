@@ -102,6 +102,9 @@ api.add_resource(ShipmentsPut, "/api/shipments/put/<string:user_id>/<string:lab_
 api.add_resource(ShipmentsDel, "/api/shipments/delete/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
 api.add_resource(ShipmentsGetOne, "/api/shipments/get/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
 api.add_resource(ShipmentsGetAll, "/api/shipments/get/<string:user_id>/<string:lab_name>/")
+api.add_resource(VendorCreate, "/api/shipments/vendors/<string:user_id>/")
+api.add_resource(VendorGetAll, "/api/shipments/vendors/get/<string:user_id>/")
+
 
 #requests-pickup
 api.add_resource(RequestsPush, "/api/request-pickup/push/<string:user_id>/")

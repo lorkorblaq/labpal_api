@@ -113,7 +113,7 @@ class ChannelPush(Resource):
                     "expiration": args["expiration"],
                     "quantity": args["quantity"],
                     "created at": wat_now,
-                    "update at": wat_now
+                    # "update at": wat_now
                 }
                 if lot:
                     LOT_EXP_COLLECTION.update_one(

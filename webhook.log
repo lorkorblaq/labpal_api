@@ -14460,3 +14460,788 @@
 2025-02-25 22:46:47,052 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:46:47] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
 2025-02-25 22:47:24,047 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:47:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
 2025-02-25 22:47:24,633 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:47:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:52:03,610 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-25 22:52:03,611 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-25 22:52:03,611 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 22:52:05,279 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 22:52:05,280 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 22:52:38,776 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 22:52:39,259 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 22:52:42,143 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 22:52:42,143 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 22:52:42,804 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:52:42] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:52:43,380 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:52:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:16,691 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:16] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:17,916 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:17] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:22,831 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:22] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:23,438 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:23] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:30,416 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:31,009 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:38,303 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:38] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:53:39,015 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:53:39] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:54:04,617 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:54:04] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:54:05,740 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:54:05] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:54:10,356 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:54:10] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:54:10,913 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:54:10] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:58:42,879 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:58:42] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:58:43,462 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:58:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:58:50,405 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:58:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 22:58:50,999 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 22:58:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:00:37,386 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:00:37] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:00:38,085 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:00:38] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:00:58,563 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:00:58] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:01:00,453 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:01:00] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:01:05,145 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:01:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:01:06,020 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:01:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:02:14,585 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:02:14] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:02:15,717 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:02:15] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:02:19,915 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:02:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:02:20,490 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:02:20] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:03:15,991 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:03:16,550 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:03:20,277 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:03:20,278 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:03:21,280 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:03:21] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:03:21,867 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:03:21] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:03:35,839 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:03:35] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:03:36,302 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:03:36] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:04:25,828 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:04:25] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:04:26,255 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:04:26] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:04:59,494 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:04:59] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:04:59,894 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:04:59] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:09:30,455 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:09:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:09:31,051 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:09:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:09:46,682 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:09:46] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:21:10,569 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:21:11,156 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:21:29,136 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:21:29,137 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:21:29,857 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:21:29] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:21:30,685 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:21:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:31:41,499 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:31:42,113 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:31:45,228 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:31:45,234 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:35:43,301 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:35:43] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:35:43,517 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:35:43] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:36:11,014 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:36:11,641 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:36:23,402 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:36:23,402 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:36:24,909 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:36:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:36:26,249 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:36:26] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:36:46,203 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:36:46] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:36:47,484 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:36:47] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:38:10,287 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:38:10,886 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:38:28,762 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:38:28,763 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:38:29,074 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:38:29] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:38:29,350 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:38:29] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:38:43,617 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:38:43] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:38:44,095 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:38:44] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:40:01,322 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:40:01,713 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:40:03,953 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:40:03,953 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:42:21,219 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:42:21,815 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:42:24,217 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:42:24,218 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:42:39,652 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:42:39] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:42:40,270 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:42:40] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:44:59,982 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:45:00,550 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:45:18,250 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:45:18,250 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:46:39,593 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-25 23:46:40,166 - werkzeug - INFO -  * Restarting with stat
+2025-02-25 23:47:02,791 - werkzeug - WARNING -  * Debugger is active!
+2025-02-25 23:47:02,792 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-25 23:51:51,148 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:51:51] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:51:51,812 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:51:51] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:52:07,491 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:52:07] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:52:08,699 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:52:08] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:53:56,316 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:53:56] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:53:56,685 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:53:56] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:53:58,379 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:53:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:53:59,190 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:53:59] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:54:23,578 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:54:23] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:54:24,177 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:54:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:54:43,882 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:54:43] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:54:44,349 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:54:44] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:54:54,078 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:54:54] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:54:54,479 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:54:54] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-25 23:58:33,672 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:58:33] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:58:34,317 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:58:34] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:59:42,225 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:59:42] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-25 23:59:42,816 - werkzeug - INFO - 127.0.0.1 - - [25/Feb/2025 23:59:42] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:00:03,545 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:00:03] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:00:04,549 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:00:04] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:00:10,605 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:00:10] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:00:11,170 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:00:11] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:02:59,845 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:03:00,508 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:03:03,275 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:03:03,276 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:03:05,732 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:03:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:03:06,089 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:03:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:03:25,676 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:03:25] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:03:26,082 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:03:26] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:03:30,884 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:03:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:03:31,185 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:03:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:10,401 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:04:11,015 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:04:13,193 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:04:13,193 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:04:14,684 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:14] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:14,977 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:14] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:31,658 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:31] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:32,195 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:32] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:37,118 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:37] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:37,429 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:37] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:47,393 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:47] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:04:47,712 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:04:47] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:05:27,425 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:05:27,976 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:05:30,708 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:05:30,709 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:05:31,876 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:05:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:05:32,155 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:05:32] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:06:14,983 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:06:14] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:06:16,174 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:06:16] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:06:20,259 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:06:20] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:06:20,891 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:06:20] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:06:39,808 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:06:40,427 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:06:58,656 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:06:58,657 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:06:59,364 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:06:59] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:06:59,934 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:06:59] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:07:19,605 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:07:19] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:07:20,670 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:07:20] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:07:24,759 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:07:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:07:25,354 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:07:25] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:07:33,374 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:07:33] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:07:34,104 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:07:34] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:08:15,499 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:08:15] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:08:16,997 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:08:16] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:08:20,716 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:08:20] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:08:21,393 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:08:21] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:08:30,329 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:08:30] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:08:31,054 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:08:31] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:09:56,511 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:09:57,093 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:10:14,226 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:10:14,227 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:10:25,639 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:10:25] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:10:26,045 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:10:26] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:10:53,941 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:10:54,491 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:10:56,386 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:10:56,386 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:11:01,774 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:11:01] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:11:02,104 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:11:02] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:13:10,767 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:13:11,388 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:13:33,905 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:13:33,906 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:14:05,620 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:14:05] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:14:05,973 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:14:05] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:14:31,855 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:14:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:14:32,152 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:14:32] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:15:13,969 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:15:13] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:15:14,461 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:15:14] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:15:20,219 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:15:20] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:15:20,532 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:15:20] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:16:12,610 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:16:13,202 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:16:15,451 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:16:15,451 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:17:25,079 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:17:25] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:17:26,683 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:17:26] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:17:31,739 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:17:31] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:17:32,430 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:17:32] "[35m[1mGET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 500 -
+2025-02-26 00:21:36,103 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:21:36,729 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:21:44,119 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:21:44,119 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:21:50,170 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:21:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:21:50,474 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:21:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:22:10,041 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:22:10] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:22:11,201 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:22:11] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:23:18,893 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:23:19,532 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:23:23,035 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:23:23,036 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:23:40,331 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:23:40,936 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:23:43,334 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:23:43,335 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:29:35,276 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:29:35,838 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:29:56,210 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:29:56,210 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:30:02,129 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:02] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:02,684 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:02] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:24,553 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:24] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:26,056 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:26] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:31,059 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:31,669 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:42,940 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:42] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:30:43,522 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:30:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:31:26,677 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:31:27,100 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:31:44,436 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:31:44,436 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:31:45,204 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:31:45] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:31:45,484 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:31:45] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:32:04,711 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:32:04] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:32:05,210 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:32:05] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:33:57,686 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:33:58,225 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:34:17,059 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:34:17,060 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:34:19,392 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:34:19] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:34:20,941 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:34:20] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:34:58,251 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:34:58] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:34:59,666 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:34:59] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:35:21,196 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:35:21,732 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:35:39,879 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:35:39,880 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:35:49,864 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:35:49] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:35:50,938 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:35:50] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:37:00,330 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:37:00] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:37:01,727 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:37:01] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:37:33,200 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:37:33] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:37:34,583 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:37:34] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:38:01,842 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:38:01] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:38:03,233 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:38:03] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:38:33,768 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:38:33] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:38:35,262 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:38:35] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:39:06,249 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:39:06] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:39:07,989 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:39:07] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:39:30,751 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:39:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:39:31,402 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:39:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:39:54,810 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:39:54] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:39:56,853 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:39:56] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:40:23,139 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:40:23] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:40:24,279 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:40:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:41:06,352 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:41:06] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:41:07,006 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:41:07] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:41:35,637 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:41:35] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:41:36,882 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:41:36] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:42:13,204 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:42:13] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:42:13,679 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:42:13] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:42:32,833 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:42:32] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:42:33,319 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:42:33] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:42:45,354 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:42:45] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:42:45,957 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:42:45] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:43:04,398 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:43:04] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:43:05,099 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:43:05] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:43:23,854 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:43:23] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:43:24,504 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:43:24] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:43:52,258 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:43:52] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:43:52,935 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:43:52] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:44:43,535 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:44:43] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:44:44,046 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:44:44] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:44:54,531 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:44:54] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:44:55,199 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:44:55] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:47:39,029 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:47:39,627 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:47:57,339 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:47:57,340 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:47:58,573 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:47:58] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:47:59,187 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:47:59] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:48:30,199 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:48:30] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:48:30,694 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:48:30] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:48:43,365 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:48:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:48:43,642 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:48:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:49:16,501 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:49:17,134 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:49:20,008 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:49:20,008 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:50:03,278 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:50:03] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:50:04,401 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:50:04] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:53:54,412 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:53:54,876 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:54:13,533 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:54:13,534 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:58:32,912 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:58:33,559 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 00:58:51,359 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 00:58:51,359 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 00:58:54,022 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:58:54] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:58:55,088 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:58:55] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:59:01,492 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:59:01] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:59:01,821 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:59:01] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:59:30,963 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:59:30] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:59:31,507 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 00:59:31] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 00:59:53,349 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 00:59:53,871 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:00:31,568 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-26 01:00:31,569 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 01:00:31,570 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:00:34,946 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:00:34,947 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:00:39,253 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:00:39] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:00:40,637 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:00:40] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:00:57,415 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:00:57] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:01:00,140 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:01:00] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:02:19,907 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:02:20,549 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:02:38,238 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:02:38,239 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:02:38,251 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:02:38] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:02:38,803 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:02:38] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:24:24,571 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:24:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:24:25,654 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:24:25] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:42:27,896 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:42:27] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:42:28,353 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:42:28] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:42:33,297 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:42:33,941 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:42:58,121 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:42:58,122 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:43:05,623 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:43:05] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:43:07,526 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:43:07] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 01:43:50,032 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:43:50,345 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:44:07,817 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:44:07,818 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:44:08,846 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:44:08] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:44:10,172 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:44:10] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 01:44:23,714 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:44:23] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:44:25,326 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:44:25] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 01:44:47,565 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:44:48,144 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:44:50,819 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:44:50,819 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:44:58,574 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:44:58] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:45:00,062 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:45:00] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:45:11,831 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:45:11] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:45:13,558 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:45:13] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:45:46,923 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:45:46] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:45:47,783 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:45:47] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:46:12,501 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:46:12] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:46:13,686 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:46:13] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:46:40,371 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:46:40] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:46:42,255 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:46:42] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:47:16,476 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:47:16] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:47:17,115 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:47:17] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:47:31,652 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:47:31] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:47:32,383 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:47:32] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:51:12,271 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:51:12,790 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:51:20,498 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:51:20,499 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:51:23,367 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:51:23] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:51:24,064 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:51:24] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:51:57,787 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:51:57] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:51:58,297 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:51:58] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:52:08,067 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:52:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:52:08,356 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:52:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:52:35,301 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:52:35] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:52:36,000 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:52:36] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:52:49,005 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:52:49] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:52:49,761 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:52:49] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:56:00,145 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:56:00,568 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:56:17,661 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:56:17,661 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 01:56:51,593 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:56:51] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:56:52,271 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:56:52] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:57:21,314 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:57:21] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:57:21,785 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 01:57:21] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 01:58:46,082 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 01:58:46,666 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 01:59:03,581 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 01:59:03,583 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:01:00,692 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:01:01,175 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:01:04,544 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:01:04,545 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:01:20,425 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:01:20] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:01:21,934 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:01:21] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:02:52,290 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:02:52] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:02:53,300 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:02:53] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:03:01,452 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:03:01] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:03:01,992 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:03:01] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:03:14,769 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:03:14] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:03:15,705 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:03:15] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:04:32,791 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:04:32] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:04:34,373 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:04:34] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:06:50,369 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:06:50,974 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:07:09,181 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:07:09,181 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:09:01,374 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:09:01] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:09:02,818 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:09:02] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:10:40,065 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:10:40,551 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:10:43,137 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:10:43,138 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:10:46,843 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:10:46] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:10:47,296 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:10:47] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:11:30,945 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:11:31,551 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:11:33,066 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:11:33,067 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:11:34,440 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:11:34] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:11:34,894 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:11:34] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:13:27,919 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:13:28,453 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:13:46,418 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:13:46,418 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:13:46,433 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:13:46] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:13:47,928 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:13:47] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:14:05,870 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:14:05] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:14:07,076 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:14:07] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:15:31,198 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:15:31,791 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:15:35,139 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:15:35,140 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:18:08,700 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:18:09,372 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:18:27,453 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:18:27,454 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:18:27,467 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:18:27] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:18:29,225 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:18:29] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:18:37,653 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:18:38,266 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:18:40,147 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:18:40,148 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:18:42,237 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:18:42] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:18:43,060 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:18:43] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:19:17,796 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:19:18,380 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:19:37,822 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:19:37,822 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:19:37,834 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:19:37] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:19:39,691 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:19:39] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:20:18,549 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:20:19,157 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:20:21,792 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:20:21,792 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:20:23,895 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:20:23] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:20:25,545 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:20:25] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:20:48,240 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:20:48,617 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:21:05,793 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:21:05,794 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:21:07,008 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:21:07] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:21:07,479 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:21:07] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:21:22,103 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:21:22,586 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:21:24,366 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:21:24,366 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:21:27,569 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:21:27] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:21:28,248 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:21:28] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:22:08,142 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:22:08,764 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:22:27,198 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:22:27,199 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:22:33,955 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:22:33] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:22:35,401 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:22:35] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 02:22:55,687 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:22:56,333 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:22:59,282 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:22:59,283 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:23:00,047 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:00] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:23:00,665 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:00] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:23:14,660 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:14] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:23:16,568 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:16] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 02:23:29,468 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:29] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:23:30,939 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:30] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 02:23:40,222 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:40] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:23:41,748 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:41] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 02:23:52,589 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:52] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:23:54,588 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:23:54] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:24:30,709 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:24:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:24:31,264 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:24:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:25:04,606 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:25:05,017 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:25:21,950 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:25:21,951 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:25:22,477 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:25:22] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:25:22,765 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:25:22] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:25:41,290 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:25:41] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:25:41,956 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 02:25:41] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 02:26:05,675 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:26:06,298 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:26:14,481 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:26:14,482 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:30:33,335 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:30:33,858 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:30:36,626 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:30:36,629 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:30:48,831 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:30:49,387 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:30:51,654 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:30:51,655 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:32:43,591 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:32:44,179 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:32:47,991 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:32:47,991 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:33:05,301 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:33:05,864 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:33:07,396 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:33:07,397 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:36:53,761 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:36:54,168 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:36:57,328 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:36:57,329 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:37:31,929 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:37:32,560 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:37:34,356 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:37:34,356 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:37:39,423 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:37:40,070 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:37:41,872 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:37:41,872 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:38:29,678 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:38:30,147 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:38:49,305 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:38:49,306 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:55:23,205 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:55:23,866 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:55:32,396 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:55:32,396 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 02:57:20,075 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 02:57:20,710 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 02:57:38,878 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 02:57:38,878 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:06:38,508 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:06:39,180 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:06:43,697 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:06:43,699 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:07:21,290 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:07:21,732 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:07:23,687 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:07:23,688 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:12:37,435 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:12:38,050 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:12:56,639 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:12:56,640 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:13:28,171 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:13:28,838 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:13:30,861 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:13:30,861 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:13:35,884 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:13:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:13:36,167 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:13:36] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:14:02,827 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:14:02] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:14:03,443 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:14:03] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:15:17,521 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:15:17] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:15:18,160 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:15:18] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:16:07,570 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:16:08,195 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:16:11,115 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:16:11,116 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:16:11,126 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:16:11] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:16:11,762 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:16:11] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:16:29,582 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:16:29] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:16:30,225 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:16:30] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:29:35,183 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:29:35,800 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:29:45,336 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:29:45,337 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:29:53,450 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:29:54,059 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:29:56,660 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:29:56,660 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:30:05,910 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:30:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:30:06,452 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:30:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:30:36,792 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:30:36] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:30:38,558 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:30:38] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 03:30:48,369 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:30:48] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:30:50,077 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:30:50] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:33:23,960 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:33:24,512 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:33:27,682 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:33:27,682 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:33:42,415 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:33:42] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:33:43,604 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:33:43] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:34:29,615 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:34:29] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:34:30,752 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:34:30] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:34:56,012 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:34:56] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:34:56,640 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:34:56] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:36:43,354 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:36:43] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:36:43,978 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:36:43] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:37:03,839 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:37:03] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:37:04,124 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:37:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:48:03,176 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 03:48:03,832 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 03:48:07,232 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 03:48:07,233 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 03:48:50,384 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:48:50] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:48:51,027 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:48:51] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:49:06,893 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:49:06] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:49:07,640 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:49:07] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:49:25,082 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:49:25] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:49:25,706 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:49:25] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:50:29,556 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:50:29] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:50:30,013 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:50:30] "[31m[1mPOST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 03:50:37,162 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:50:37] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:50:37,808 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:50:37] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:51:02,262 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:51:02] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:51:02,921 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:51:02] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:51:27,052 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:51:27] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:51:27,697 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:51:27] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:51:48,927 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:51:48] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 03:51:49,194 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 03:51:49] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:02:09,471 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 04:02:10,005 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 04:02:13,225 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 04:02:13,226 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 04:03:28,814 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:03:28] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:03:29,097 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:03:29] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:03:39,718 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:03:39] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:03:51,658 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:03:51] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:03:58,880 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:03:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:04:06,813 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:04:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:05:04,290 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:05:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:05:08,688 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:05:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:05:36,510 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:05:36] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:14:00,128 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:14:00] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:14:00,670 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:14:00] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:14:09,197 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:14:09] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:16:58,202 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:16:58] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:16:58,967 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:16:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:17:04,770 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:17:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:19:14,428 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:19:14] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:19:15,493 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:19:15] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:19:22,331 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:19:22] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:22:50,128 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:22:50] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:22:50,682 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:22:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:23:05,782 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:23:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:24:29,114 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:24:29] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:24:29,915 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:24:29] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:24:49,403 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:24:49] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:30:04,029 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 04:30:04,642 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 04:30:07,348 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 04:30:07,350 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 04:30:19,589 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 04:30:20,190 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 04:30:22,312 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 04:30:22,313 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 04:30:27,163 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:30:27] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:30:27,968 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:30:27] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:30:40,821 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:30:40] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:31:11,163 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 04:31:11,679 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 04:31:28,677 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 04:31:28,678 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 04:31:28,977 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:31:28] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:31:29,304 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:31:29] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:31:35,951 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:31:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:31:45,318 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:31:45] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:31:59,516 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:31:59] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:31:59,829 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:31:59] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:32:18,806 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:32:18] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:32:45,739 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:32:45] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:32:49,372 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:32:49] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:32:55,745 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:32:55] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:32:58,850 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:32:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:33:33,457 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:33:33] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:33:33,784 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:33:33] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:33:41,431 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:33:41] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:33:50,347 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:33:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:35:13,060 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:35:13] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:35:13,416 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:35:13] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:35:19,060 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:35:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:36:56,225 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:36:56] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:36:56,560 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:36:56] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:37:02,731 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:37:02] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:38:02,680 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:38:02] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:38:03,013 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:38:03] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:38:08,360 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:38:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:38:19,846 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:38:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:38:56,909 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:38:56] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:38:57,202 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:38:57] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:39:21,294 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:39:21] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:39:21,981 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:39:21] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:39:33,197 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:39:33] "GET /api/labs/get/676d738b9e4dce225dba716c/ HTTP/1.1" 200 -
+2025-02-26 04:39:33,545 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:39:33] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:39:41,196 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:39:41] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 04:39:49,211 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 04:39:49] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 10:10:35,967 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-26 10:10:35,968 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 10:10:35,969 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 10:10:37,666 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 10:10:37,671 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 10:37:31,692 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 10:37:32,059 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 10:37:35,913 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 10:37:35,915 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 10:43:27,185 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 10:43:27,713 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 10:43:30,830 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 10:43:30,831 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 10:44:08,478 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-02-26 10:44:09,084 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 10:44:11,594 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 10:44:11,594 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 10:46:07,584 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2025-02-26 10:47:58,385 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 10:47:58] "[33mPOST /api/shipments/vendors/676d738b9e4dce225dba716c/ HTTP/1.1[0m" 404 -
+2025-02-26 10:49:59,970 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 10:49:59] "[33mPOST /api/shipments/vendors/676d738b9e4dce225dba716c/ HTTP/1.1[0m" 404 -
+2025-02-26 10:51:52,854 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 10:51:52] "[33mPOST /api/shipments/vendors/676d738b9e4dce225dba716c/ HTTP/1.1[0m" 404 -
+2025-02-26 10:54:46,584 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 10:54:46] "[33mPOST /api/shipments/vendors/676d738b9e4dce225dba716c/ HTTP/1.1[0m" 404 -
+2025-02-26 10:56:33,766 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 10:56:33] "[33mPOST /api/shipments/vendors/676d738b9e4dce225dba716c/ HTTP/1.1[0m" 404 -
+2025-02-26 11:24:44,141 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:24:44] "GET /api/channels/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:25:25,529 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-26 11:25:25,530 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 11:25:25,531 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 11:25:27,391 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 11:25:27,395 - werkzeug - INFO -  * Debugger PIN: 902-413-468
+2025-02-26 11:25:50,986 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:25:50] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:28:03,491 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:28:03] "GET /api/channels/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:28:50,330 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:28:50] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:28:53,986 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:28:53] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:28:57,319 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:28:57] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:29:06,205 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:29:06] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:29:09,579 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:29:09] "GET /api/channels/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:29:31,515 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:29:31] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:31:09,347 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:09] "GET /api/channels/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:31:25,655 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:25] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:31:29,750 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:29] "OPTIONS /api/channel/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:31:30,440 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:30] "[31m[1mPOST /api/channel/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1[0m" 400 -
+2025-02-26 11:31:40,563 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:40] "GET /api/lotexp/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:31:46,262 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:46] "OPTIONS /api/channel/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 11:31:47,221 - werkzeug - INFO - 127.0.0.1 - - [26/Feb/2025 11:31:47] "POST /api/channel/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-02-26 20:28:21,471 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-26 20:28:21,479 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-26 20:28:21,481 - werkzeug - INFO -  * Restarting with stat
+2025-02-26 20:28:23,115 - werkzeug - WARNING -  * Debugger is active!
+2025-02-26 20:28:23,116 - werkzeug - INFO -  * Debugger PIN: 104-389-923
+2025-02-27 08:21:46,536 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-27 08:21:46,538 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 08:21:46,539 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 08:21:48,864 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 08:21:48,865 - werkzeug - INFO -  * Debugger PIN: 353-163-228
+2025-02-27 14:46:57,915 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-02-27 14:46:57,916 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 14:46:57,917 - werkzeug - INFO -  * Restarting with stat
+2025-02-27 14:47:00,080 - werkzeug - WARNING -  * Debugger is active!
+2025-02-27 14:47:00,195 - werkzeug - INFO -  * Debugger PIN: 131-660-399
