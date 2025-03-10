@@ -4,6 +4,8 @@ from bson import ObjectId
 from datetime import datetime, timedelta, timezone
 from engine import client, org_users_db, get_org_name
 from pymongo import DESCENDING
+from mailer import app_mail
+
 
 # SHIPMENTS_COLLECTION = db_clinical['channels']
 # ITEMS_COLLECTION = db_clinical['items']
@@ -77,18 +79,18 @@ class ShipmentsPush(Resource):
                 return {"message": f"The {args['dropoff_loc']} location not found"}, 400
             
             # Ensure that at least one of them is "central store"
-            if fromLabName != "central_store" and toLabName != "central_store":
-                return {"message": "Either pickup or dropoff location must be central store"}, 400
+            # if fromLabName != "central_store" and toLabName != "central_store":
+            #     return {"message": "Either pickup or dropoff location must be central store"}, 400
             
             # Extract regions
             fromRegion = fromLab.get('region')
             toRegion = toLab.get('region')
 
             # Validate region existence
-            if not fromRegion:
-                return {"message": f"The {args['pickup_loc']} location is missing region data"}, 400
-            if not toRegion:
-                return {"message": f"The {args['dropoff_loc']} location is missing region data"}, 400
+            # if not fromRegion:
+            #     return {"message": f"The {args['pickup_loc']} location is missing region data"}, 400
+            # if not toRegion:
+            #     return {"message": f"The {args['dropoff_loc']} location is missing region data"}, 400
 
             #Define the pricing based on regions
             REGION_PRICING = {
@@ -107,8 +109,13 @@ class ShipmentsPush(Resource):
                 firstInitialFromRegion = fromRegion[0].upper()
                 Rcode = f"F{firstInitialFromRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
                 regionCode = f"FN" if fromRegion.lower() == "north" else f"FW" if fromRegion.lower() == "west" else f"FE" if fromRegion.lower() == "east" else f"FS" if fromRegion.lower() == "south" else f"FU"
+            elif fromLabName != "central_store" and toLabName != "central_store":
+                price = REGION_PRICING.get(fromRegion, 0) + REGION_PRICING.get(toRegion, 0)
+                firstInitialFromRegion = fromRegion[0].upper()
+                firstInitialToRegion = toRegion[0].upper()
+                Rcode = f"F{firstInitialFromRegion}T{firstInitialToRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
+                regionCode = f"FN" if fromRegion.lower() == "north" else f"FW" if fromRegion.lower() == "west" else f"FE" if fromRegion.lower() == "east" else f"FS" if fromRegion.lower() == "south" else f"FU"
             
-
             # **Generate the Serial Number for the Current Month**
             current_month = utc_now.strftime('%Y-%m')
             latest_shipment = SHIPMENTS_COLLECTION.find_one(

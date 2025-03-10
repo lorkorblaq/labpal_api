@@ -3,3 +3,4 @@ __pycache__/
 engine/__pycache__
 engine/.env
 webhook.log
+.env

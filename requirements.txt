@@ -19,3 +19,4 @@ requests
 python-dotenv
 gevent
 boto3
+flask_mail

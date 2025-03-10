@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template, Blueprint
-from flask_restful import Api
+# from flask_restful import Api
 from flask_cors import CORS
 # from items_api import *  # Import your resources
 # from put_in_use_api import *
@@ -22,9 +22,11 @@ from end_points.pickup import *
 from end_points.machines import *
 from end_points.org_api import *
 from end_points.admin import Health
+from config import api, app
 
-app = Flask(__name__)
-api = Api(app)
+# app = Flask(__name__)
+
+# app = create_app()
 CORS(app)
 
 
