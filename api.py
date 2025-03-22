@@ -101,7 +101,7 @@ api.add_resource(ChannelGetAll, "/api/channels/get/<string:user_id>/<string:lab_
 #shipments
 api.add_resource(ShipmentsPush, "/api/shipments/push/<string:user_id>/<string:lab_name>/")
 api.add_resource(ShipmentsPut, "/api/shipments/put/<string:user_id>/<string:lab_name>/")
-api.add_resource(ShipmentsDel, "/api/shipments/delete/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
+api.add_resource(ShipmentsDel, "/api/shipments/delete/<string:user_id>/<string:shipment_id>/")
 api.add_resource(ShipmentsGetOne, "/api/shipments/get/<string:user_id>/<string:lab_name>/<string:shipments_id>/")
 api.add_resource(ShipmentsGetAll, "/api/shipments/get/<string:user_id>/<string:lab_name>/")
 api.add_resource(VendorCreate, "/api/shipments/vendors/<string:user_id>/")

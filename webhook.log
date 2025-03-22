@@ -15329,3 +15329,324 @@
 2025-03-02 16:17:04,876 - werkzeug - WARNING -  * Debugger is active!
 2025-03-02 16:17:04,877 - werkzeug - INFO -  * Debugger PIN: 668-499-063
 2025-03-02 16:17:07,325 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 16:17:07] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-10 21:28:26,703 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-10 21:28:26,704 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 21:28:26,705 - werkzeug - INFO -  * Restarting with stat
+2025-03-10 21:28:28,883 - werkzeug - WARNING -  * Debugger is active!
+2025-03-10 21:28:28,884 - werkzeug - INFO -  * Debugger PIN: 593-480-296
+2025-03-10 21:48:54,716 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-10 21:48:54,716 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 21:48:54,717 - werkzeug - INFO -  * Restarting with stat
+2025-03-10 21:48:57,033 - werkzeug - WARNING -  * Debugger is active!
+2025-03-10 21:48:57,034 - werkzeug - INFO -  * Debugger PIN: 593-480-296
+2025-03-10 21:51:02,339 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-10 21:51:02,340 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 21:51:02,341 - werkzeug - INFO -  * Restarting with stat
+2025-03-10 21:51:10,733 - werkzeug - WARNING -  * Debugger is active!
+2025-03-10 21:51:10,734 - werkzeug - INFO -  * Debugger PIN: 593-480-296
+2025-03-11 10:31:39,586 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-11 10:31:39,587 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-11 10:31:39,587 - werkzeug - INFO -  * Restarting with stat
+2025-03-11 10:31:41,287 - werkzeug - WARNING -  * Debugger is active!
+2025-03-11 10:31:41,288 - werkzeug - INFO -  * Debugger PIN: 593-480-296
+2025-03-15 20:08:16,889 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.209.1:3000
+2025-03-15 20:08:16,897 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-15 20:08:16,903 - werkzeug - INFO -  * Restarting with stat
+2025-03-15 20:08:21,089 - werkzeug - WARNING -  * Debugger is active!
+2025-03-15 20:08:21,090 - werkzeug - INFO -  * Debugger PIN: 598-365-563
+2025-03-16 13:48:03,372 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.168.1:3000
+2025-03-16 13:48:03,372 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-16 13:48:03,373 - werkzeug - INFO -  * Restarting with stat
+2025-03-16 13:48:05,779 - werkzeug - WARNING -  * Debugger is active!
+2025-03-16 13:48:05,780 - werkzeug - INFO -  * Debugger PIN: 598-365-563
+2025-03-16 14:30:50,083 - werkzeug - INFO - 127.0.0.1 - - [16/Mar/2025 14:30:50] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-17 01:47:01,195 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://127.0.0.1:3000
+2025-03-17 01:47:01,195 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 01:47:01,197 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 09:42:37,972 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.31.1:3000
+2025-03-17 09:42:37,974 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 09:42:37,976 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 09:42:50,686 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 09:42:50,686 - werkzeug - INFO -  * Debugger PIN: 129-531-661
+2025-03-17 21:12:35,848 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-17 21:12:35,849 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 21:12:35,851 - werkzeug - INFO -  * Restarting with stat
+2025-03-17 21:12:39,030 - werkzeug - WARNING -  * Debugger is active!
+2025-03-17 21:12:39,030 - werkzeug - INFO -  * Debugger PIN: 988-107-154
+2025-03-18 00:13:35,720 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:13:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:13:35,982 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:13:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:14:04,676 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:14:04] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:14:05,345 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:14:05] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:27:37,858 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:27:37] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:27:38,132 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:27:38] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:28:04,096 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:28:04] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:28:04,754 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:28:04] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:44:14,636 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:44:14] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:44:14,899 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:44:14] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:48:30,277 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:48:30] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 00:48:30,904 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 00:48:30] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:02:55,598 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-18 01:02:56,858 - werkzeug - INFO -  * Restarting with stat
+2025-03-18 01:02:59,751 - werkzeug - WARNING -  * Debugger is active!
+2025-03-18 01:02:59,751 - werkzeug - INFO -  * Debugger PIN: 988-107-154
+2025-03-18 01:04:45,891 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-18 01:04:46,556 - werkzeug - INFO -  * Restarting with stat
+2025-03-18 01:05:04,371 - werkzeug - WARNING -  * Debugger is active!
+2025-03-18 01:05:04,372 - werkzeug - INFO -  * Debugger PIN: 988-107-154
+2025-03-18 01:05:05,079 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:05:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:05:05,694 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:05:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:05:34,537 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:05:34] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:05:35,697 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:05:35] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:06:41,178 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:06:41] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:06:42,341 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:06:42] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:07:11,494 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:07:11] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:07:12,542 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:07:12] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:07:56,601 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:07:56] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:07:57,126 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:07:57] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:08:23,122 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:08:23] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:08:24,053 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:08:24] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:09:44,017 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:09:44] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:09:45,535 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:09:45] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:10:22,722 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:10:22] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:10:23,754 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:10:23] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:11:07,429 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-18 01:11:07,967 - werkzeug - INFO -  * Restarting with stat
+2025-03-18 01:11:25,803 - werkzeug - WARNING -  * Debugger is active!
+2025-03-18 01:11:25,803 - werkzeug - INFO -  * Debugger PIN: 988-107-154
+2025-03-18 01:11:25,819 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:11:25] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:11:27,344 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:11:27] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:11:52,180 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:11:52] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:11:53,956 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:11:53] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:12:22,446 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:12:22] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:12:24,074 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:12:24] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:12:47,524 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:12:47] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:12:48,119 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:12:48] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:28:55,516 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-18 01:28:56,144 - werkzeug - INFO -  * Restarting with stat
+2025-03-18 01:29:18,832 - werkzeug - WARNING -  * Debugger is active!
+2025-03-18 01:29:18,832 - werkzeug - INFO -  * Debugger PIN: 988-107-154
+2025-03-18 01:29:19,110 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:29:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:29:19,375 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:29:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:29:24,743 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:29:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:29:25,000 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:29:25] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:29:53,933 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:29:53] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:29:54,717 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:29:54] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:30:22,931 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:30:22] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-18 01:30:23,627 - werkzeug - INFO - 127.0.0.1 - - [18/Mar/2025 01:30:23] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:31:18,109 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-22 03:31:18,110 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-22 03:31:18,113 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 03:31:21,443 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 03:31:21,444 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 03:33:07,433 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:33:07] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:33:07,699 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:33:07] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:35:00,372 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:35:00] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:35:00,629 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:35:00] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:35:20,959 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:35:20] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:35:21,617 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:35:21] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:36:07,763 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:36:07] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:36:08,025 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:36:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:53:06,676 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:53:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:53:06,955 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:53:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:55:14,376 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-22 03:55:15,691 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 03:55:17,919 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 03:55:17,921 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 03:55:44,927 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:55:44] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 03:55:45,582 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 03:55:45] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:23:54,976 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-22 04:23:55,576 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 04:24:03,095 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 04:24:03,096 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 04:27:03,742 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:27:03] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:27:04,246 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:27:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:27:30,739 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:27:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:27:31,256 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:27:31] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:27:41,538 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:27:41] "OPTIONS /api/shipments/put/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:27:42,275 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:27:42] "PUT /api/shipments/put/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:29:58,516 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:29:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:29:59,083 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:29:59] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:31:09,030 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:31:09] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:31:09,599 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:31:09] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:31:55,553 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:31:55] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:31:56,169 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:31:56] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:35:43,333 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:35:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:35:43,834 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:35:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:36:26,515 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:36:26] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:36:27,009 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:36:27] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:43:38,246 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:43:38] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:43:38,770 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:43:38] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:45:45,940 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:45:45] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:45:46,427 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:45:46] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:45:50,107 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:45:50] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/clinicals_lagos/LE-2503161302-001/ HTTP/1.1" 200 -
+2025-03-22 04:45:50,123 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:45:50] "[35m[1mDELETE /api/shipments/delete/676d738b9e4dce225dba716c/clinicals_lagos/LE-2503161302-001/ HTTP/1.1[0m" 500 -
+2025-03-22 04:46:13,615 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:46:13] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:46:15,109 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:46:15] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:46:24,011 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:46:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:46:24,532 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:46:24] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:47:20,363 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:47:20] "OPTIONS /api/shipments/put/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:47:21,256 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:47:21] "PUT /api/shipments/put/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:47:28,118 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:47:28] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:47:28,719 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:47:28] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:48:07,625 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:48:07] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/clinicals_lagos/NE-2503220546-003/ HTTP/1.1" 200 -
+2025-03-22 04:48:07,639 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:48:07] "[35m[1mDELETE /api/shipments/delete/676d738b9e4dce225dba716c/clinicals_lagos/NE-2503220546-003/ HTTP/1.1[0m" 500 -
+2025-03-22 04:50:04,167 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:50:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:50:04,782 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:50:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:51:01,202 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:51:01] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:51:01,817 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:51:01] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:18,836 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:18] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:19,401 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:34,487 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:34] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:36,331 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:36] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:43,733 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:44,272 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:44] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:51,075 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:51] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:52:51,689 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:52:51] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:53:03,670 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:53:03] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:53:04,284 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:53:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:53:34,402 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:53:34] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:53:34,905 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:53:34] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:53:40,297 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:53:40] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/clinicals_lagos/NW-2503180130-001/ HTTP/1.1" 200 -
+2025-03-22 04:53:40,309 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:53:40] "[35m[1mDELETE /api/shipments/delete/676d738b9e4dce225dba716c/clinicals_lagos/NW-2503180130-001/ HTTP/1.1[0m" 500 -
+2025-03-22 04:57:13,161 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/api.py', reloading
+2025-03-22 04:57:13,802 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 04:59:47,933 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.135:3000
+2025-03-22 04:59:47,933 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-22 04:59:47,934 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 04:59:49,342 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 04:59:49,343 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 04:59:53,466 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:59:53] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:59:53,724 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:59:53] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 04:59:59,585 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:59:59] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/NW-2503180130-001/ HTTP/1.1" 200 -
+2025-03-22 04:59:59,776 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 04:59:59] "[35m[1mDELETE /api/shipments/delete/676d738b9e4dce225dba716c/NW-2503180130-001/ HTTP/1.1[0m" 500 -
+2025-03-22 05:00:57,684 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:00:57] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:00:57,944 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:00:57] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:01:04,907 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:01:04] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:01:05,164 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:01:05] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:01:07,240 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:01:07] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/undefined/ HTTP/1.1" 200 -
+2025-03-22 05:01:07,424 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:01:07] "[35m[1mDELETE /api/shipments/delete/676d738b9e4dce225dba716c/undefined/ HTTP/1.1[0m" 500 -
+2025-03-22 05:01:58,135 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:01:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:01:58,390 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:01:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:02:00,792 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:00] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8be9f1a5a900bc48d9d79/ HTTP/1.1" 200 -
+2025-03-22 05:02:01,047 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:01] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8be9f1a5a900bc48d9d79/ HTTP/1.1" 200 -
+2025-03-22 05:02:16,498 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:16] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:02:16,762 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:16] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:02:21,215 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:21] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67de32862d86cfa046c58c4c/ HTTP/1.1" 200 -
+2025-03-22 05:02:21,497 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:21] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67de32862d86cfa046c58c4c/ HTTP/1.1" 200 -
+2025-03-22 05:02:35,142 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:02:35,422 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:02:40,765 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:40] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:02:41,500 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:02:41] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:03:08,282 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:03:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:03:08,546 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:03:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:03:16,960 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:03:16] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67de26b12ddc3442f3e210fd/ HTTP/1.1" 200 -
+2025-03-22 05:03:17,231 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:03:17] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67de26b12ddc3442f3e210fd/ HTTP/1.1" 200 -
+2025-03-22 05:04:39,758 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-22 05:04:40,230 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 05:04:48,467 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 05:04:48,468 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 05:04:49,129 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:04:49] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:04:49,707 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:04:49] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:04:52,150 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:04:52] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8be821a5a900bc48d9d78/ HTTP/1.1" 200 -
+2025-03-22 05:04:52,751 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:04:52] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8be821a5a900bc48d9d78/ HTTP/1.1" 200 -
+2025-03-22 05:05:04,370 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:04] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67de21e974c4f64e3fda9f2d/ HTTP/1.1" 200 -
+2025-03-22 05:05:04,975 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:04] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67de21e974c4f64e3fda9f2d/ HTTP/1.1" 200 -
+2025-03-22 05:05:08,664 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:08] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:09,361 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:09] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:19,717 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:19,991 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:19] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:27,436 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:27] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d6cc8bcf016345097a1ad5/ HTTP/1.1" 200 -
+2025-03-22 05:05:27,714 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:27] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d6cc8bcf016345097a1ad5/ HTTP/1.1" 200 -
+2025-03-22 05:05:36,594 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:36] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:36,868 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:36] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:41,405 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:41] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d6cbd7cf016345097a1ad3/ HTTP/1.1" 200 -
+2025-03-22 05:05:41,683 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:41] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d6cbd7cf016345097a1ad3/ HTTP/1.1" 200 -
+2025-03-22 05:05:50,967 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:50] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8b0044289a6a0fa6efd77/ HTTP/1.1" 200 -
+2025-03-22 05:05:51,232 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:51] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8b0044289a6a0fa6efd77/ HTTP/1.1" 200 -
+2025-03-22 05:05:53,371 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:53] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d6ccaacf016345097a1ad6/ HTTP/1.1" 200 -
+2025-03-22 05:05:53,638 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:53] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d6ccaacf016345097a1ad6/ HTTP/1.1" 200 -
+2025-03-22 05:05:58,249 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:05:58,513 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:05:58] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:06:10,742 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:10] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8ba67db4eb934de0a1ea8/ HTTP/1.1" 200 -
+2025-03-22 05:06:11,016 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:11] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8ba67db4eb934de0a1ea8/ HTTP/1.1" 200 -
+2025-03-22 05:06:11,630 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:11] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8ba49db4eb934de0a1ea7/ HTTP/1.1" 200 -
+2025-03-22 05:06:11,913 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:11] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8ba49db4eb934de0a1ea7/ HTTP/1.1" 200 -
+2025-03-22 05:06:15,796 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:15] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8ba2fdb4eb934de0a1ea6/ HTTP/1.1" 200 -
+2025-03-22 05:06:16,077 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:16] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8ba2fdb4eb934de0a1ea6/ HTTP/1.1" 200 -
+2025-03-22 05:06:20,644 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:20] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8b9c9e508a01cba867da2/ HTTP/1.1" 200 -
+2025-03-22 05:06:20,916 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:20] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8b9c9e508a01cba867da2/ HTTP/1.1" 200 -
+2025-03-22 05:06:25,860 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:25] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:06:26,123 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:06:26] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:10:06,379 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:10:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:10:06,632 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:10:06] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:10:10,219 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:10:10] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8acbd4289a6a0fa6efd76/ HTTP/1.1" 200 -
+2025-03-22 05:10:10,484 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:10:10] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8acbd4289a6a0fa6efd76/ HTTP/1.1" 200 -
+2025-03-22 05:29:35,893 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:29:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:29:36,151 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:29:36] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:29:40,960 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:29:40] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d6cc08cf016345097a1ad4/ HTTP/1.1" 200 -
+2025-03-22 05:29:41,240 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:29:41] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d6cc08cf016345097a1ad4/ HTTP/1.1" 200 -
+2025-03-22 05:31:43,704 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:31:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:31:43,958 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:31:43] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:31:53,035 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:31:53] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67d8b4ce4289a6a0fa6efd78/ HTTP/1.1" 200 -
+2025-03-22 05:31:53,306 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:31:53] "DELETE /api/shipments/delete/676d738b9e4dce225dba716c/67d8b4ce4289a6a0fa6efd78/ HTTP/1.1" 200 -
+2025-03-22 05:32:29,849 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:32:29] "OPTIONS /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:32:30,611 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:32:30] "POST /api/shipments/push/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:32:35,024 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:32:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:32:35,277 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:32:35] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:34:13,766 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-22 05:34:14,331 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 05:34:37,462 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 05:34:37,463 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 05:34:52,404 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:34:52] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:34:53,162 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:34:53] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:35:30,394 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-22 05:35:30,918 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 05:35:47,942 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 05:35:47,942 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 05:35:48,207 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:35:48] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:35:48,485 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:35:48] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:04,802 - werkzeug - INFO -  * Detected change in '/home/blaq/Desktop/clinicalx/labpal_api/end_points/shipments.py', reloading
+2025-03-22 05:39:05,396 - werkzeug - INFO -  * Restarting with stat
+2025-03-22 05:39:07,375 - werkzeug - WARNING -  * Debugger is active!
+2025-03-22 05:39:07,376 - werkzeug - INFO -  * Debugger PIN: 120-802-337
+2025-03-22 05:39:13,803 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:13] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:14,156 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:14] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:25,395 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:25] "OPTIONS /api/shipments/put/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:25,746 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:25] "PUT /api/shipments/put/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:30,657 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:30,920 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:30] "GET /api/shipments/get/676d738b9e4dce225dba716c/clinicals_lagos/ HTTP/1.1" 200 -
+2025-03-22 05:39:42,416 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:42] "OPTIONS /api/shipments/delete/676d738b9e4dce225dba716c/67de3d5e6c59cd3006f53a5b/ HTTP/1.1" 200 -
+2025-03-22 05:39:42,675 - werkzeug - INFO - 127.0.0.1 - - [22/Mar/2025 05:39:42] "[31m[1mDELETE /api/shipments/delete/676d738b9e4dce225dba716c/67de3d5e6c59cd3006f53a5b/ HTTP/1.1[0m" 400 -

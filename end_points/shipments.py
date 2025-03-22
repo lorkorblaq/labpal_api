@@ -61,7 +61,7 @@ class ShipmentsPush(Resource):
 
             name = user.get('firstname') + ' ' + user.get('lastname')
             print('user_id2', user_id)
-            utc_now = datetime.now()   
+            wat_now = datetime.now() + timedelta(hours=1)  # Convert UTC to WAT (West Africa Time)
             fromLab = LAB_COLLECTION.find_one({'lab_name': args['pickup_loc'].lower()}, {'lab_name': 1, 'region': 1})
             toLab = LAB_COLLECTION.find_one({'lab_name': args['dropoff_loc'].lower()}, {'lab_name': 1, 'region': 1})
 
@@ -102,25 +102,30 @@ class ShipmentsPush(Resource):
             if fromLabName == "central_store":
                 price = REGION_PRICING.get(toRegion, 0)  # Default to 0 if region is unknown
                 firstInitialToRegion = toRegion[0].upper()
-                Rcode = f"L{firstInitialToRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
+                Rcode = f"L{firstInitialToRegion}-{wat_now.strftime('%y%m%d%H%M')}-"
                 regionCode = f"LN" if toRegion.lower() == "north" else f"LW" if toRegion.lower() == "west" else f"LE" if toRegion.lower() == "east" else f"LS" if toRegion.lower() == "south" else f"LU"
             elif toLabName == "central_store":
                 price = REGION_PRICING.get(fromRegion, 0)
                 firstInitialFromRegion = fromRegion[0].upper()
-                Rcode = f"F{firstInitialFromRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
+                Rcode = f"F{firstInitialFromRegion}-{wat_now.strftime('%y%m%d%H%M')}-"
                 regionCode = f"FN" if fromRegion.lower() == "north" else f"FW" if fromRegion.lower() == "west" else f"FE" if fromRegion.lower() == "east" else f"FS" if fromRegion.lower() == "south" else f"FU"
             elif fromLabName != "central_store" and toLabName != "central_store":
-                price = REGION_PRICING.get(fromRegion, 0) + REGION_PRICING.get(toRegion, 0)
+                # price = REGION_PRICING.get(fromRegion, 0) + REGION_PRICING.get(toRegion, 0)
+                price = 12000
                 firstInitialFromRegion = fromRegion[0].upper()
                 firstInitialToRegion = toRegion[0].upper()
-                Rcode = f"F{firstInitialFromRegion}T{firstInitialToRegion}-{utc_now.strftime('%y%m%d%H%M')}-"
-                regionCode = f"FN" if fromRegion.lower() == "north" else f"FW" if fromRegion.lower() == "west" else f"FE" if fromRegion.lower() == "east" else f"FS" if fromRegion.lower() == "south" else f"FU"
+                Rcode = f"{firstInitialFromRegion}{firstInitialToRegion}-{wat_now.strftime('%y%m%d%H%M')}-"
+                regionCode = f"N{toRegion[0].upper()}" if fromRegion.lower() == "north" else \
+                             f"W{toRegion[0].upper()}" if fromRegion.lower() == "west" else \
+                             f"E{toRegion[0].upper()}" if fromRegion.lower() == "east" else \
+                             f"S{toRegion[0].upper()}" if fromRegion.lower() == "south" else \
+                             f"U{toRegion[0].upper()}"
             
             # **Generate the Serial Number for the Current Month**
-            current_month = utc_now.strftime('%Y-%m')
+            current_month = wat_now.strftime('%Y-%m')
             latest_shipment = SHIPMENTS_COLLECTION.find_one(
                 {
-                    "created_at": {"$gte": datetime(utc_now.year, utc_now.month, 1)},
+                    "created_at": {"$gte": datetime(wat_now.year, wat_now.month, 1)},
                     "shipment_id": {"$regex": f"^{regionCode}"}  # Filter by region code prefix
                 },
                 sort=[("created_at", DESCENDING)]
@@ -140,7 +145,7 @@ class ShipmentsPush(Resource):
 
             data = {
                 "created_by": name,
-                "created_at": utc_now,
+                "created_at": wat_now,
                 "shipment_id": shipment_id,
                 "top": args['top'],
                 "numb_of_packs": args['numb_of_packs'],
@@ -189,7 +194,7 @@ class ShipmentsPut(Resource):
         except ValueError as e:
             abort(404, message=str(e))
 
-        utc_now = datetime.now()  # Use UTC for consistency
+        wat_now = datetime.now() + timedelta(hours=1)  # Convert UTC to WAT (West Africa Time)
         shipment = SHIPMENTS_COLLECTION.find_one({'shipment_id': shipment_id})
         if not shipment:
             abort(404, message="Shipment not found")
@@ -201,25 +206,25 @@ class ShipmentsPut(Resource):
                     value = None
                 shipment[key] = value
 
-        picked = args.get('picked_by')
-        if picked:
-            shipment['picked_by'] = picked
-            shipment['pickup_time'] = utc_now
-            shipment['updated_at'] = utc_now
-            shipment['status'] = 'in-transit'
+        # picked = args.get('picked_by')
+        # if picked:
+        #     shipment['picked_by'] = picked
+        #     shipment['pickup_time'] = wat_now
+        #     shipment['updated_at'] = wat_now
+        #     shipment['status'] = 'in-transit'
 
         dropped = args.get('dropoff_by')
         if dropped:
             shipment['dropoff_by'] = dropped
-            shipment['dropoff_time'] = utc_now
-            shipment['updated_at'] = utc_now
+            shipment['dropoff_time'] = wat_now
+            shipment['updated_at'] = wat_now
             shipment['status'] = 'delivered'
 
             # Calculate the duration between pickup_time and dropoff_time
-            pickup_time = shipment.get('pickup_time')
+            created_at = shipment.get('created_at')
             dropoff_time = shipment.get('dropoff_time')
-            if pickup_time and dropoff_time:
-                duration = dropoff_time - pickup_time
+            if created_at and dropoff_time:
+                duration = dropoff_time - created_at
                 total_minutes = duration.total_seconds() // 60  # Convert to minutes
                 shipment['duration'] = total_minutes
             # if pickup_time and dropoff_time:
@@ -296,7 +301,7 @@ class ShipmentsGetAll(Resource):
             "created_at": shipment.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in shipment else None,
             "created_by": shipment.get('created_by', 'Unknown User'),
             "picked_by": shipment.get('picked_by', 'Not yet picked'),
-            "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
+            "dropoff_by": shipment.get('dropoff_by', 'not yet recieved'),
             "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
             "top": shipment.get('top', 'Unknown type of package'),
             "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
@@ -308,10 +313,10 @@ class ShipmentsGetAll(Resource):
             "from_region": shipment.get("from_region", 'Unknown region'),
             "to_region": shipment.get("to_region", 'Unknown region'),
             "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
-            "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'Not yet dropped',
+            "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'not yet recieved',
             "create_lat_lng": shipment.get('create_lat_lng', 'location'),
             "pickup_lat_lng": shipment.get('pickup_lat_lng', 'Not yet picked'),
-            "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet dropped'),
+            "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'not yet recieved'),
             "duration": shipment.get('duration', 0),
             "description": shipment.get('description', 'No Description'),
             "status": shipment.get('status', "not yet created"),
@@ -321,14 +326,23 @@ class ShipmentsGetAll(Resource):
         return response, 200
 
 class ShipmentsDel(Resource):
-    def delete(self, user_id, lab_name, shipment_id):
+    def delete(self, user_id, shipment_id):
         try:
             org_name = get_org_name(user_id)
             SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
+        
+        # Check the status of the shipment
+        shipment = SHIPMENTS_COLLECTION.find_one({'_id': ObjectId(shipment_id)})
+        if not shipment:
+            abort(404, message="Shipment not found")
+        if shipment.get('status') == 'delivered':
+            return {"message": "Cannot delete a shipment with status 'delivered'"}, 400
+        
         SHIPMENTS_COLLECTION.delete_one({'_id': ObjectId(shipment_id)})
-        return jsonify({"message": "Item has been deleted successfully"})
+        response = {"message": "Shipment has been deleted successfully"}
+        return response, 200
      
 
 class VendorCreate(Resource):
