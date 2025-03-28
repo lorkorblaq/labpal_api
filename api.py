@@ -12,7 +12,7 @@ from end_points.user_api import *
 from end_points.channels_api import *
 from end_points.lot_exp_api import *
 from end_points.messenger_api import *
-from end_points.organisation import *
+from end_points.org_api import *
 from end_points.events import *
 from end_points.to_do import *
 from end_points.billing import *
@@ -20,7 +20,7 @@ from end_points.webhook import *
 from end_points.shipments import *
 from end_points.pickup import *
 from end_points.machines import *
-from end_points.org_api import *
+from end_points.lab_api import *
 from end_points.admin import Health
 from config import api, app
 
@@ -32,7 +32,9 @@ CORS(app)
 
 api.add_resource(Health, "/health")
 #organisation
-api.add_resource(OrgGetLabs, "/api/labs/get/<string:user_id>/")
+api.add_resource(LabsPush, "/api/labs/push/<string:user_id>/")
+api.add_resource(LabsGet, "/api/labs/get/<string:user_id>/")
+
 
 
 #subscription

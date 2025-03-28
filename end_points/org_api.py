@@ -1,37 +1,37 @@
-from flask_restful import Resource, abort, reqparse
-from flask import jsonify, make_response, request
-from bson import json_util, ObjectId
+from flask import Flask, jsonify, request, abort
+from flask_restful import Api, Resource, reqparse
+from bson import ObjectId
 from datetime import datetime, timedelta
-from engine import client, org_users_db, get_org_name
-import math
+from engine import org_users_db
+
+ORGANISATION_COLLECTION = org_users_db['org']
 
 
-USERS_COLLECTION = org_users_db['users']
-ORG_COLLECTION = org_users_db['organisations']
 
-machine_parser = reqparse.RequestParser()
-machine_parser.add_argument("name", type=str, help="name is required", required=False)
-machine_parser.add_argument("serial_number", type=str, help="serial_no is required", required=False)
-
-
-class OrgGetLabs(Resource):
-    def get(self, user_id):
+class GetOrganisation(Resource):
+    def get(self, name):
+        result = ORGANISATION_COLLECTION.find_one({'name': name})
+        if not result:
+            return {"message": "Organisation not found"}, 404
+        result['_id'] = str(result['_id'])
+        return result, 200
+    
+class OrganisationPush(Resource):
+    def post(self):
         try:
-            org_name = get_org_name(user_id)
-            LABS_COLLECTION = client[org_name+'_db']['labs']
-        except ValueError as e:
-            abort(404, message=str(e))
-        labs = list(LABS_COLLECTION.find())
-        lab_list = [{
-            "_id": str(lab['_id']),
-            "created at": lab.get('created at').strftime("%Y-%m-%d %H:%M:%S") if 'created at' in lab else None,
-            "lab_name": lab.get('lab_name', 'Unknown User'),
-            "managers_email": lab.get('managers_email', 'Unknown Item'),
-            "users": lab.get('users', 'Unknown Bench'),
-            "org_id": lab.get('org_id', 'Unknown Machine'),
-            "area": lab.get('area', 'Unknown Area'),
-            "region": lab.get('region', 'Unknown Region')
-        } for lab in labs]
-        response = make_response({'labs':lab_list}, 200)
-        # response.set_cookie('labs', lab_list, max_age=60*60*24 )
-        return response
+            parser = reqparse.RequestParser()
+            parser.add_argument("name", type=str, help="Name is required", required=True)
+            parser.add_argument("address", type=str, help="Address is required", required=True)
+            parser.add_argument("domain", type=str, help="Email is required", required=True)
+            parser.add_argument("staff numb.", type=int, help="Staff number is required", required=True)
+            parser.add_argument("created by", type=str, help="Created by is required", required=True)
+            args = parser.parse_args()
+            # Check if organisation already exists
+            if ORGANISATION_COLLECTION.find_one({'name': args['name']}):
+                return {"message": "Organisation already exists"}, 400
+            # Insert organisation
+            ORGANISATION_COLLECTION.insert_one(args)
+            return {"message": "Organisation created successfully"}, 201
+        except Exception as e:
+            return {"message": "Error occured while creating organisation", "error": str(e)}
+    

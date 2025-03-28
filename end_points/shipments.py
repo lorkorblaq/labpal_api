@@ -1,10 +1,12 @@
 from flask import jsonify, request
 from flask_restful import Resource, reqparse, abort, fields, marshal_with
 from bson import ObjectId
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo  # Python 3.9+from engine import client, org_users_db, get_org_name
 from engine import client, org_users_db, get_org_name
 from pymongo import DESCENDING
 from mailer import app_mail
+
 
 
 # SHIPMENTS_COLLECTION = db_clinical['channels']
@@ -61,14 +63,14 @@ class ShipmentsPush(Resource):
 
             name = user.get('firstname') + ' ' + user.get('lastname')
             print('user_id2', user_id)
-            wat_now = datetime.now() + timedelta(hours=1)  # Convert UTC to WAT (West Africa Time)
+            wat_now = datetime.now(ZoneInfo("UTC"))
+            print('wat', wat_now)           
             fromLab = LAB_COLLECTION.find_one({'lab_name': args['pickup_loc'].lower()}, {'lab_name': 1, 'region': 1})
             toLab = LAB_COLLECTION.find_one({'lab_name': args['dropoff_loc'].lower()}, {'lab_name': 1, 'region': 1})
 
             # Ensure fromLab and toLab exist before calling .get()
             fromLabName = fromLab.get('lab_name') if fromLab else None
             toLabName = toLab.get('lab_name') if toLab else None
-            print('shipments_data', 'shipments_data')
             print('fromLab', fromLabName)
             print('toLab', toLabName)
 
@@ -77,22 +79,16 @@ class ShipmentsPush(Resource):
                 return {"message": f"The {args['pickup_loc']} location not found"}, 400
             if not toLabName:
                 return {"message": f"The {args['dropoff_loc']} location not found"}, 400
-            
-            # Ensure that at least one of them is "central store"
-            # if fromLabName != "central_store" and toLabName != "central_store":
-            #     return {"message": "Either pickup or dropoff location must be central store"}, 400
-            
+
+            # Prevent pickup and dropoff locations from being the same
+            if fromLabName == toLabName:
+                return {"message": "Pickup location and dropoff location cannot be the same"}, 400
+
             # Extract regions
             fromRegion = fromLab.get('region')
             toRegion = toLab.get('region')
 
-            # Validate region existence
-            # if not fromRegion:
-            #     return {"message": f"The {args['pickup_loc']} location is missing region data"}, 400
-            # if not toRegion:
-            #     return {"message": f"The {args['dropoff_loc']} location is missing region data"}, 400
-
-            #Define the pricing based on regions
+            # Define the pricing based on regions
             REGION_PRICING = {
                 "north": 18000,
                 "west": 8000,
@@ -110,7 +106,6 @@ class ShipmentsPush(Resource):
                 Rcode = f"F{firstInitialFromRegion}-{wat_now.strftime('%y%m%d%H%M')}-"
                 regionCode = f"FN" if fromRegion.lower() == "north" else f"FW" if fromRegion.lower() == "west" else f"FE" if fromRegion.lower() == "east" else f"FS" if fromRegion.lower() == "south" else f"FU"
             elif fromLabName != "central_store" and toLabName != "central_store":
-                # price = REGION_PRICING.get(fromRegion, 0) + REGION_PRICING.get(toRegion, 0)
                 price = 12000
                 firstInitialFromRegion = fromRegion[0].upper()
                 firstInitialToRegion = toRegion[0].upper()
@@ -120,8 +115,8 @@ class ShipmentsPush(Resource):
                              f"E{toRegion[0].upper()}" if fromRegion.lower() == "east" else \
                              f"S{toRegion[0].upper()}" if fromRegion.lower() == "south" else \
                              f"U{toRegion[0].upper()}"
-            
-            # **Generate the Serial Number for the Current Month**
+
+            # Generate the Serial Number for the Current Month
             current_month = wat_now.strftime('%Y-%m')
             latest_shipment = SHIPMENTS_COLLECTION.find_one(
                 {
@@ -161,14 +156,14 @@ class ShipmentsPush(Resource):
                 "status": 'pending'
             }
             try:
-                print('shipments_data', 'shipments_data')
+                print('shipments_data', data)
                 result = SHIPMENTS_COLLECTION.insert_one(data)
                 print('resultship', result)
                 # Verify insert success
                 if result.inserted_id:
                     inserted_id = str(result.inserted_id)
                     response = {
-                        "message": "Shipent created successfully",
+                        "message": "Shipment created successfully",
                         "tracking_id": inserted_id
                     }
                     print('response', response)
@@ -182,7 +177,7 @@ class ShipmentsPush(Resource):
                 return {"message": "Error occurred while creating shipment", "error": str(e)}, 500
 
         except Exception as e:
-            return {"message": "Error occured while creating shipment", "error": str(e)}
+            return {"message": "Error occurred while creating shipment", "error": str(e)}
 
 class ShipmentsPut(Resource):    
     def put(self, user_id, lab_name):
@@ -194,7 +189,8 @@ class ShipmentsPut(Resource):
         except ValueError as e:
             abort(404, message=str(e))
 
-        wat_now = datetime.now() + timedelta(hours=1)  # Convert UTC to WAT (West Africa Time)
+        utc_now = datetime.now(ZoneInfo("UTC"))
+        wat_now = utc_now.astimezone(ZoneInfo("Africa/Lagos"))        
         shipment = SHIPMENTS_COLLECTION.find_one({'shipment_id': shipment_id})
         if not shipment:
             abort(404, message="Shipment not found")
@@ -244,64 +240,84 @@ class ShipmentsPut(Resource):
         return response, 200
     
 class ShipmentsGetOne(Resource):
-    def get(self,user_id, lab_name, shipment_id):
+    def get(self, user_id, lab_name, shipment_id):
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
+            SHIPMENTS_COLLECTION = client[org_name + '_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
         try:
             shipment = SHIPMENTS_COLLECTION.find_one({'_id': ObjectId(shipment_id)})
             if not shipment:
-                abort(404, message="Channel not found")
-            # for shipment in shipment:
+                abort(404, message="Shipment not found")
+
+            # Convert timestamps to Africa/Lagos time zone
+            def convert_to_lagos_time(timestamp):
+                if timestamp:
+                    # Ensure the timestamp is treated as UTC if it's naive
+                    if timestamp.tzinfo is None:
+                        timestamp = timestamp.replace(tzinfo=timezone.utc)
+                    # Convert to Africa/Lagos timezone
+                    return timestamp.astimezone(ZoneInfo("Africa/Lagos")).strftime("%Y-%m-%d %H:%M:%S")
+                return None
             response = {
-                    "id": str(shipment['_id']),
-                    "created_at": shipment.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in shipment else None,
-                    "created_by": shipment.get('created_by', 'Unknown User'),
-                    "picked_by": shipment.get('picked_by', 'Not yet picked'),
-                    "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
-                    "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
-                    "top": shipment.get('top', 'Unknown type of package'),
-                    "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
-                    "price": shipment.get("price", 'Unknown price'),
-                    "weight": shipment.get("weight", 'Unknown weight'),
-                    "vendor": shipment.get("vendor", 'Unknown vendor'),
-                    "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
-                    "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
-                    "from_region": shipment.get("from_region", 'Unknown region'),
-                    "to_region": shipment.get("to_region", 'Unknown region'),
-                    "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
-                    "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'Not yet dropped',
-                    "create_lat_lng": shipment.get('create_lat_lng', 'location'),
-                    "pickup_lat_lng": shipment.get('pickup_lat_lng', 'Not yet picked'),
-                    "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet dropped'),
-                    "duration": shipment.get('duration', 0),
-                    "description": shipment.get('description', 'No Description'),
-                    "status": shipment.get('status', "not yet created")}
+                "id": str(shipment['_id']),
+                "created_at": convert_to_lagos_time(shipment.get('created_at')),
+                "created_by": shipment.get('created_by', 'Unknown User'),
+                "picked_by": shipment.get('picked_by', 'Not yet picked'),
+                "dropoff_by": shipment.get('dropoff_by', 'Not yet dropped'),
+                "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
+                "top": shipment.get('top', 'Unknown type of package'),
+                "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
+                "price": shipment.get("price", 'Unknown price'),
+                "weight": shipment.get("weight", 'Unknown weight'),
+                "vendor": shipment.get("vendor", 'Unknown vendor'),
+                "pickup_loc": shipment.get("pickup_loc", 'Not yet picked'),
+                "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
+                "from_region": shipment.get("from_region", 'Unknown region'),
+                "to_region": shipment.get("to_region", 'Unknown region'),
+                "pickup_time": convert_to_lagos_time(shipment.get('pickup_time')),
+                "dropoff_time": convert_to_lagos_time(shipment.get('dropoff_time')),
+                "create_lat_lng": shipment.get('create_lat_lng', 'location'),
+                "pickup_lat_lng": shipment.get('pickup_lat_lng', 'Not yet picked'),
+                "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet dropped'),
+                "duration": shipment.get('duration', 0),
+                "description": shipment.get('description', 'No Description'),
+                "status": shipment.get('status', "not yet created")
+            }
             return response, 200
         except Exception as e:
-            return {"message": "Error occured while fetching put in use item", "error": str(e)}
+            return {"message": "Error occurred while fetching shipment", "error": str(e)}
 
 class ShipmentsGetAll(Resource):
     def get(self, user_id, lab_name):
         try:
             org_name = get_org_name(user_id)
-            SHIPMENTS_COLLECTION = client[org_name+'_db']['shipments']
+            SHIPMENTS_COLLECTION = client[org_name + '_db']['shipments']
         except ValueError as e:
             abort(404, message=str(e))
+
         shipments = list(SHIPMENTS_COLLECTION.find())
         if not shipments:
             abort(404, message="Shipment not found")
-        # utc_now = datetime.now()
-        # wat_now = utc_now + timedelta(hours=1)
 
+        # Convert timestamps to Africa/Lagos time zone
+        def convert_to_lagos_time(timestamp):
+            if timestamp:
+                # Ensure the timestamp is treated as UTC if it's naive
+                if timestamp.tzinfo is None:
+                    timestamp = timestamp.replace(tzinfo=timezone.utc)
+                # Convert to Africa/Lagos timezone
+                return timestamp.astimezone(ZoneInfo("Africa/Lagos")).strftime("%Y-%m-%d %H:%M:%S")
+            return None
+        # print("Before conversion:", shipments.get('created_at'))
+        # print("After conversion:", convert_to_lagos_time(shipments.get('created_at')))
         shipment_list = [{
             "id": str(shipment['_id']),
-            "created_at": shipment.get('created_at').strftime("%Y-%m-%d %H:%M:%S") if 'created_at' in shipment else None,
+            "created_at": convert_to_lagos_time(shipment.get('created_at')),
             "created_by": shipment.get('created_by', 'Unknown User'),
             "picked_by": shipment.get('picked_by', 'Not yet picked'),
-            "dropoff_by": shipment.get('dropoff_by', 'not yet recieved'),
+            "dropoff_by": shipment.get('dropoff_by', 'Not yet received'),
             "shipment_id": shipment.get('shipment_id', 'Unknown shipment id'),
             "top": shipment.get('top', 'Unknown type of package'),
             "numb_of_packs": shipment.get("numb_of_packs", 'Unknown numb of packs'),
@@ -312,11 +328,11 @@ class ShipmentsGetAll(Resource):
             "dropoff_loc": shipment.get("dropoff_loc", 'Not yet dropped'),
             "from_region": shipment.get("from_region", 'Unknown region'),
             "to_region": shipment.get("to_region", 'Unknown region'),
-            "pickup_time": shipment.get('pickup_time').strftime("%Y-%m-%d %H:%M:%S") if 'pickup_time' in shipment else 'Not yet picked',
-            "dropoff_time": shipment.get('dropoff_time').strftime("%Y-%m-%d %H:%M:%S") if 'dropoff_time' in shipment else 'not yet recieved',
+            "pickup_time": convert_to_lagos_time(shipment.get('pickup_time')),
+            "dropoff_time": convert_to_lagos_time(shipment.get('dropoff_time')),
             "create_lat_lng": shipment.get('create_lat_lng', 'location'),
             "pickup_lat_lng": shipment.get('pickup_lat_lng', 'Not yet picked'),
-            "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'not yet recieved'),
+            "dropoff_lat_lng": shipment.get('dropoff_lat_lng', 'Not yet received'),
             "duration": shipment.get('duration', 0),
             "description": shipment.get('description', 'No Description'),
             "status": shipment.get('status', "not yet created"),
