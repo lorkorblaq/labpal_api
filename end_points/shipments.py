@@ -217,9 +217,19 @@ class ShipmentsPut(Resource):
             shipment['status'] = 'delivered'
 
             # Calculate the duration between pickup_time and dropoff_time
+# Calculate the duration between pickup_time and dropoff_time
             created_at = shipment.get('created_at')
             dropoff_time = shipment.get('dropoff_time')
+            
             if created_at and dropoff_time:
+                # PyMongo returns naive datetimes (in UTC). Make it timezone-aware.
+                if created_at.tzinfo is None:
+                    created_at = created_at.replace(tzinfo=timezone.utc)
+                
+                # Ensure dropoff_time is also timezone-aware before subtraction
+                if dropoff_time.tzinfo is None:
+                    dropoff_time = dropoff_time.replace(tzinfo=timezone.utc)
+                    
                 duration = dropoff_time - created_at
                 total_minutes = duration.total_seconds() // 60  # Convert to minutes
                 shipment['duration'] = total_minutes
